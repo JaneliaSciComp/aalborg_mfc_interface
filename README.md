@@ -1,2 +1,2 @@
-relay_mfc_controller
+mfc_interface
 ====================
