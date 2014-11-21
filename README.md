@@ -1,2 +1,2 @@
-mfc_interface
+aalborg_mfc_interface
 ====================
