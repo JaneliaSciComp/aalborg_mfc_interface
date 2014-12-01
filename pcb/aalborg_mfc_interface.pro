@@ -1,4 +1,4 @@
-update=Tue 25 Nov 2014 04:32:25 PM EST
+update=Mon 01 Dec 2014 02:47:20 PM EST
 version=1
 last_client=kicad
 [cvpcb]
@@ -25,6 +25,8 @@ SolderMaskMinWidth=0.000000000000
 DrawSegmentWidth=0.200000000000
 BoardOutlineThickness=0.100000000000
 ModuleOutlineThickness=0.150000000000
+[general]
+version=1
 [eeschema]
 version=1
 LibDir=
@@ -60,5 +62,3 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=aalborg_mfc_interface
-[general]
-version=1
