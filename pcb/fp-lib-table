@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name aalborg_mfc_interface)(type KiCad)(uri ${KIPRJMOD}/aalborg_mfc_interface.pretty)(options "")(descr ""))
+  (lib (name peterpolidoro)(type KiCad)(uri /home/polidorop/git/kicad-libraries/footprints.pretty)(options "")(descr ""))
 )
