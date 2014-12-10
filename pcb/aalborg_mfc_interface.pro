@@ -1,4 +1,4 @@
-update=Tue 02 Dec 2014 04:33:00 PM EST
+update=Wed 10 Dec 2014 05:35:05 PM EST
 version=1
 last_client=kicad
 [cvpcb]
@@ -8,6 +8,26 @@ NetIExt=net
 EquName1=devcms
 [general]
 version=1
+[pcbnew]
+version=1
+PageLayoutDescrFile=
+LastNetListRead=
+UseCmpFile=1
+PadDrill=0.6
+PadDrillOvalY=0.6
+PadSizeH=1.5
+PadSizeV=1.5
+PcbTextSizeV=1.5
+PcbTextSizeH=1.5
+PcbTextThickness=0.3
+ModuleTextSizeV=1
+ModuleTextSizeH=1
+ModuleTextSizeThickness=0.15
+SolderMaskClearance=0
+SolderMaskMinWidth=0
+DrawSegmentWidth=0.2
+BoardOutlineThickness=0.09999999999999999
+ModuleOutlineThickness=0.15
 [eeschema]
 version=1
 LibDir=
@@ -43,23 +63,3 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=aalborg_mfc_interface
-[pcbnew]
-version=1
-PageLayoutDescrFile=
-LastNetListRead=
-UseCmpFile=1
-PadDrill=0.6
-PadDrillOvalY=0.6
-PadSizeH=1.5
-PadSizeV=1.5
-PcbTextSizeV=1.5
-PcbTextSizeH=1.5
-PcbTextThickness=0.3
-ModuleTextSizeV=1
-ModuleTextSizeH=1
-ModuleTextSizeThickness=0.15
-SolderMaskClearance=0
-SolderMaskMinWidth=0
-DrawSegmentWidth=0.2
-BoardOutlineThickness=0.09999999999999999
-ModuleOutlineThickness=0.15

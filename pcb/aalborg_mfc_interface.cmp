@@ -1,133 +1,133 @@
-Cmp-Mod V01 Created by Cvpcb 0.201412011747+5309~19~ubuntu14.04.1-product   date = Thu 04 Dec 2014 03:16:06 PM EST
+Cmp-Mod V01 Created by Cvpcb 0.201412091631+5318~19~ubuntu14.04.1-product   date = Wed 10 Dec 2014 05:16:32 PM EST
 
 BeginCmp
-TimeStamp = /547CC49D;
+TimeStamp = /5488E846;
+Reference = ARDUINO1;
+ValeurCmp = ARDUINO_MEGA;
+IdModule  = aalborg_mfc_interface:ARDUINO_MEGA_SHIELD;
+EndCmp
+
+BeginCmp
+TimeStamp = /548925C4;
 Reference = C1;
 ValeurCmp = 10uF;
 IdModule  = aalborg_mfc_interface:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = /547CC4BC;
+TimeStamp = /54892682;
 Reference = C2;
 ValeurCmp = 10uF;
 IdModule  = aalborg_mfc_interface:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = /547CACBC;
+TimeStamp = /5489288F;
 Reference = C3;
 ValeurCmp = 10uF;
 IdModule  = aalborg_mfc_interface:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = /547CEC68;
+TimeStamp = /5489352B;
 Reference = C4;
 ValeurCmp = 0.1uF;
 IdModule  = aalborg_mfc_interface:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = /547E116E;
+TimeStamp = /54892AC2;
 Reference = C5;
 ValeurCmp = 10uF;
 IdModule  = aalborg_mfc_interface:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = /547E1C9A;
+TimeStamp = /54892B53;
 Reference = C6;
 ValeurCmp = 10uF;
 IdModule  = aalborg_mfc_interface:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = /547CC132;
+TimeStamp = /54891A64;
 Reference = D1;
-ValeurCmp = LED;
+ValeurCmp = LED_24V;
 IdModule  = aalborg_mfc_interface:LED_555-3XXX;
 EndCmp
 
 BeginCmp
-TimeStamp = /547CCE47;
+TimeStamp = /5488F1C1;
 Reference = E1;
 ValeurCmp = ENCODER_C14;
 IdModule  = aalborg_mfc_interface:Micro-MaTch_6_SMD;
 EndCmp
 
 BeginCmp
-TimeStamp = /5474C4BF;
+TimeStamp = /54890F29;
 Reference = J1;
-ValeurCmp = MFCA;
+ValeurCmp = DB15FV;
 IdModule  = aalborg_mfc_interface:DB15FD;
 EndCmp
 
 BeginCmp
-TimeStamp = /547E1DF5;
+TimeStamp = /548910B3;
 Reference = J2;
-ValeurCmp = MFCB;
+ValeurCmp = DB15FV;
 IdModule  = aalborg_mfc_interface:DB15FD;
 EndCmp
 
 BeginCmp
-TimeStamp = /5474C631;
+TimeStamp = /5488FCDE;
 Reference = P1;
-ValeurCmp = +24VDC;
+ValeurCmp = PWR_JACK_2.5x5.5;
 IdModule  = aalborg_mfc_interface:DCJACK_2PIN_HIGHCURRENT;
 EndCmp
 
 BeginCmp
-TimeStamp = /547CAB9D;
+TimeStamp = /548904D3;
 Reference = P2;
-ValeurCmp = DISPLAY;
+ValeurCmp = HEADER_01X03;
 IdModule  = aalborg_mfc_interface:Header_Shrouded_3_Pin;
 EndCmp
 
 BeginCmp
-TimeStamp = /547CD03F;
+TimeStamp = /54893E85;
 Reference = R1;
-ValeurCmp = 5.1k;
+ValeurCmp = 5.11k;
 IdModule  = aalborg_mfc_interface:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = /547CD062;
+TimeStamp = /54893F36;
 Reference = R2;
-ValeurCmp = 5.1k;
+ValeurCmp = 5.11k;
 IdModule  = aalborg_mfc_interface:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = /547E11B7;
+TimeStamp = /54894188;
+Reference = R3;
+ValeurCmp = 5.11k;
+IdModule  = aalborg_mfc_interface:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = /5489443F;
 Reference = R4;
-ValeurCmp = 5.1k;
+ValeurCmp = 5.11k;
 IdModule  = aalborg_mfc_interface:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = /547E1CA0;
-Reference = R5;
-ValeurCmp = 5.1k;
-IdModule  = aalborg_mfc_interface:SM1210;
-EndCmp
-
-BeginCmp
-TimeStamp = /547CC3CC;
+TimeStamp = /5488ECA7;
 Reference = REG1;
-ValeurCmp = CONV_DC_DC;
+ValeurCmp = CONV_DC_DC_12V_1A;
 IdModule  = aalborg_mfc_interface:DC_DC_CONV_R78C;
 EndCmp
 
 BeginCmp
-TimeStamp = /5474AAA1;
-Reference = SHIELD1;
-ValeurCmp = ARDUINO_MEGA_SHIELD_FULL;
-IdModule  = aalborg_mfc_interface:ARDUINO_MEGA_SHIELD;
-EndCmp
-
-BeginCmp
-TimeStamp = /547CE85B;
+TimeStamp = /5488E1D0;
 Reference = U1;
 ValeurCmp = MAX6817;
 IdModule  = aalborg_mfc_interface:MAX6817;

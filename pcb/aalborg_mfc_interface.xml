@@ -2,133 +2,274 @@
 <export version="D">
   <design>
     <source>/home/polidorop/git/aalborg_mfc_interface/pcb/aalborg_mfc_interface.sch</source>
-    <date>Tue 02 Dec 2014 03:19:24 PM EST</date>
-    <tool>Eeschema 0.201411301746+5308~19~ubuntu14.04.1-product</tool>
+    <date>Wed 10 Dec 2014 05:16:41 PM EST</date>
+    <tool>Eeschema 0.201412091631+5318~19~ubuntu14.04.1-product</tool>
   </design>
   <components>
-    <comp ref="SHIELD1">
-      <value>ARDUINO_MEGA_SHIELD_FULL</value>
-      <libsource lib="aalborg_mfc_interface" part="ARDUINO_MEGA_SHIELD_FULL"/>
+    <comp ref="U1">
+      <value>MAX6817</value>
+      <footprint>aalborg_mfc_interface:MAX6817</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">MAX6817EUT+TCT-ND</field>
+        <field name="Description">IC_DEBOUNCER_SWITCH_DUAL_SOT23-6</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="MAX6817"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5474AAA1</tstamp>
+      <tstamp>5488E1D0</tstamp>
     </comp>
-    <comp ref="J1">
-      <value>MFCA</value>
-      <libsource lib="conn" part="DB15"/>
+    <comp ref="ARDUINO1">
+      <value>ARDUINO_MEGA</value>
+      <footprint>aalborg_mfc_interface:ARDUINO_MEGA_SHIELD</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">1050-1018-ND</field>
+        <field name="Description">BOARD_MCU_MEGA2560</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="ARDUINO_MEGA"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>5474C4BF</tstamp>
-    </comp>
-    <comp ref="P1">
-      <value>+24VDC</value>
-      <libsource lib="conn" part="CONN_01X02"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>5474C631</tstamp>
-    </comp>
-    <comp ref="P2">
-      <value>DISPLAY</value>
-      <libsource lib="conn" part="CONN_01X03"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>547CAB9D</tstamp>
-    </comp>
-    <comp ref="C3">
-      <value>10uF</value>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>547CACBC</tstamp>
-    </comp>
-    <comp ref="R1">
-      <value>1k</value>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>547CC103</tstamp>
-    </comp>
-    <comp ref="D1">
-      <value>LED</value>
-      <libsource lib="device" part="LED"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>547CC132</tstamp>
+      <tstamp>5488E846</tstamp>
     </comp>
     <comp ref="REG1">
-      <value>CONV_DC_DC</value>
-      <libsource lib="aalborg_mfc_interface" part="CONV_DC_DC"/>
+      <value>CONV_DC_DC_12V_1A</value>
+      <footprint>aalborg_mfc_interface:DC_DC_CONV_R78C</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">945-1392-5-ND</field>
+        <field name="Description">CONV_DC/DC_1A_12V_OUT_SIP_VERT</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="CONV_DC_DC_12V_1A"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>547CC3CC</tstamp>
-    </comp>
-    <comp ref="C1">
-      <value>10uF</value>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>547CC49D</tstamp>
-    </comp>
-    <comp ref="C2">
-      <value>10uF</value>
-      <libsource lib="device" part="C"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>547CC4BC</tstamp>
+      <tstamp>5488ECA7</tstamp>
     </comp>
     <comp ref="E1">
       <value>ENCODER_C14</value>
+      <footprint>aalborg_mfc_interface:Micro-MaTch_6_SMD</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">102-1914-ND</field>
+        <field name="Description">ENCODER OPT 32PPR DET CABLE TYPE</field>
+      </fields>
       <libsource lib="aalborg_mfc_interface" part="ENCODER_C14"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>547CCE47</tstamp>
+      <tstamp>5488F1C1</tstamp>
     </comp>
-    <comp ref="R2">
-      <value>5.1k</value>
-      <libsource lib="device" part="R"/>
+    <comp ref="P1">
+      <value>PWR_JACK_2.5x5.5</value>
+      <footprint>aalborg_mfc_interface:DCJACK_2PIN_HIGHCURRENT</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">CP-063BH-ND</field>
+        <field name="Description">CONN PWR JACK DC 2.5X5.5 8A T/H</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="PWR_JACK_2.5x5.5"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>547CD03F</tstamp>
+      <tstamp>5488FCDE</tstamp>
     </comp>
-    <comp ref="R3">
-      <value>5.1k</value>
-      <libsource lib="device" part="R"/>
+    <comp ref="P2">
+      <value>HEADER_01X03</value>
+      <footprint>aalborg_mfc_interface:Header_Shrouded_3_Pin</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">609-3461-ND</field>
+        <field name="Description">BERGSTIK II .100" SR STRAIGHT</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="HEADER_01X03"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>547CD062</tstamp>
+      <tstamp>548904D3</tstamp>
     </comp>
-    <comp ref="U1">
-      <value>MAX6817</value>
-      <libsource lib="aalborg_mfc_interface" part="MAX6817"/>
+    <comp ref="J1">
+      <value>DB15FV</value>
+      <footprint>aalborg_mfc_interface:DB15FD</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">A102054-ND</field>
+        <field name="Description">CONN D-SUB RCPT 15POS VERT GOLD</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="DB15FV"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>547CE85B</tstamp>
+      <tstamp>54890F29</tstamp>
     </comp>
-    <comp ref="C4">
-      <value>0.1uF</value>
-      <libsource lib="device" part="C"/>
+    <comp ref="J2">
+      <value>DB15FV</value>
+      <footprint>aalborg_mfc_interface:DB15FD</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">A102054-ND</field>
+        <field name="Description">CONN D-SUB RCPT 15POS VERT GOLD</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="DB15FV"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>547CEC68</tstamp>
+      <tstamp>548910B3</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>LED_24V</value>
+      <footprint>aalborg_mfc_interface:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54891A64</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>10uF</value>
+      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">445-4536-1-ND</field>
+        <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="10uF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>548925C4</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>10uF</value>
+      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">445-4536-1-ND</field>
+        <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="10uF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54892682</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>10uF</value>
+      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">445-4536-1-ND</field>
+        <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="10uF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5489288F</tstamp>
     </comp>
     <comp ref="C5">
       <value>10uF</value>
-      <libsource lib="device" part="C"/>
+      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">445-4536-1-ND</field>
+        <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="10uF"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>547E116E</tstamp>
-    </comp>
-    <comp ref="R4">
-      <value>5.1k</value>
-      <libsource lib="device" part="R"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>547E11B7</tstamp>
+      <tstamp>54892AC2</tstamp>
     </comp>
     <comp ref="C6">
       <value>10uF</value>
-      <libsource lib="device" part="C"/>
+      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">445-4536-1-ND</field>
+        <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="10uF"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>547E1C9A</tstamp>
+      <tstamp>54892B53</tstamp>
     </comp>
-    <comp ref="R5">
-      <value>5.1k</value>
-      <libsource lib="device" part="R"/>
+    <comp ref="C4">
+      <value>0.1uF</value>
+      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">478-3586-1-ND</field>
+        <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="0.1uF"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>547E1CA0</tstamp>
+      <tstamp>5489352B</tstamp>
     </comp>
-    <comp ref="J2">
-      <value>MFCB</value>
-      <libsource lib="conn" part="DB15"/>
+    <comp ref="R1">
+      <value>5.11k</value>
+      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">P5.11KAACT-ND</field>
+        <field name="Description">RES SMD 5.11K OHM 1% 1/2W 1210</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="5.11k"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamp>547E1DF5</tstamp>
+      <tstamp>54893E85</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>5.11k</value>
+      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">P5.11KAACT-ND</field>
+        <field name="Description">RES SMD 5.11K OHM 1% 1/2W 1210</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="5.11k"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54893F36</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>5.11k</value>
+      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">P5.11KAACT-ND</field>
+        <field name="Description">RES SMD 5.11K OHM 1% 1/2W 1210</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="5.11k"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54894188</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>5.11k</value>
+      <footprint>aalborg_mfc_interface:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">P5.11KAACT-ND</field>
+        <field name="Description">RES SMD 5.11K OHM 1% 1/2W 1210</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="5.11k"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5489443F</tstamp>
     </comp>
   </components>
   <libparts>
-    <libpart lib="device" part="C">
+    <libpart lib="aalborg_mfc_interface" part="ENCODER_C14">
+      <fields>
+        <field name="Reference">E</field>
+        <field name="Value">ENCODER_C14</field>
+        <field name="Footprint">aalborg_mfc_interface:Micro-MaTch_6_SMD</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">102-1914-ND</field>
+        <field name="Description">ENCODER OPT 32PPR DET CABLE TYPE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="BTN_B" type="passive"/>
+        <pin num="3" name="BTN_A" type="passive"/>
+        <pin num="4" name="OUT_B" type="output"/>
+        <pin num="5" name="OUT_A" type="output"/>
+        <pin num="6" name="+5V" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="aalborg_mfc_interface" part="CONV_DC_DC_12V_1A">
+      <fields>
+        <field name="Reference">REG</field>
+        <field name="Value">CONV_DC_DC_12V_1A</field>
+        <field name="Footprint">aalborg_mfc_interface:DC_DC_CONV_R78C</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">945-1392-5-ND</field>
+        <field name="Description">CONV_DC/DC_1A_12V_OUT_SIP_VERT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+VIN" type="power_in"/>
+        <pin num="2" name="GND" type="power_in"/>
+        <pin num="3" name="+VOUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="aalborg_mfc_interface" part="10uF">
       <description>Condensateur non polarise</description>
       <footprints>
         <fp>SM*</fp>
@@ -137,113 +278,25 @@
       </footprints>
       <fields>
         <field name="Reference">C</field>
-        <field name="Value">C</field>
+        <field name="Value">10uF</field>
+        <field name="Footprint">aalborg_mfc_interface:SM1210</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">445-4536-1-ND</field>
+        <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
       </fields>
       <pins>
         <pin num="1" name="~" type="passive"/>
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="R">
-      <description>Resistance</description>
-      <footprints>
-        <fp>R?</fp>
-        <fp>SM0603</fp>
-        <fp>SM0805</fp>
-        <fp>R?-*</fp>
-        <fp>SM1206</fp>
-      </footprints>
+    <libpart lib="aalborg_mfc_interface" part="ARDUINO_MEGA">
       <fields>
-        <field name="Reference">R</field>
-        <field name="Value">R</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="LED">
-      <footprints>
-        <fp>LED-3MM</fp>
-        <fp>LED-5MM</fp>
-        <fp>LED-10MM</fp>
-        <fp>LED-0603</fp>
-        <fp>LED-0805</fp>
-        <fp>LED-1206</fp>
-        <fp>LEDV</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">LED</field>
-      </fields>
-      <pins>
-        <pin num="1" name="A" type="passive"/>
-        <pin num="2" name="K" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="conn" part="CONN_01X02">
-      <footprints>
-        <fp>Pin_Header_Straight_1X02</fp>
-        <fp>Pin_Header_Angled_1X02</fp>
-        <fp>Socket_Strip_Straight_1X02</fp>
-        <fp>Socket_Strip_Angled_1X02</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_01X02</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="conn" part="CONN_01X03">
-      <footprints>
-        <fp>Pin_Header_Straight_1X03</fp>
-        <fp>Pin_Header_Angled_1X03</fp>
-        <fp>Socket_Strip_Straight_1X03</fp>
-        <fp>Socket_Strip_Angled_1X03</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_01X03</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-        <pin num="3" name="P3" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="conn" part="DB15">
-      <footprints>
-        <fp>DB15*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">DB15</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-        <pin num="3" name="3" type="passive"/>
-        <pin num="4" name="4" type="passive"/>
-        <pin num="5" name="5" type="passive"/>
-        <pin num="6" name="6" type="passive"/>
-        <pin num="7" name="7" type="passive"/>
-        <pin num="8" name="8" type="passive"/>
-        <pin num="9" name="P9" type="passive"/>
-        <pin num="10" name="P10" type="passive"/>
-        <pin num="11" name="P111" type="passive"/>
-        <pin num="12" name="P12" type="passive"/>
-        <pin num="13" name="P13" type="passive"/>
-        <pin num="14" name="P14" type="passive"/>
-        <pin num="15" name="P15" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="aalborg_mfc_interface" part="ARDUINO_MEGA_SHIELD_FULL">
-      <fields>
-        <field name="Reference">SHIELD</field>
-        <field name="Value">ARDUINO_MEGA_SHIELD_FULL</field>
+        <field name="Reference">ARDUINO</field>
+        <field name="Value">ARDUINO_MEGA</field>
+        <field name="Footprint">aalborg_mfc_interface:ARDUINO_MEGA_SHIELD</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">1050-1018-ND</field>
+        <field name="Description">BOARD_MCU_MEGA2560</field>
       </fields>
       <pins>
         <pin num="0" name="D0/RX0/PDI/PCINT8/PE0" type="BiDi"/>
@@ -332,35 +385,14 @@
         <pin num="V_IN" name="V_IN" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="aalborg_mfc_interface" part="CONV_DC_DC">
-      <fields>
-        <field name="Reference">REG</field>
-        <field name="Value">CONV_DC_DC</field>
-      </fields>
-      <pins>
-        <pin num="1" name="+VIN" type="power_in"/>
-        <pin num="2" name="GND" type="power_in"/>
-        <pin num="3" name="+VOUT" type="power_out"/>
-      </pins>
-    </libpart>
-    <libpart lib="aalborg_mfc_interface" part="ENCODER_C14">
-      <fields>
-        <field name="Reference">E</field>
-        <field name="Value">ENCODER_C14</field>
-      </fields>
-      <pins>
-        <pin num="1" name="GND" type="power_in"/>
-        <pin num="2" name="BTN_B" type="passive"/>
-        <pin num="3" name="BTN_A" type="passive"/>
-        <pin num="4" name="OUT_B" type="output"/>
-        <pin num="5" name="OUT_A" type="output"/>
-        <pin num="6" name="+5V" type="power_in"/>
-      </pins>
-    </libpart>
     <libpart lib="aalborg_mfc_interface" part="MAX6817">
       <fields>
         <field name="Reference">U</field>
         <field name="Value">MAX6817</field>
+        <field name="Footprint">aalborg_mfc_interface:MAX6817</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">MAX6817EUT+TCT-ND</field>
+        <field name="Description">IC_DEBOUNCER_SWITCH_DUAL_SOT23-6</field>
       </fields>
       <pins>
         <pin num="1" name="IN1" type="input"/>
@@ -371,380 +403,506 @@
         <pin num="6" name="OUT1" type="output"/>
       </pins>
     </libpart>
+    <libpart lib="aalborg_mfc_interface" part="PWR_JACK_2.5x5.5">
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">PWR_JACK_2.5x5.5</field>
+        <field name="Footprint">aalborg_mfc_interface:DCJACK_2PIN_HIGHCURRENT</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">CP-063BH-ND</field>
+        <field name="Description">CONN PWR JACK DC 2.5X5.5 8A T/H</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="aalborg_mfc_interface" part="0.1uF">
+      <description>Condensateur non polarise</description>
+      <footprints>
+        <fp>SM*</fp>
+        <fp>C?</fp>
+        <fp>C1-1</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">0.1uF</field>
+        <field name="Footprint">aalborg_mfc_interface:SM1210</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">478-3586-1-ND</field>
+        <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="aalborg_mfc_interface" part="HEADER_01X03">
+      <footprints>
+        <fp>Pin_Header_Straight_1X03</fp>
+        <fp>Pin_Header_Angled_1X03</fp>
+        <fp>Socket_Strip_Straight_1X03</fp>
+        <fp>Socket_Strip_Angled_1X03</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">HEADER_01X03</field>
+        <field name="Footprint">aalborg_mfc_interface:Header_Shrouded_3_Pin</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">609-3461-ND</field>
+        <field name="Description">BERGSTIK II .100" SR STRAIGHT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="aalborg_mfc_interface" part="DB15FV">
+      <footprints>
+        <fp>DB15*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">DB15FV</field>
+        <field name="Footprint">aalborg_mfc_interface:DB15FD</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">A102054-ND</field>
+        <field name="Description">CONN D-SUB RCPT 15POS VERT GOLD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+        <pin num="5" name="5" type="passive"/>
+        <pin num="6" name="6" type="passive"/>
+        <pin num="7" name="7" type="passive"/>
+        <pin num="8" name="8" type="passive"/>
+        <pin num="9" name="P9" type="passive"/>
+        <pin num="10" name="P10" type="passive"/>
+        <pin num="11" name="P111" type="passive"/>
+        <pin num="12" name="P12" type="passive"/>
+        <pin num="13" name="P13" type="passive"/>
+        <pin num="14" name="P14" type="passive"/>
+        <pin num="15" name="P15" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="aalborg_mfc_interface" part="LED_24V">
+      <footprints>
+        <fp>LED-3MM</fp>
+        <fp>LED-5MM</fp>
+        <fp>LED-10MM</fp>
+        <fp>LED-0603</fp>
+        <fp>LED-0805</fp>
+        <fp>LED-1206</fp>
+        <fp>LEDV</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED_24V</field>
+        <field name="Footprint">aalborg_mfc_interface:LED_555-3XXX</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="aalborg_mfc_interface" part="5.11k">
+      <description>Resistance</description>
+      <footprints>
+        <fp>R?</fp>
+        <fp>SM0603</fp>
+        <fp>SM0805</fp>
+        <fp>R?-*</fp>
+        <fp>SM1206</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">5.11k</field>
+        <field name="Footprint">aalborg_mfc_interface:SM1210</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">P5.11KAACT-ND</field>
+        <field name="Description">RES SMD 5.11K OHM 1% 1/2W 1210</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
-    <library logical="device">
-      <uri>/usr/share/kicad/library/device.lib</uri>
-    </library>
-    <library logical="conn">
-      <uri>/usr/share/kicad/library/conn.lib</uri>
-    </library>
     <library logical="aalborg_mfc_interface">
       <uri>/home/polidorop/git/aalborg_mfc_interface/pcb/aalborg_mfc_interface.lib</uri>
     </library>
   </libraries>
   <nets>
-    <net code="1" name="/ENC_BTN">
-      <node ref="E1" pin="3"/>
-      <node ref="U1" pin="1"/>
+    <net code="2" name="Net-(ARDUINO1-Pad20)">
+      <node ref="ARDUINO1" pin="20"/>
     </net>
-    <net code="2" name="+5V">
-      <node ref="C4" pin="1"/>
-      <node ref="E1" pin="6"/>
-      <node ref="R2" pin="1"/>
-      <node ref="R3" pin="1"/>
-      <node ref="P2" pin="3"/>
-      <node ref="U1" pin="5"/>
-      <node ref="C3" pin="1"/>
-      <node ref="SHIELD1" pin="5V_1"/>
+    <net code="3" name="Net-(ARDUINO1-Pad10)">
+      <node ref="ARDUINO1" pin="10"/>
     </net>
-    <net code="3" name="Net-(U1-Pad4)">
+    <net code="4" name="Net-(ARDUINO1-Pad9)">
+      <node ref="ARDUINO1" pin="9"/>
+    </net>
+    <net code="5" name="Net-(ARDUINO1-Pad6)">
+      <node ref="ARDUINO1" pin="6"/>
+    </net>
+    <net code="6" name="Net-(ARDUINO1-Pad5)">
+      <node ref="ARDUINO1" pin="5"/>
+    </net>
+    <net code="7" name="Net-(ARDUINO1-Pad4)">
+      <node ref="ARDUINO1" pin="4"/>
+    </net>
+    <net code="8" name="Net-(ARDUINO1-Pad1)">
+      <node ref="ARDUINO1" pin="1"/>
+    </net>
+    <net code="9" name="Net-(ARDUINO1-Pad0)">
+      <node ref="ARDUINO1" pin="0"/>
+    </net>
+    <net code="10" name="Net-(ARDUINO1-Pad30)">
+      <node ref="ARDUINO1" pin="30"/>
+    </net>
+    <net code="11" name="Net-(U1-Pad4)">
       <node ref="U1" pin="4"/>
     </net>
-    <net code="4" name="Net-(U1-Pad3)">
+    <net code="12" name="Net-(U1-Pad3)">
       <node ref="U1" pin="3"/>
     </net>
-    <net code="5" name="/ENC_B">
+    <net code="13" name="/ANALOG_IN_B">
+      <node ref="ARDUINO1" pin="A1"/>
+      <node ref="J2" pin="2"/>
+    </net>
+    <net code="14" name="VAA">
+      <node ref="J2" pin="7"/>
+      <node ref="REG1" pin="1"/>
+      <node ref="P1" pin="1"/>
+      <node ref="D1" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="J1" pin="7"/>
+    </net>
+    <net code="15" name="Net-(ARDUINO1-Pad42)">
+      <node ref="ARDUINO1" pin="42"/>
+    </net>
+    <net code="16" name="Net-(ARDUINO1-PadA4)">
+      <node ref="ARDUINO1" pin="A4"/>
+    </net>
+    <net code="17" name="Net-(ARDUINO1-Pad44)">
+      <node ref="ARDUINO1" pin="44"/>
+    </net>
+    <net code="18" name="Net-(ARDUINO1-Pad34)">
+      <node ref="ARDUINO1" pin="34"/>
+    </net>
+    <net code="19" name="Net-(ARDUINO1-PadA3)">
+      <node ref="ARDUINO1" pin="A3"/>
+    </net>
+    <net code="20" name="Net-(ARDUINO1-Pad53)">
+      <node ref="ARDUINO1" pin="53"/>
+    </net>
+    <net code="21" name="Net-(ARDUINO1-Pad43)">
+      <node ref="ARDUINO1" pin="43"/>
+    </net>
+    <net code="22" name="Net-(ARDUINO1-Pad33)">
+      <node ref="ARDUINO1" pin="33"/>
+    </net>
+    <net code="23" name="Net-(ARDUINO1-Pad13)">
+      <node ref="ARDUINO1" pin="13"/>
+    </net>
+    <net code="24" name="Net-(ARDUINO1-PadA2)">
+      <node ref="ARDUINO1" pin="A2"/>
+    </net>
+    <net code="25" name="Net-(ARDUINO1-Pad52)">
+      <node ref="ARDUINO1" pin="52"/>
+    </net>
+    <net code="26" name="Net-(ARDUINO1-Pad32)">
+      <node ref="ARDUINO1" pin="32"/>
+    </net>
+    <net code="27" name="Net-(ARDUINO1-Pad12)">
+      <node ref="ARDUINO1" pin="12"/>
+    </net>
+    <net code="28" name="Net-(ARDUINO1-Pad51)">
+      <node ref="ARDUINO1" pin="51"/>
+    </net>
+    <net code="29" name="Net-(ARDUINO1-Pad41)">
+      <node ref="ARDUINO1" pin="41"/>
+    </net>
+    <net code="30" name="Net-(ARDUINO1-Pad31)">
+      <node ref="ARDUINO1" pin="31"/>
+    </net>
+    <net code="32" name="Net-(ARDUINO1-Pad21)">
+      <node ref="ARDUINO1" pin="21"/>
+    </net>
+    <net code="33" name="Net-(ARDUINO1-Pad11)">
+      <node ref="ARDUINO1" pin="11"/>
+    </net>
+    <net code="34" name="Net-(ARDUINO1-Pad50)">
+      <node ref="ARDUINO1" pin="50"/>
+    </net>
+    <net code="35" name="Net-(ARDUINO1-Pad40)">
+      <node ref="ARDUINO1" pin="40"/>
+    </net>
+    <net code="36" name="/PWM_A">
       <node ref="R3" pin="2"/>
-      <node ref="E1" pin="4"/>
-      <node ref="SHIELD1" pin="3"/>
+      <node ref="ARDUINO1" pin="7"/>
     </net>
-    <net code="6" name="/ENC_A">
-      <node ref="R2" pin="2"/>
-      <node ref="E1" pin="5"/>
-      <node ref="SHIELD1" pin="2"/>
+    <net code="37" name="/ANALOG_OUT_A">
+      <node ref="R3" pin="1"/>
+      <node ref="C5" pin="1"/>
+      <node ref="J1" pin="8"/>
     </net>
-    <net code="7" name="Net-(J1-Pad9)">
-      <node ref="J1" pin="9"/>
+    <net code="38" name="/PWM_B">
+      <node ref="ARDUINO1" pin="8"/>
+      <node ref="R4" pin="2"/>
     </net>
-    <net code="8" name="Net-(J1-Pad11)">
+    <net code="39" name="/ANALOG_IN_A">
+      <node ref="J1" pin="2"/>
+      <node ref="ARDUINO1" pin="A0"/>
+    </net>
+    <net code="40" name="/VALVE_OFF_B">
+      <node ref="ARDUINO1" pin="25"/>
+      <node ref="J2" pin="12"/>
+    </net>
+    <net code="41" name="/ANALOG_OUT_B">
+      <node ref="C6" pin="1"/>
+      <node ref="J2" pin="8"/>
+      <node ref="R4" pin="1"/>
+    </net>
+    <net code="42" name="Net-(J2-Pad15)">
+      <node ref="J2" pin="15"/>
+    </net>
+    <net code="43" name="Net-(ARDUINO1-Pad15)">
+      <node ref="ARDUINO1" pin="15"/>
+    </net>
+    <net code="44" name="/PURGE_B">
+      <node ref="J2" pin="4"/>
+      <node ref="ARDUINO1" pin="24"/>
+    </net>
+    <net code="45" name="Net-(J2-Pad9)">
+      <node ref="J2" pin="9"/>
+    </net>
+    <net code="46" name="Net-(J2-Pad11)">
+      <node ref="J2" pin="11"/>
+    </net>
+    <net code="47" name="Net-(J2-Pad13)">
+      <node ref="J2" pin="13"/>
+    </net>
+    <net code="48" name="Net-(J2-Pad6)">
+      <node ref="J2" pin="6"/>
+    </net>
+    <net code="49" name="Net-(J2-Pad14)">
+      <node ref="J2" pin="14"/>
+    </net>
+    <net code="50" name="Net-(J1-Pad11)">
       <node ref="J1" pin="11"/>
     </net>
-    <net code="9" name="Net-(J1-Pad13)">
-      <node ref="J1" pin="13"/>
+    <net code="51" name="Net-(J1-Pad15)">
+      <node ref="J1" pin="15"/>
     </net>
-    <net code="10" name="Net-(J1-Pad6)">
-      <node ref="J1" pin="6"/>
-    </net>
-    <net code="11" name="Net-(J1-Pad14)">
+    <net code="52" name="Net-(J1-Pad14)">
       <node ref="J1" pin="14"/>
     </net>
-    <net code="12" name="/D_ENC_BTN">
-      <node ref="U1" pin="6"/>
-      <node ref="SHIELD1" pin="19"/>
+    <net code="53" name="Net-(J1-Pad13)">
+      <node ref="J1" pin="13"/>
     </net>
-    <net code="13" name="GND">
-      <node ref="C6" pin="2"/>
-      <node ref="C5" pin="2"/>
-      <node ref="J1" pin="1"/>
-      <node ref="C3" pin="2"/>
-      <node ref="J1" pin="10"/>
-      <node ref="P1" pin="2"/>
-      <node ref="P2" pin="2"/>
-      <node ref="SHIELD1" pin="GND1"/>
+    <net code="54" name="Net-(J1-Pad9)">
+      <node ref="J1" pin="9"/>
+    </net>
+    <net code="55" name="Net-(J1-Pad6)">
+      <node ref="J1" pin="6"/>
+    </net>
+    <net code="56" name="Net-(ARDUINO1-PadA7)">
+      <node ref="ARDUINO1" pin="A7"/>
+    </net>
+    <net code="57" name="Net-(ARDUINO1-PadA11)">
+      <node ref="ARDUINO1" pin="A11"/>
+    </net>
+    <net code="58" name="Net-(ARDUINO1-PadA10)">
+      <node ref="ARDUINO1" pin="A10"/>
+    </net>
+    <net code="59" name="Net-(ARDUINO1-PadNC)">
+      <node ref="ARDUINO1" pin="NC"/>
+    </net>
+    <net code="60" name="Net-(ARDUINO1-PadA9)">
+      <node ref="ARDUINO1" pin="A9"/>
+    </net>
+    <net code="61" name="Net-(ARDUINO1-Pad49)">
+      <node ref="ARDUINO1" pin="49"/>
+    </net>
+    <net code="62" name="Net-(ARDUINO1-Pad39)">
+      <node ref="ARDUINO1" pin="39"/>
+    </net>
+    <net code="63" name="Net-(ARDUINO1-Pad29)">
+      <node ref="ARDUINO1" pin="29"/>
+    </net>
+    <net code="64" name="Net-(ARDUINO1-PadA8)">
+      <node ref="ARDUINO1" pin="A8"/>
+    </net>
+    <net code="65" name="Net-(ARDUINO1-Pad48)">
+      <node ref="ARDUINO1" pin="48"/>
+    </net>
+    <net code="66" name="Net-(ARDUINO1-Pad38)">
+      <node ref="ARDUINO1" pin="38"/>
+    </net>
+    <net code="67" name="Net-(ARDUINO1-Pad28)">
+      <node ref="ARDUINO1" pin="28"/>
+    </net>
+    <net code="68" name="Net-(ARDUINO1-Pad18)">
+      <node ref="ARDUINO1" pin="18"/>
+    </net>
+    <net code="69" name="Net-(ARDUINO1-PadA12)">
+      <node ref="ARDUINO1" pin="A12"/>
+    </net>
+    <net code="70" name="Net-(ARDUINO1-Pad47)">
+      <node ref="ARDUINO1" pin="47"/>
+    </net>
+    <net code="71" name="Net-(ARDUINO1-Pad37)">
+      <node ref="ARDUINO1" pin="37"/>
+    </net>
+    <net code="72" name="Net-(ARDUINO1-Pad27)">
+      <node ref="ARDUINO1" pin="27"/>
+    </net>
+    <net code="73" name="Net-(ARDUINO1-Pad17)">
+      <node ref="ARDUINO1" pin="17"/>
+    </net>
+    <net code="74" name="Net-(ARDUINO1-PadA6)">
+      <node ref="ARDUINO1" pin="A6"/>
+    </net>
+    <net code="75" name="Net-(ARDUINO1-Pad46)">
+      <node ref="ARDUINO1" pin="46"/>
+    </net>
+    <net code="76" name="Net-(ARDUINO1-Pad36)">
+      <node ref="ARDUINO1" pin="36"/>
+    </net>
+    <net code="77" name="Net-(ARDUINO1-Pad26)">
+      <node ref="ARDUINO1" pin="26"/>
+    </net>
+    <net code="78" name="Net-(ARDUINO1-Pad16)">
+      <node ref="ARDUINO1" pin="16"/>
+    </net>
+    <net code="79" name="Net-(ARDUINO1-PadA5)">
+      <node ref="ARDUINO1" pin="A5"/>
+    </net>
+    <net code="80" name="Net-(ARDUINO1-Pad45)">
+      <node ref="ARDUINO1" pin="45"/>
+    </net>
+    <net code="81" name="Net-(ARDUINO1-Pad35)">
+      <node ref="ARDUINO1" pin="35"/>
+    </net>
+    <net code="82" name="Net-(ARDUINO1-Pad5V_5)">
+      <node ref="ARDUINO1" pin="5V_5"/>
+    </net>
+    <net code="83" name="Net-(ARDUINO1-PadIREF)">
+      <node ref="ARDUINO1" pin="IREF"/>
+    </net>
+    <net code="84" name="Net-(ARDUINO1-PadAREF)">
+      <node ref="ARDUINO1" pin="AREF"/>
+    </net>
+    <net code="85" name="Net-(ARDUINO1-PadGND5)">
+      <node ref="ARDUINO1" pin="GND5"/>
+    </net>
+    <net code="86" name="Net-(ARDUINO1-Pad5V_4)">
+      <node ref="ARDUINO1" pin="5V_4"/>
+    </net>
+    <net code="87" name="Net-(ARDUINO1-PadGND4)">
+      <node ref="ARDUINO1" pin="GND4"/>
+    </net>
+    <net code="88" name="Net-(ARDUINO1-PadGND3)">
+      <node ref="ARDUINO1" pin="GND3"/>
+    </net>
+    <net code="89" name="Net-(ARDUINO1-PadRST)">
+      <node ref="ARDUINO1" pin="RST"/>
+    </net>
+    <net code="90" name="Net-(ARDUINO1-PadA15)">
+      <node ref="ARDUINO1" pin="A15"/>
+    </net>
+    <net code="91" name="Net-(ARDUINO1-PadA14)">
+      <node ref="ARDUINO1" pin="A14"/>
+    </net>
+    <net code="92" name="Net-(ARDUINO1-Pad3V3)">
+      <node ref="ARDUINO1" pin="3V3"/>
+    </net>
+    <net code="93" name="Net-(ARDUINO1-PadA13)">
+      <node ref="ARDUINO1" pin="A13"/>
+    </net>
+    <net code="94" name="+5V">
+      <node ref="E1" pin="6"/>
+      <node ref="U1" pin="5"/>
+      <node ref="C3" pin="1"/>
+      <node ref="C4" pin="1"/>
+      <node ref="R1" pin="1"/>
+      <node ref="R2" pin="1"/>
+      <node ref="ARDUINO1" pin="5V_1"/>
+      <node ref="P2" pin="3"/>
+    </net>
+    <net code="95" name="/TX3">
+      <node ref="P2" pin="1"/>
+      <node ref="ARDUINO1" pin="14"/>
+    </net>
+    <net code="96" name="/V_IN">
+      <node ref="C2" pin="1"/>
+      <node ref="ARDUINO1" pin="V_IN"/>
+      <node ref="REG1" pin="3"/>
+    </net>
+    <net code="97" name="GND">
       <node ref="U1" pin="2"/>
-      <node ref="SHIELD1" pin="GND2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="J2" pin="10"/>
+      <node ref="J1" pin="10"/>
       <node ref="J1" pin="5"/>
       <node ref="J1" pin="3"/>
-      <node ref="C4" pin="2"/>
+      <node ref="J1" pin="1"/>
+      <node ref="ARDUINO1" pin="GND1"/>
+      <node ref="P2" pin="2"/>
+      <node ref="ARDUINO1" pin="GND2"/>
+      <node ref="REG1" pin="2"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="E1" pin="1"/>
       <node ref="E1" pin="2"/>
+      <node ref="P1" pin="2"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="D1" pin="2"/>
       <node ref="J2" pin="5"/>
       <node ref="J2" pin="3"/>
       <node ref="J2" pin="1"/>
-      <node ref="REG1" pin="2"/>
-      <node ref="C1" pin="2"/>
-      <node ref="J2" pin="10"/>
-      <node ref="C2" pin="2"/>
-      <node ref="D1" pin="2"/>
-      <node ref="E1" pin="1"/>
     </net>
-    <net code="14" name="Net-(D1-Pad1)">
-      <node ref="D1" pin="1"/>
-      <node ref="R1" pin="2"/>
+    <net code="98" name="/D_ENC_BTN">
+      <node ref="ARDUINO1" pin="19"/>
+      <node ref="U1" pin="6"/>
     </net>
-    <net code="15" name="VAA">
-      <node ref="REG1" pin="1"/>
-      <node ref="C1" pin="1"/>
-      <node ref="J1" pin="7"/>
-      <node ref="J2" pin="7"/>
-      <node ref="P1" pin="1"/>
-      <node ref="R1" pin="1"/>
+    <net code="99" name="/ENC_BTN">
+      <node ref="U1" pin="1"/>
+      <node ref="E1" pin="3"/>
     </net>
-    <net code="16" name="/V_IN">
-      <node ref="C2" pin="1"/>
-      <node ref="SHIELD1" pin="V_IN"/>
-      <node ref="REG1" pin="3"/>
+    <net code="100" name="/ENC_B">
+      <node ref="R2" pin="2"/>
+      <node ref="ARDUINO1" pin="3"/>
+      <node ref="E1" pin="4"/>
     </net>
-    <net code="17" name="Net-(J2-Pad15)">
-      <node ref="J2" pin="15"/>
-    </net>
-    <net code="18" name="Net-(J2-Pad14)">
-      <node ref="J2" pin="14"/>
-    </net>
-    <net code="19" name="Net-(J2-Pad13)">
-      <node ref="J2" pin="13"/>
-    </net>
-    <net code="20" name="Net-(J2-Pad11)">
-      <node ref="J2" pin="11"/>
-    </net>
-    <net code="21" name="Net-(J2-Pad9)">
-      <node ref="J2" pin="9"/>
-    </net>
-    <net code="22" name="Net-(J2-Pad6)">
-      <node ref="J2" pin="6"/>
-    </net>
-    <net code="23" name="/PWM_B">
-      <node ref="R5" pin="2"/>
-      <node ref="SHIELD1" pin="8"/>
-    </net>
-    <net code="24" name="/ANALOG_OUT_B">
-      <node ref="J2" pin="8"/>
-      <node ref="R5" pin="1"/>
-      <node ref="C6" pin="1"/>
-    </net>
-    <net code="25" name="/ANALOG_IN_B">
-      <node ref="SHIELD1" pin="A1"/>
-      <node ref="J2" pin="2"/>
-    </net>
-    <net code="26" name="/VALVE_OFF_B">
-      <node ref="SHIELD1" pin="25"/>
-      <node ref="J2" pin="12"/>
-    </net>
-    <net code="27" name="/PURGE_B">
-      <node ref="SHIELD1" pin="24"/>
-      <node ref="J2" pin="4"/>
-    </net>
-    <net code="28" name="/ANALOG_OUT_A">
-      <node ref="R4" pin="1"/>
-      <node ref="J1" pin="8"/>
-      <node ref="C5" pin="1"/>
-    </net>
-    <net code="29" name="Net-(J1-Pad15)">
-      <node ref="J1" pin="15"/>
-    </net>
-    <net code="30" name="/VALVE_OFF_A">
+    <net code="101" name="/VALVE_OFF_A">
+      <node ref="ARDUINO1" pin="23"/>
       <node ref="J1" pin="12"/>
-      <node ref="SHIELD1" pin="23"/>
     </net>
-    <net code="31" name="/PURGE_A">
-      <node ref="SHIELD1" pin="22"/>
+    <net code="102" name="/PURGE_A">
+      <node ref="ARDUINO1" pin="22"/>
       <node ref="J1" pin="4"/>
     </net>
-    <net code="32" name="/PWM_A">
-      <node ref="R4" pin="2"/>
-      <node ref="SHIELD1" pin="7"/>
-    </net>
-    <net code="33" name="/ANALOG_IN_A">
-      <node ref="SHIELD1" pin="A0"/>
-      <node ref="J1" pin="2"/>
-    </net>
-    <net code="34" name="Net-(SHIELD1-PadA13)">
-      <node ref="SHIELD1" pin="A13"/>
-    </net>
-    <net code="35" name="Net-(SHIELD1-PadAREF)">
-      <node ref="SHIELD1" pin="AREF"/>
-    </net>
-    <net code="36" name="Net-(SHIELD1-Pad5V_5)">
-      <node ref="SHIELD1" pin="5V_5"/>
-    </net>
-    <net code="37" name="Net-(SHIELD1-PadGND5)">
-      <node ref="SHIELD1" pin="GND5"/>
-    </net>
-    <net code="38" name="Net-(SHIELD1-Pad5V_4)">
-      <node ref="SHIELD1" pin="5V_4"/>
-    </net>
-    <net code="39" name="Net-(SHIELD1-PadGND4)">
-      <node ref="SHIELD1" pin="GND4"/>
-    </net>
-    <net code="40" name="Net-(SHIELD1-PadGND3)">
-      <node ref="SHIELD1" pin="GND3"/>
-    </net>
-    <net code="41" name="Net-(SHIELD1-PadRST)">
-      <node ref="SHIELD1" pin="RST"/>
-    </net>
-    <net code="42" name="Net-(SHIELD1-PadA15)">
-      <node ref="SHIELD1" pin="A15"/>
-    </net>
-    <net code="43" name="Net-(SHIELD1-PadA14)">
-      <node ref="SHIELD1" pin="A14"/>
-    </net>
-    <net code="44" name="Net-(SHIELD1-Pad3V3)">
-      <node ref="SHIELD1" pin="3V3"/>
-    </net>
-    <net code="45" name="Net-(SHIELD1-PadIREF)">
-      <node ref="SHIELD1" pin="IREF"/>
-    </net>
-    <net code="46" name="Net-(SHIELD1-PadA12)">
-      <node ref="SHIELD1" pin="A12"/>
-    </net>
-    <net code="47" name="Net-(SHIELD1-PadA11)">
-      <node ref="SHIELD1" pin="A11"/>
-    </net>
-    <net code="48" name="Net-(SHIELD1-PadA10)">
-      <node ref="SHIELD1" pin="A10"/>
-    </net>
-    <net code="49" name="Net-(SHIELD1-PadNC)">
-      <node ref="SHIELD1" pin="NC"/>
-    </net>
-    <net code="50" name="Net-(SHIELD1-PadA9)">
-      <node ref="SHIELD1" pin="A9"/>
-    </net>
-    <net code="51" name="Net-(SHIELD1-Pad49)">
-      <node ref="SHIELD1" pin="49"/>
-    </net>
-    <net code="52" name="Net-(SHIELD1-Pad39)">
-      <node ref="SHIELD1" pin="39"/>
-    </net>
-    <net code="53" name="Net-(SHIELD1-Pad29)">
-      <node ref="SHIELD1" pin="29"/>
-    </net>
-    <net code="54" name="Net-(SHIELD1-PadA8)">
-      <node ref="SHIELD1" pin="A8"/>
-    </net>
-    <net code="55" name="Net-(SHIELD1-Pad48)">
-      <node ref="SHIELD1" pin="48"/>
-    </net>
-    <net code="56" name="Net-(SHIELD1-Pad38)">
-      <node ref="SHIELD1" pin="38"/>
-    </net>
-    <net code="57" name="Net-(SHIELD1-Pad28)">
-      <node ref="SHIELD1" pin="28"/>
-    </net>
-    <net code="58" name="Net-(SHIELD1-PadA7)">
-      <node ref="SHIELD1" pin="A7"/>
-    </net>
-    <net code="59" name="Net-(SHIELD1-PadA6)">
-      <node ref="SHIELD1" pin="A6"/>
-    </net>
-    <net code="60" name="Net-(SHIELD1-PadA5)">
-      <node ref="SHIELD1" pin="A5"/>
-    </net>
-    <net code="61" name="Net-(SHIELD1-PadA4)">
-      <node ref="SHIELD1" pin="A4"/>
-    </net>
-    <net code="62" name="Net-(SHIELD1-PadA3)">
-      <node ref="SHIELD1" pin="A3"/>
-    </net>
-    <net code="63" name="Net-(SHIELD1-PadA2)">
-      <node ref="SHIELD1" pin="A2"/>
-    </net>
-    <net code="64" name="Net-(SHIELD1-Pad18)">
-      <node ref="SHIELD1" pin="18"/>
-    </net>
-    <net code="65" name="Net-(SHIELD1-Pad40)">
-      <node ref="SHIELD1" pin="40"/>
-    </net>
-    <net code="66" name="Net-(SHIELD1-Pad42)">
-      <node ref="SHIELD1" pin="42"/>
-    </net>
-    <net code="67" name="Net-(SHIELD1-Pad32)">
-      <node ref="SHIELD1" pin="32"/>
-    </net>
-    <net code="68" name="Net-(SHIELD1-Pad12)">
-      <node ref="SHIELD1" pin="12"/>
-    </net>
-    <net code="69" name="Net-(SHIELD1-Pad51)">
-      <node ref="SHIELD1" pin="51"/>
-    </net>
-    <net code="70" name="Net-(SHIELD1-Pad41)">
-      <node ref="SHIELD1" pin="41"/>
-    </net>
-    <net code="71" name="Net-(SHIELD1-Pad31)">
-      <node ref="SHIELD1" pin="31"/>
-    </net>
-    <net code="73" name="Net-(SHIELD1-Pad21)">
-      <node ref="SHIELD1" pin="21"/>
-    </net>
-    <net code="74" name="Net-(SHIELD1-Pad11)">
-      <node ref="SHIELD1" pin="11"/>
-    </net>
-    <net code="75" name="Net-(SHIELD1-Pad50)">
-      <node ref="SHIELD1" pin="50"/>
-    </net>
-    <net code="76" name="Net-(SHIELD1-Pad52)">
-      <node ref="SHIELD1" pin="52"/>
-    </net>
-    <net code="77" name="Net-(SHIELD1-Pad30)">
-      <node ref="SHIELD1" pin="30"/>
-    </net>
-    <net code="79" name="Net-(SHIELD1-Pad20)">
-      <node ref="SHIELD1" pin="20"/>
-    </net>
-    <net code="80" name="Net-(SHIELD1-Pad10)">
-      <node ref="SHIELD1" pin="10"/>
-    </net>
-    <net code="81" name="Net-(SHIELD1-Pad9)">
-      <node ref="SHIELD1" pin="9"/>
-    </net>
-    <net code="82" name="Net-(SHIELD1-Pad6)">
-      <node ref="SHIELD1" pin="6"/>
-    </net>
-    <net code="83" name="Net-(SHIELD1-Pad5)">
-      <node ref="SHIELD1" pin="5"/>
-    </net>
-    <net code="84" name="Net-(SHIELD1-Pad4)">
-      <node ref="SHIELD1" pin="4"/>
-    </net>
-    <net code="85" name="Net-(SHIELD1-Pad1)">
-      <node ref="SHIELD1" pin="1"/>
-    </net>
-    <net code="86" name="Net-(SHIELD1-Pad47)">
-      <node ref="SHIELD1" pin="47"/>
-    </net>
-    <net code="87" name="Net-(SHIELD1-Pad37)">
-      <node ref="SHIELD1" pin="37"/>
-    </net>
-    <net code="88" name="Net-(SHIELD1-Pad27)">
-      <node ref="SHIELD1" pin="27"/>
-    </net>
-    <net code="89" name="Net-(SHIELD1-Pad17)">
-      <node ref="SHIELD1" pin="17"/>
-    </net>
-    <net code="90" name="Net-(SHIELD1-Pad46)">
-      <node ref="SHIELD1" pin="46"/>
-    </net>
-    <net code="91" name="Net-(SHIELD1-Pad36)">
-      <node ref="SHIELD1" pin="36"/>
-    </net>
-    <net code="92" name="Net-(SHIELD1-Pad26)">
-      <node ref="SHIELD1" pin="26"/>
-    </net>
-    <net code="93" name="Net-(SHIELD1-Pad16)">
-      <node ref="SHIELD1" pin="16"/>
-    </net>
-    <net code="94" name="Net-(SHIELD1-Pad45)">
-      <node ref="SHIELD1" pin="45"/>
-    </net>
-    <net code="95" name="Net-(SHIELD1-Pad35)">
-      <node ref="SHIELD1" pin="35"/>
-    </net>
-    <net code="96" name="Net-(SHIELD1-Pad15)">
-      <node ref="SHIELD1" pin="15"/>
-    </net>
-    <net code="97" name="Net-(SHIELD1-Pad44)">
-      <node ref="SHIELD1" pin="44"/>
-    </net>
-    <net code="98" name="Net-(SHIELD1-Pad34)">
-      <node ref="SHIELD1" pin="34"/>
-    </net>
-    <net code="99" name="/TX3">
-      <node ref="P2" pin="1"/>
-      <node ref="SHIELD1" pin="14"/>
-    </net>
-    <net code="100" name="Net-(SHIELD1-Pad53)">
-      <node ref="SHIELD1" pin="53"/>
-    </net>
-    <net code="101" name="Net-(SHIELD1-Pad43)">
-      <node ref="SHIELD1" pin="43"/>
-    </net>
-    <net code="102" name="Net-(SHIELD1-Pad33)">
-      <node ref="SHIELD1" pin="33"/>
-    </net>
-    <net code="103" name="Net-(SHIELD1-Pad13)">
-      <node ref="SHIELD1" pin="13"/>
-    </net>
-    <net code="104" name="Net-(SHIELD1-Pad0)">
-      <node ref="SHIELD1" pin="0"/>
+    <net code="103" name="/ENC_A">
+      <node ref="ARDUINO1" pin="2"/>
+      <node ref="E1" pin="5"/>
+      <node ref="R1" pin="2"/>
     </net>
   </nets>
 </export>

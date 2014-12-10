@@ -42,3 +42,7 @@ coverage.xml
 docs/_build/
 
 RELEASE-VERSION
+*.bak
+*.bck
+*.dcm
+*-bak
