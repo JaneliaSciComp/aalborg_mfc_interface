@@ -1,4 +1,4 @@
-update=Thu 11 Dec 2014 11:13:48 AM EST
+update=Thu 11 Dec 2014 03:18:05 PM EST
 version=1
 last_client=kicad
 [cvpcb]
@@ -63,4 +63,3 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=aalborg_mfc_interface
-LibName32=/home/polidorop/git/kicad-libraries/components
