@@ -15,12 +15,13 @@ Date: Wed 10 Dec 2014 05:16:41 PM EST
 |   |   10 | REG1           | CONV_DC_DC_12V_1A |        1 | CONV_DC/DC_1A_12V_OUT_SIP_VERT   | 945-1392-5-ND             | digikey  |
 |   |   11 | U1             | MAX6817           |        1 | IC_DEBOUNCER_SWITCH_DUAL_SOT23-6 | MAX6817EUT+TCT-ND         | digikey  |
 |   |      |                |                   |          |                                  |                           |          |
-|   |   12 |                | POWER             |        1 | POWER SUPPLY SWITCHER 101W 24V   | 271-2731-ND               | digikey  |
-|   |   13 |                | POWER             |        1 | LINE CORD 3 COND US              | 993-1039-ND               | digikey  |
-|   |   14 |                | POWER             |        2 | CONN HDR VERT 50POS .100" SNGL   | SAM1055-50-ND             | digikey  |
-|   |   15 |                | DISPLAY           |        1 | LCD SERIAL 4X20 SIDE WHT BKLT    | NHD-0420D3Z-NSW-BBW-V3-ND | digikey  |
-|   |   16 |                | DISPLAY           |        1 | "BERGSTIK II .100"" SR STRAIGHT" | 609-3461-ND               | digikey  |
-|   |   17 |                | DISPLAY           |        1 | Jumper Wire - 0.1", 3-pin, 4"    | PRT-10363                 | sparkfun |
-|   |   18 |                | ENCODER           |        1 | KNOB CLR/MATTE.50"DIA .250"SHAFT | 226-3100-ND               | digikey  |
-|   |   19 |                | MFC               |        2 | ASSEMBLED D-SUB CABLE 15-POS     | 277-7325-ND               | digikey  |
+|   |   12 |                | ARDUINO_MEGA      |        2 | CONN HDR VERT 50POS .100" SNGL   | SAM1055-50-ND             | digikey  |
+|   |   13 |                | ARDUINO_MEGA      |        1 | CABLE USB A-B MALE 1M 2.0 VERS   | AE1462-ND                 | digikey  |
+|   |   14 |                | POWER             |        1 | POWER SUPPLY SWITCHER 101W 24V   | 271-2731-ND               | digikey  |
+|   |   15 |                | POWER             |        1 | LINE CORD 3 COND US              | 993-1039-ND               | digikey  |
+|   |   16 |                | DISPLAY           |        1 | LCD SERIAL 4X20 SIDE WHT BKLT    | NHD-0420D3Z-NSW-BBW-V3-ND | digikey  |
+|   |   17 |                | DISPLAY           |        1 | "BERGSTIK II .100"" SR STRAIGHT" | 609-3461-ND               | digikey  |
+|   |   18 |                | DISPLAY           |        1 | Jumper Wire - 0.1", 3-pin, 4"    | PRT-10363                 | sparkfun |
+|   |   19 |                | ENCODER_C14       |        1 | KNOB CLR/MATTE.50"DIA .250"SHAFT | 226-3100-ND               | digikey  |
+|   |   20 |                | MFC               |        2 | ASSEMBLED D-SUB CABLE 15-POS     | 277-7325-ND               | digikey  |
 |   |      |                |                   |          |                                  |                           |          |
