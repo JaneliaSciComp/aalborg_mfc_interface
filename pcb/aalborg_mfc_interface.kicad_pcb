@@ -1,4 +1,4 @@
-(kicad_pcb (version 4) (host pcbnew 0.201412101631+5319~19~ubuntu14.04.1-product)
+(kicad_pcb (version 4) (host pcbnew 0.201412111631+5320~19~ubuntu14.04.1-product)
 
   (general
     (links 57)
@@ -177,7 +177,7 @@
 
   (module aalborg_mfc_interface:Micro-MaTch_6_SMD (layer F.Cu) (tedit 5480B1C7) (tstamp 5480C9BE)
     (at 181.61 116.84)
-    (path /5488F1C1)
+    (path /548B59E0)
     (fp_text reference E1 (at 0 -5.08) (layer F.SilkS)
       (effects (font (size 1.016 1.016) (thickness 0.254)))
     )
@@ -875,7 +875,7 @@
   (gr_text https://github.com/JaneliaSciComp/remote-devices (at 188.976 101.6 90) (layer F.SilkS)
     (effects (font (size 0.762 0.762) (thickness 0.1905)))
   )
-  (gr_text "Janelia Remote Device\naalborg_mfc_interface\nmodel_number: 1100\n12/2014\nversion 1.1" (at 184.15 101.6 90) (layer F.SilkS)
+  (gr_text "Janelia Remote Device\naalborg_mfc_interface\n12/2014\nversion 1.1" (at 184.15 101.6 90) (layer F.SilkS)
     (effects (font (size 1.016 1.016) (thickness 0.254)))
   )
   (gr_line (start 93.98 76.2) (end 93.98 129.54) (angle 90) (layer Edge.Cuts) (width 0.2286))
