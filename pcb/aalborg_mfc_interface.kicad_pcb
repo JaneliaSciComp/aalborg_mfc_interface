@@ -1,9 +1,9 @@
-(kicad_pcb (version 4) (host pcbnew 0.201412111631+5320~19~ubuntu14.04.1-product)
+(kicad_pcb (version 4) (host pcbnew 0.201501042001+5351~20~ubuntu14.04.1-product)
 
   (general
     (links 57)
     (no_connects 57)
-    (area 93.865699 76.085699 210.934301 129.654301)
+    (area 90.995499 75.755499 211.324 130.044)
     (thickness 1.6)
     (drawings 11)
     (tracks 0)
@@ -875,7 +875,7 @@
   (gr_text https://github.com/JaneliaSciComp/remote-devices (at 188.976 101.6 90) (layer F.SilkS)
     (effects (font (size 0.762 0.762) (thickness 0.1905)))
   )
-  (gr_text "Janelia Remote Device\naalborg_mfc_interface\n12/2014\nversion 1.1" (at 184.15 101.6 90) (layer F.SilkS)
+  (gr_text "Janelia Remote Device\naalborg_mfc_interface\nmodel_number: 1100\n01/2015\nversion 1.1" (at 184.15 101.6 90) (layer F.SilkS)
     (effects (font (size 1.016 1.016) (thickness 0.254)))
   )
   (gr_line (start 93.98 76.2) (end 93.98 129.54) (angle 90) (layer Edge.Cuts) (width 0.2286))
