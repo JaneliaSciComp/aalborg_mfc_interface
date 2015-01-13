@@ -1,4 +1,4 @@
-Cmp-Mod V01 Genere par PcbNew le Thu 08 Jan 2015 05:19:51 PM EST
+Cmp-Mod V01 Genere par PcbNew le Mon 12 Jan 2015 04:27:37 PM EST
 
 BeginCmp
 TimeStamp = 5488C5FC
@@ -161,17 +161,17 @@ IdModule  = aalborg_mfc_interface:Micro-MaTch_6_SMD;
 EndCmp
 
 BeginCmp
-TimeStamp = 5480C9F0
-Path = /548910B3
-Reference = J2;
+TimeStamp = 5480C9D7
+Path = /54890F29
+Reference = J1;
 ValeurCmp = DB15FV;
 IdModule  = aalborg_mfc_interface:DB15FD;
 EndCmp
 
 BeginCmp
-TimeStamp = 5480C9D7
-Path = /54890F29
-Reference = J1;
+TimeStamp = 5480C9F0
+Path = /548910B3
+Reference = J2;
 ValeurCmp = DB15FV;
 IdModule  = aalborg_mfc_interface:DB15FD;
 EndCmp

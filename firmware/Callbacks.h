@@ -14,5 +14,10 @@
 
 namespace callbacks
 {
+void setMfcFlowCallback();
+
+void getMfcFlowSettingCallback();
+
+void getMfcFlowMeasureCallback();
 }
 #endif
