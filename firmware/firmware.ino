@@ -14,32 +14,36 @@ using namespace RemoteDevice;
 
 void setup()
 {
+  // Pin Setup
   for (int mfc = 0; mfc < constants::MFC_COUNT; mfc++)
   {
     pinMode(constants::purge_pins[mfc],INPUT);
     pinMode(constants::valve_off_pins[mfc],INPUT);
   }
 
+  // Device Info
   remote_device.setName(constants::device_name);
   remote_device.setModelNumber(constants::model_number);
   remote_device.setFirmwareNumber(constants::firmware_number);
 
-  remote_device.createSavedVariable(constants::flow_setting_0_name,constants::flow_setting_default);
-  remote_device.createSavedVariable(constants::flow_setting_1_name,constants::flow_setting_default);
-  remote_device.createSavedVariable(constants::flow_setting_2_name,constants::flow_setting_default);
+  // Saved Variables
+  remote_device.createSavedVariable(constants::flow_settings_name,constants::flow_settings_default);
+
+  uint8 flow_settings[constants::MFC_COUNT];
+  remote_device.getSavedVariableValue(constants::flow_settings_name,flow_settings);
 
   for (int mfc = 0; mfc < constants::MFC_COUNT; mfc++)
   {
-    uint8 pwm_value;
-    remote_device.getSavedVariableValue(constants::starting_chars_name,starting_chars_count);
-    analogWrite(constants::pwm_pins[mfc],0);
+    analogWrite(constants::pwm_pins[mfc],flow_settings[mfc]);
   }
 
+  // Parameters
   Parameter& mfc_parameter = remote_device.createParameter(constants::mfc_parameter_name);
   percent_parameter.setRange(0,constants::MFC_COUNT-1);
   Parameter& percent_parameter = remote_device.createParameter(constants::percent_parameter_name);
   percent_parameter.setRange(constants::percent_min,constants::percent_max);
 
+  // Methods
   Method& set_mfc_flow_method = remote_device.createMethod(constants::set_mfc_flow_method_name);
   set_mfc_flow_method.attachCallback(callbacks::setMfcFlowCallback);
   set_mfc_flow_method.addParameter(mfc_parameter);
@@ -53,6 +57,7 @@ void setup()
   get_mfc_flow_measure_method.attachCallback(callbacks::getMfcValueACallback);
   get_mfc_flow_measure_method.addParameter(mfc_parameter);
 
+  // Start Server
   remote_device.startServer(constants::baudrate);
 }
 

@@ -28,7 +28,7 @@ const int analog_in_max = 1023;
 const int percent_min = 0;
 const int percent_max = 100;
 
-extern const uint8 flow_setting_default = 0;
+extern const uint8 flow_settings_default = {0,0};
 
 FLASH_STRING(device_name,"aalborg_mfc_interface");
 FLASH_STRING(set_mfc_flow_method_name,"setMfcFlow");
@@ -36,7 +36,5 @@ FLASH_STRING(get_mfc_flow_setting_method_name,"getMfcFlowSetting");
 FLASH_STRING(get_mfc_flow_measure_method_name,"getMfcFlowMeasure");
 FLASH_STRING(mfc_parameter_name,"mfc");
 FLASH_STRING(percent_parameter_name,"percent");
-FLASH_STRING(flow_setting_0_name,"flow_setting_0");
-FLASH_STRING(flow_setting_1_name,"flow_setting_1");
-FLASH_STRING(flow_setting_2_name,"flow_setting_2");
+FLASH_STRING(flow_settings_name,"flow_settings");
 }

@@ -31,7 +31,7 @@ extern const int analog_in_max;
 extern const int percent_min;
 extern const int percent_max;
 
-extern const uint8 flow_setting_default;
+extern const uint8 flow_settings_default[MFC_COUNT];
 
 extern _FLASH_STRING device_name;
 extern _FLASH_STRING set_mfc_flow_method_name;
@@ -39,8 +39,6 @@ extern _FLASH_STRING get_mfc_flow_setting_method_name;
 extern _FLASH_STRING get_mfc_flow_measure_method_name;
 extern _FLASH_STRING mfc_parameter_name;
 extern _FLASH_STRING percent_parameter_name;
-extern _FLASH_STRING flow_setting_0_name;
-extern _FLASH_STRING flow_setting_1_name;
-extern _FLASH_STRING flow_setting_2_name;
+extern _FLASH_STRING flow_settings_name;
 }
 #endif
