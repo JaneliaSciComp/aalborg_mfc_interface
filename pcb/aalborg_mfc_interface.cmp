@@ -1,57 +1,145 @@
-Cmp-Mod V01 Genere par PcbNew le Mon 12 Jan 2015 04:27:37 PM EST
+Cmp-Mod V01 Genere par PcbNew le Fri 16 Jan 2015 04:28:52 PM EST
 
 BeginCmp
-TimeStamp = 5488C5FC
-Path = /54894188
-Reference = R4;
+TimeStamp = 54B97002
+Path = /54B95C4E
+Reference = S1;
+ValeurCmp = HEADER_01X02;
+IdModule  = aalborg_mfc_interface:Header_Shrouded_2_Pin;
+EndCmp
+
+BeginCmp
+TimeStamp = 54B96FF2
+Path = /54B4453C
+Reference = C8;
+ValeurCmp = 10uF;
+IdModule  = aalborg_mfc_interface:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C9BE
+Path = /548B59E0
+Reference = E1;
+ValeurCmp = ENCODER_C14;
+IdModule  = aalborg_mfc_interface:Micro-MaTch_6_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 54B58AEF
+Path = /54B9DA07
+Reference = P5;
+ValeurCmp = HEADER_01X03_SHR;
+IdModule  = aalborg_mfc_interface:Header_Shrouded_3_Pin;
+EndCmp
+
+BeginCmp
+TimeStamp = 54B58ADE
+Path = /54B9D9D9
+Reference = P4;
+ValeurCmp = HEADER_01X03_SHR;
+IdModule  = aalborg_mfc_interface:Header_Shrouded_3_Pin;
+EndCmp
+
+BeginCmp
+TimeStamp = 54B58ABE
+Path = /54B9D7EF
+Reference = P3;
+ValeurCmp = HEADER_01X03_SHR;
+IdModule  = aalborg_mfc_interface:Header_Shrouded_3_Pin;
+EndCmp
+
+BeginCmp
+TimeStamp = 54B44911
+Path = /54B44545
+Reference = R6;
 ValeurCmp = 5.11k;
 IdModule  = aalborg_mfc_interface:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = 5480CA26
-Path = /54893F36
-Reference = R2;
-ValeurCmp = 5.11k;
-IdModule  = aalborg_mfc_interface:SM1210;
+TimeStamp = 54B44905
+Path = /54B43ADD
+Reference = J3;
+ValeurCmp = DB15FV;
+IdModule  = aalborg_mfc_interface:DB15FD;
 EndCmp
 
 BeginCmp
-TimeStamp = 5480CA1A
-Path = /54893E85
-Reference = R1;
-ValeurCmp = 5.11k;
-IdModule  = aalborg_mfc_interface:SM1210;
-EndCmp
-
-BeginCmp
-TimeStamp = 5480C99F
+TimeStamp = 54B448E0
 Path = /54892B53
-Reference = C6;
+Reference = C7;
 ValeurCmp = 10uF;
 IdModule  = aalborg_mfc_interface:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = 5480C993
-Path = /54892AC2
-Reference = C5;
-ValeurCmp = 10uF;
+TimeStamp = 5480C9F0
+Path = /548910B3
+Reference = J2;
+ValeurCmp = DB15FV;
+IdModule  = aalborg_mfc_interface:DB15FD;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C9D7
+Path = /54890F29
+Reference = J1;
+ValeurCmp = DB15FV;
+IdModule  = aalborg_mfc_interface:DB15FD;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C9AB
+Path = /54891A64
+Reference = D1;
+ValeurCmp = LED_24V;
+IdModule  = aalborg_mfc_interface:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 5488C98D
+Path = /54AEFE62
+Reference = ARDUINO1;
+ValeurCmp = ARDUINO_MEGA;
+IdModule  = aalborg_mfc_interface:ARDUINO_MEGA_SHIELD;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AF04BB
+Path = /5489443F
+Reference = R5;
+ValeurCmp = 5.11k;
 IdModule  = aalborg_mfc_interface:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = 5480C987
-Path = /5489352B
-Reference = C4;
-ValeurCmp = 0.1uF;
+TimeStamp = 5480CA49
+Path = /5489CB72
+Reference = REG1;
+ValeurCmp = CONV_DC_DC_12V_1A;
+IdModule  = aalborg_mfc_interface:DC_DC_CONV_R78C;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C9FD
+Path = /5488FCDE
+Reference = P1;
+ValeurCmp = PWR_JACK_2.5x5.5;
+IdModule  = aalborg_mfc_interface:DCJACK_2PIN_HIGHCURRENT;
+EndCmp
+
+BeginCmp
+TimeStamp = 5488C999
+Path = /54AF2C25
+Reference = R3;
+ValeurCmp = 5.11k;
 IdModule  = aalborg_mfc_interface:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = 5480C97B
-Path = /5489288F
-Reference = C3;
+TimeStamp = 5480C963
+Path = /548925C4
+Reference = C1;
 ValeurCmp = 10uF;
 IdModule  = aalborg_mfc_interface:SM1210;
 EndCmp
@@ -65,11 +153,67 @@ IdModule  = aalborg_mfc_interface:SM1210;
 EndCmp
 
 BeginCmp
-TimeStamp = 5480C963
-Path = /548925C4
-Reference = C1;
+TimeStamp = 5480C97B
+Path = /5489288F
+Reference = C3;
 ValeurCmp = 10uF;
 IdModule  = aalborg_mfc_interface:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C987
+Path = /5489352B
+Reference = C4;
+ValeurCmp = 0.1uF;
+IdModule  = aalborg_mfc_interface:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C993
+Path = /54B955FC
+Reference = C5;
+ValeurCmp = 0.1uF;
+IdModule  = aalborg_mfc_interface:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C99F
+Path = /54892AC2
+Reference = C6;
+ValeurCmp = 10uF;
+IdModule  = aalborg_mfc_interface:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480CA1A
+Path = /54893E85
+Reference = R1;
+ValeurCmp = 5.11k;
+IdModule  = aalborg_mfc_interface:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480CA26
+Path = /54893F36
+Reference = R2;
+ValeurCmp = 5.11k;
+IdModule  = aalborg_mfc_interface:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5488C5FC
+Path = /54894188
+Reference = R4;
+ValeurCmp = 5.11k;
+IdModule  = aalborg_mfc_interface:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 54B9701F
+Path = /54B95605
+Reference = U2;
+ValeurCmp = MAX6817;
+IdModule  = aalborg_mfc_interface:MAX6817;
 EndCmp
 
 BeginCmp
@@ -81,99 +225,27 @@ IdModule  = aalborg_mfc_interface:MAX6817;
 EndCmp
 
 BeginCmp
-TimeStamp = 5488C999
-Path = /54AF2C25
-Reference = R3;
-ValeurCmp = 5.11k;
-IdModule  = aalborg_mfc_interface:SM1210;
-EndCmp
-
-BeginCmp
-TimeStamp = 5480CA0E
-Path = /5489D3E6
-Reference = P2;
-ValeurCmp = HEADER_01X03;
-IdModule  = aalborg_mfc_interface:Header_Shrouded_3_Pin;
-EndCmp
-
-BeginCmp
-TimeStamp = 5480C9FD
-Path = /5488FCDE
-Reference = P1;
-ValeurCmp = PWR_JACK_2.5x5.5;
-IdModule  = aalborg_mfc_interface:DCJACK_2PIN_HIGHCURRENT;
-EndCmp
-
-BeginCmp
-TimeStamp = 5480CA49
-Path = /5489CB72
-Reference = REG1;
-ValeurCmp = CONV_DC_DC_12V_1A;
-IdModule  = aalborg_mfc_interface:DC_DC_CONV_R78C;
-EndCmp
-
-BeginCmp
-TimeStamp = 54AF04AF
-Path = /54AF19CE
-Reference = P3;
-ValeurCmp = BNC_DOUBLE_RA;
-IdModule  = aalborg_mfc_interface:BNC_DOUBLE;
-EndCmp
-
-BeginCmp
-TimeStamp = 54AF04BB
-Path = /5489443F
-Reference = R5;
-ValeurCmp = 5.11k;
-IdModule  = aalborg_mfc_interface:SM1210;
+TimeStamp = 54B97532
+Path = /54B9B96B
+Reference = SW2;
+ValeurCmp = KT_SWITCH;
+IdModule  = aalborg_mfc_interface:KT_SWITCH;
 EndCmp
 
 BeginCmp
 TimeStamp = 54AF04C8
-Path = /54AF2791
+Path = /54B9764F
 Reference = SW1;
 ValeurCmp = SPST_SERIES_M;
 IdModule  = aalborg_mfc_interface:SPST_SERIES_M;
 EndCmp
 
 BeginCmp
-TimeStamp = 5488C98D
-Path = /54AEFE62
-Reference = ARDUINO1;
-ValeurCmp = ARDUINO_MEGA;
-IdModule  = aalborg_mfc_interface:ARDUINO_MEGA_SHIELD;
-EndCmp
-
-BeginCmp
-TimeStamp = 5480C9AB
-Path = /54891A64
-Reference = D1;
-ValeurCmp = LED_24V;
-IdModule  = aalborg_mfc_interface:LED_555-3XXX;
-EndCmp
-
-BeginCmp
-TimeStamp = 5480C9BE
-Path = /548B59E0
-Reference = E1;
-ValeurCmp = ENCODER_C14;
-IdModule  = aalborg_mfc_interface:Micro-MaTch_6_SMD;
-EndCmp
-
-BeginCmp
-TimeStamp = 5480C9D7
-Path = /54890F29
-Reference = J1;
-ValeurCmp = DB15FV;
-IdModule  = aalborg_mfc_interface:DB15FD;
-EndCmp
-
-BeginCmp
-TimeStamp = 5480C9F0
-Path = /548910B3
-Reference = J2;
-ValeurCmp = DB15FV;
-IdModule  = aalborg_mfc_interface:DB15FD;
+TimeStamp = 54B9B559
+Path = /54B9E074
+Reference = P2;
+ValeurCmp = HEADER_01X03;
+IdModule  = aalborg_mfc_interface:Header_3_Pin;
 EndCmp
 
 EndListe
