@@ -73,7 +73,9 @@ $EndComp
 Wire Wire Line
 	1200 1200 1200 1550
 Wire Wire Line
-	1200 1550 1850 1550
+	1200 1550 1350 1550
+Wire Wire Line
+	1350 1550 1850 1550
 Wire Wire Line
 	1350 1200 1350 1550
 Connection ~ 1350 1550
@@ -91,7 +93,9 @@ $EndComp
 Wire Wire Line
 	1850 1650 1350 1650
 Wire Wire Line
-	1350 1650 1350 1800
+	1350 1650 1350 1750
+Wire Wire Line
+	1350 1750 1350 1800
 Wire Wire Line
 	1850 1750 1350 1750
 Connection ~ 1350 1750
@@ -189,14 +193,18 @@ F 3 "" H 5050 950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5250 950  5500 950 
+	5250 950  5400 950 
+Wire Wire Line
+	5400 950  5500 950 
 Wire Wire Line
 	5250 950  5250 850 
 Wire Wire Line
 	5400 850  5400 950 
 Connection ~ 5400 950 
 Wire Wire Line
-	5050 1050 5500 1050
+	5050 1050 5400 1050
+Wire Wire Line
+	5400 1050 5500 1050
 Wire Wire Line
 	5050 1050 5050 950 
 Wire Wire Line
@@ -239,7 +247,9 @@ F 3 "" H 1300 6600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1300 6350 1300 6600
+	1300 6350 1300 6450
+Wire Wire Line
+	1300 6450 1300 6600
 Wire Wire Line
 	900  6450 1300 6450
 Connection ~ 1300 6450
@@ -259,7 +269,9 @@ Wire Wire Line
 Wire Wire Line
 	1300 5900 1000 5900
 Wire Wire Line
-	1000 5850 1000 6350
+	1000 5850 1000 5900
+Wire Wire Line
+	1000 5900 1000 6350
 Wire Wire Line
 	1000 6350 900  6350
 Connection ~ 1000 5900
@@ -303,20 +315,28 @@ F 3 "" H 6800 1450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6800 1200 6800 1450
+	6800 1200 6800 1350
+Wire Wire Line
+	6800 1350 6800 1450
 Wire Wire Line
 	6150 1300 6150 1350
 Wire Wire Line
-	6150 1350 7450 1350
+	6150 1350 6800 1350
+Wire Wire Line
+	6800 1350 7450 1350
 Connection ~ 6800 1350
 Wire Wire Line
 	7450 1350 7450 1300
 Wire Wire Line
 	6150 900  6150 850 
 Wire Wire Line
-	6150 850  6400 850 
+	6150 850  6200 850 
 Wire Wire Line
-	7200 850  7700 850 
+	6200 850  6400 850 
+Wire Wire Line
+	7200 850  7450 850 
+Wire Wire Line
+	7450 850  7700 850 
 Wire Wire Line
 	7450 900  7450 850 
 Connection ~ 7450 850 
@@ -337,7 +357,9 @@ F 3 "" H 1350 7700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	950  7550 1350 7550
+	950  7550 1050 7550
+Wire Wire Line
+	1050 7550 1350 7550
 Wire Wire Line
 	1350 7550 1350 7700
 Wire Wire Line
@@ -356,7 +378,11 @@ F 3 "" H 2000 6850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	950  7050 2000 7050
+	950  7050 1650 7050
+Wire Wire Line
+	1650 7050 1900 7050
+Wire Wire Line
+	1900 7050 2000 7050
 Wire Wire Line
 	2000 7050 2000 6850
 Wire Wire Line
@@ -370,13 +396,17 @@ Wire Wire Line
 Wire Wire Line
 	1550 7150 1550 7700
 Wire Wire Line
-	1550 7700 1950 7700
+	1550 7700 1650 7700
+Wire Wire Line
+	1650 7700 1950 7700
 Wire Wire Line
 	950  7250 1500 7250
 Wire Wire Line
 	1500 7250 1500 7800
 Wire Wire Line
-	1500 7800 1950 7800
+	1500 7800 1900 7800
+Wire Wire Line
+	1900 7800 1950 7800
 Text Label 1050 7350 0    60   ~ 0
 ENC_BTN
 Text Label 1950 7700 0    60   ~ 0
@@ -435,7 +465,9 @@ $EndComp
 Wire Wire Line
 	3750 7000 3750 7050
 Wire Wire Line
-	3750 6500 3750 6600
+	3750 6500 3750 6550
+Wire Wire Line
+	3750 6550 3750 6600
 Wire Wire Line
 	4050 3250 4250 3250
 Text Label 4250 3250 0    60   ~ 0
@@ -472,7 +504,13 @@ VALVE_OFF_0
 Wire Wire Line
 	9050 1350 9000 1350
 Wire Wire Line
-	9000 1350 9000 2250
+	9000 1350 9000 1750
+Wire Wire Line
+	9000 1750 9000 1850
+Wire Wire Line
+	9000 1850 9000 2150
+Wire Wire Line
+	9000 2150 9000 2250
 Wire Wire Line
 	9050 2150 9000 2150
 Connection ~ 9000 2150
@@ -536,7 +574,9 @@ $EndComp
 Wire Wire Line
 	6800 2600 6800 2700
 Wire Wire Line
-	6400 2050 7000 2050
+	6400 2050 6800 2050
+Wire Wire Line
+	6800 2050 7000 2050
 Wire Wire Line
 	6800 2200 6800 2050
 Connection ~ 6800 2050
@@ -560,7 +600,9 @@ $EndComp
 Wire Wire Line
 	6800 3600 6800 3700
 Wire Wire Line
-	6400 3050 7000 3050
+	6400 3050 6800 3050
+Wire Wire Line
+	6800 3050 7000 3050
 Wire Wire Line
 	6800 3200 6800 3050
 Connection ~ 6800 3050
@@ -597,7 +639,13 @@ VALVE_OFF_1
 Wire Wire Line
 	9050 3200 9000 3200
 Wire Wire Line
-	9000 3200 9000 4100
+	9000 3200 9000 3600
+Wire Wire Line
+	9000 3600 9000 3700
+Wire Wire Line
+	9000 3700 9000 4000
+Wire Wire Line
+	9000 4000 9000 4100
 Wire Wire Line
 	9050 4000 9000 4000
 Connection ~ 9000 4000
@@ -946,7 +994,9 @@ F 3 "" H 700 4900 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	700  4000 700  4250
+	700  4000 700  4100
+Wire Wire Line
+	700  4100 700  4250
 Wire Wire Line
 	700  4750 700  4900
 Wire Wire Line
@@ -981,7 +1031,13 @@ VALVE_OFF_2
 Wire Wire Line
 	9050 5100 9000 5100
 Wire Wire Line
-	9000 5100 9000 6000
+	9000 5100 9000 5500
+Wire Wire Line
+	9000 5500 9000 5600
+Wire Wire Line
+	9000 5600 9000 5900
+Wire Wire Line
+	9000 5900 9000 6000
 Wire Wire Line
 	9050 5900 9000 5900
 Connection ~ 9000 5900
@@ -1047,7 +1103,9 @@ $EndComp
 Wire Wire Line
 	6800 4550 6800 4650
 Wire Wire Line
-	6400 4000 7000 4000
+	6400 4000 6800 4000
+Wire Wire Line
+	6800 4000 7000 4000
 Wire Wire Line
 	6800 4150 6800 4000
 Connection ~ 6800 4000
@@ -1228,7 +1286,9 @@ F 3 "" H 4400 3650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4050 3700 4650 3700
+	4050 3700 4400 3700
+Wire Wire Line
+	4400 3700 4650 3700
 Wire Wire Line
 	4400 3700 4400 3650
 $Comp
@@ -1266,11 +1326,11 @@ Connection ~ 3750 6550
 Wire Wire Line
 	4550 7250 4150 7250
 Text Label 4150 7250 0    60   ~ 0
-D21
+BTN
 Wire Wire Line
 	5350 7250 5400 7250
 Text Label 5400 7250 0    60   ~ 0
-D_D21
+D_BTN
 $Comp
 L GND #PWR037
 U 1 1 54B955E9
@@ -1298,7 +1358,9 @@ $EndComp
 Wire Wire Line
 	5600 7000 5600 7050
 Wire Wire Line
-	5600 6500 5600 6600
+	5600 6500 5600 6550
+Wire Wire Line
+	5600 6550 5600 6600
 $Comp
 L 0.1uF C5
 U 1 1 54B955FC
@@ -1330,11 +1392,11 @@ $EndComp
 Wire Wire Line
 	4550 7500 4150 7500
 Text Label 4150 7500 0    60   ~ 0
-D20
+IN
 Wire Wire Line
 	5350 7500 5400 7500
 Text Label 5400 7500 0    60   ~ 0
-D_D20
+D_IN
 $Comp
 L +5VD #PWR039
 U 1 1 54B9560F
@@ -1353,39 +1415,25 @@ Wire Wire Line
 Wire Wire Line
 	5400 6550 5600 6550
 Connection ~ 5600 6550
-$Comp
-L HEADER_01X02 S1
-U 1 1 54B95C4E
-P 4650 6500
-F 0 "S1" H 4650 6650 50  0000 C CNN
-F 1 "HEADER_01X02" V 4750 6500 50  0000 C CNN
-F 2 "aalborg_mfc_interface:Header_Shrouded_2_Pin" H 4550 6550 60  0001 C CNN
-F 3 "" H 4650 6500 60  0000 C CNN
-F 4 "digikey" H 4750 6750 60  0001 C CNN "Vendor"
-F 5 "WM4800-ND" H 4850 6850 60  0001 C CNN "PartNumber"
-F 6 "CONN HEADER 2POS .100 VERT GOLD" H 4950 6950 60  0001 C CNN "Description"
-	1    4650 6500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	4450 6450 4200 6450
-Text Label 4200 6450 0    60   ~ 0
-D20
+	4400 6450 4300 6450
+Text Label 4300 6450 0    60   ~ 0
+IN
 $Comp
 L GND #PWR040
 U 1 1 54B961A4
-P 4350 6600
-F 0 "#PWR040" H 4350 6350 60  0001 C CNN
-F 1 "GND" H 4350 6450 60  0000 C CNN
-F 2 "" H 4350 6600 60  0000 C CNN
-F 3 "" H 4350 6600 60  0000 C CNN
-	1    4350 6600
+P 4300 6600
+F 0 "#PWR040" H 4300 6350 60  0001 C CNN
+F 1 "GND" H 4300 6450 60  0000 C CNN
+F 2 "" H 4300 6600 60  0000 C CNN
+F 3 "" H 4300 6600 60  0000 C CNN
+	1    4300 6600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4350 6600 4350 6550
+	4300 6600 4300 6550
 Wire Wire Line
-	4350 6550 4450 6550
+	4300 6550 4400 6550
 $Comp
 L SPST_SERIES_M SW1
 U 1 1 54B9764F
@@ -1407,9 +1455,9 @@ Wire Wire Line
 Wire Wire Line
 	4050 3450 4250 3450
 Text Label 4250 3450 0    60   ~ 0
-D_D21
+D_BTN
 Text Label 4250 3350 0    60   ~ 0
-D_D20
+D_IN
 $Comp
 L GND #PWR041
 U 1 1 54B9A066
@@ -1426,7 +1474,7 @@ Wire Wire Line
 Wire Wire Line
 	5950 7200 5950 7050
 Text Label 5950 7050 0    60   ~ 0
-D21
+BTN
 $Comp
 L KT_SWITCH SW2
 U 1 1 54B9B96B
@@ -1496,5 +1544,19 @@ F 5 "609-3461-ND" H 900 6850 60  0001 C CNN "PartNumber"
 F 6 "01x03 .100 SR STRAIGHT" H 1000 6950 60  0001 C CNN "Description"
 	1    700  6450
 	-1   0    0    1   
+$EndComp
+$Comp
+L HEADER_01X02_SHR S1
+U 1 1 54BEC0BB
+P 4600 6500
+F 0 "S1" H 4600 6650 50  0000 C CNN
+F 1 "HEADER_01X02_SHR" V 4700 6500 50  0000 C CNN
+F 2 "aalborg_mfc_interface:Header_Shrouded_2_Pin" H 4500 6550 60  0001 C CNN
+F 3 "" H 4600 6500 60  0000 C CNN
+F 4 "digikey" H 4700 6750 60  0001 C CNN "Vendor"
+F 5 "WM4800-ND" H 4800 6850 60  0001 C CNN "PartNumber"
+F 6 "CONN HEADER 2POS .100 VERT GOLD" H 4900 6950 60  0001 C CNN "Description"
+	1    4600 6500
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

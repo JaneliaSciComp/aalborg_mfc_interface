@@ -2,8 +2,8 @@
 <export version="D">
   <design>
     <source>/home/polidorop/git/aalborg_mfc_interface/pcb/aalborg_mfc_interface.sch</source>
-    <date>Tue 20 Jan 2015 01:20:38 PM EST</date>
-    <tool>Eeschema 0.201501112116+5365~20~ubuntu14.04.1-product</tool>
+    <date>Tue 20 Jan 2015 03:11:51 PM EST</date>
+    <tool>Eeschema 0.201501192016+5381~20~ubuntu14.04.1-product</tool>
   </design>
   <components>
     <comp ref="P1">
@@ -294,18 +294,6 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54B95605</tstamp>
     </comp>
-    <comp ref="S1">
-      <value>HEADER_01X02</value>
-      <footprint>aalborg_mfc_interface:Header_Shrouded_2_Pin</footprint>
-      <fields>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">WM4800-ND</field>
-        <field name="Description">CONN HEADER 2POS .100 VERT GOLD</field>
-      </fields>
-      <libsource lib="components" part="HEADER_01X02"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>54B95C4E</tstamp>
-    </comp>
     <comp ref="SW1">
       <value>SPST_SERIES_M</value>
       <footprint>aalborg_mfc_interface:SPST_SERIES_M</footprint>
@@ -377,6 +365,18 @@
       <libsource lib="aalborg_mfc_interface" part="HEADER_01X03"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54B9E074</tstamp>
+    </comp>
+    <comp ref="S1">
+      <value>HEADER_01X02_SHR</value>
+      <footprint>aalborg_mfc_interface:Header_Shrouded_2_Pin</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">WM4800-ND</field>
+        <field name="Description">CONN HEADER 2POS .100 VERT GOLD</field>
+      </fields>
+      <libsource lib="aalborg_mfc_interface" part="HEADER_01X02_SHR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54BEC0BB</tstamp>
     </comp>
   </components>
   <libparts>
@@ -600,6 +600,82 @@
         <pin num="6" name="+5V" type="power_in"/>
       </pins>
     </libpart>
+    <libpart lib="aalborg_mfc_interface" part="HEADER_01X02_SHR">
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">HEADER_01X02_SHR</field>
+        <field name="Footprint">aalborg_mfc_interface:Header_Shrouded_2_Pin</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">WM4800-ND</field>
+        <field name="Description">CONN HEADER 2POS .100 VERT GOLD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="aalborg_mfc_interface" part="HEADER_01X03">
+      <footprints>
+        <fp>Pin_Header_Straight_1X03</fp>
+        <fp>Pin_Header_Angled_1X03</fp>
+        <fp>Socket_Strip_Straight_1X03</fp>
+        <fp>Socket_Strip_Angled_1X03</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">HEADER_01X03</field>
+        <field name="Footprint">aalborg_mfc_interface:Header_3_Pin</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">609-3461-ND</field>
+        <field name="Description">01x03 .100 SR STRAIGHT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="aalborg_mfc_interface" part="HEADER_01X03_SHR">
+      <footprints>
+        <fp>Pin_Header_Straight_1X03</fp>
+        <fp>Pin_Header_Angled_1X03</fp>
+        <fp>Socket_Strip_Straight_1X03</fp>
+        <fp>Socket_Strip_Angled_1X03</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">HEADER_01X03_SHR</field>
+        <field name="Footprint">aalborg_mfc_interface:Header_Shrouded_3_Pin</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">WM4801-ND</field>
+        <field name="Description">CONN HEADER 3POS .100 VERT GOLD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="aalborg_mfc_interface" part="KT_SWITCH">
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">KT_SWITCH</field>
+        <field name="Footprint">aalborg_mfc_interface:KT_SWITCH</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">CKN1860CT-ND</field>
+        <field name="Description">SWITCH TACTILE SPST-NO 1VA 32V</field>
+      </fields>
+      <pins>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="aalborg_mfc_interface" part="LED_24V">
       <footprints>
         <fp>LED-3MM</fp>
@@ -661,82 +737,6 @@
         <pin num="2" name="P2" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="aalborg_mfc_interface" part="KT_SWITCH">
-      <fields>
-        <field name="Reference">SW</field>
-        <field name="Value">KT_SWITCH</field>
-        <field name="Footprint">aalborg_mfc_interface:KT_SWITCH</field>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">CKN1860CT-ND</field>
-        <field name="Description">SWITCH TACTILE SPST-NO 1VA 32V</field>
-      </fields>
-      <pins>
-        <pin num="2" name="2" type="passive"/>
-        <pin num="3" name="3" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="aalborg_mfc_interface" part="HEADER_01X03">
-      <footprints>
-        <fp>Pin_Header_Straight_1X03</fp>
-        <fp>Pin_Header_Angled_1X03</fp>
-        <fp>Socket_Strip_Straight_1X03</fp>
-        <fp>Socket_Strip_Angled_1X03</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">HEADER_01X03</field>
-        <field name="Footprint">aalborg_mfc_interface:Header_3_Pin</field>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">609-3461-ND</field>
-        <field name="Description">01x03 .100 SR STRAIGHT</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-        <pin num="3" name="P3" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="aalborg_mfc_interface" part="HEADER_01X03_SHR">
-      <footprints>
-        <fp>Pin_Header_Straight_1X03</fp>
-        <fp>Pin_Header_Angled_1X03</fp>
-        <fp>Socket_Strip_Straight_1X03</fp>
-        <fp>Socket_Strip_Angled_1X03</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">HEADER_01X03_SHR</field>
-        <field name="Footprint">aalborg_mfc_interface:Header_Shrouded_3_Pin</field>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">WM4801-ND</field>
-        <field name="Description">CONN HEADER 3POS .100 VERT GOLD</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-        <pin num="3" name="P3" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="components" part="HEADER_01X02">
-      <footprints>
-        <fp>Pin_Header_Straight_1X02</fp>
-        <fp>Pin_Header_Angled_1X02</fp>
-        <fp>Socket_Strip_Straight_1X02</fp>
-        <fp>Socket_Strip_Angled_1X02</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">S</field>
-        <field name="Value">HEADER_01X02</field>
-        <field name="Footprint">footprints:Header_2_Pin</field>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">WM4800-ND</field>
-        <field name="Description">CONN HEADER 2POS .100 VERT GOLD</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="aalborg_mfc_interface" part="SPST_SERIES_M">
       <fields>
         <field name="Reference">SW</field>
@@ -755,9 +755,6 @@
   <libraries>
     <library logical="aalborg_mfc_interface">
       <uri>/home/polidorop/git/aalborg_mfc_interface/pcb/aalborg_mfc_interface.lib</uri>
-    </library>
-    <library logical="components">
-      <uri>/home/polidorop/git/kicad-libraries/components.lib</uri>
     </library>
   </libraries>
   <nets>
@@ -851,8 +848,8 @@
       <node ref="ARDUINO1" pin="26"/>
     </net>
     <net code="29" name="/VALVE_OFF_2">
-      <node ref="J3" pin="12"/>
       <node ref="ARDUINO1" pin="27"/>
+      <node ref="J3" pin="12"/>
     </net>
     <net code="30" name="Net-(J3-Pad9)">
       <node ref="J3" pin="9"/>
@@ -862,16 +859,16 @@
     </net>
     <net code="32" name="/ANALOG_OUT_2">
       <node ref="J3" pin="8"/>
-      <node ref="C8" pin="1"/>
       <node ref="R6" pin="1"/>
+      <node ref="C8" pin="1"/>
     </net>
     <net code="33" name="VAA">
       <node ref="J3" pin="7"/>
       <node ref="SW1" pin="2"/>
-      <node ref="C1" pin="1"/>
       <node ref="J2" pin="7"/>
       <node ref="J1" pin="7"/>
       <node ref="REG1" pin="1"/>
+      <node ref="C1" pin="1"/>
       <node ref="P1" pin="1"/>
     </net>
     <net code="34" name="GND">
@@ -896,21 +893,21 @@
       <node ref="C4" pin="2"/>
       <node ref="C7" pin="2"/>
       <node ref="C6" pin="2"/>
-      <node ref="P4" pin="3"/>
+      <node ref="S1" pin="2"/>
       <node ref="R3" pin="2"/>
       <node ref="P2" pin="2"/>
       <node ref="P5" pin="3"/>
       <node ref="P3" pin="3"/>
-      <node ref="E1" pin="2"/>
       <node ref="SW2" pin="3"/>
+      <node ref="E1" pin="2"/>
       <node ref="E1" pin="1"/>
       <node ref="U1" pin="2"/>
       <node ref="REG1" pin="2"/>
-      <node ref="C5" pin="2"/>
       <node ref="U2" pin="2"/>
       <node ref="ARDUINO1" pin="GND1"/>
       <node ref="ARDUINO1" pin="GND2"/>
-      <node ref="S1" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="P4" pin="3"/>
     </net>
     <net code="35" name="Net-(J3-Pad14)">
       <node ref="J3" pin="14"/>
@@ -952,14 +949,14 @@
       <node ref="ARDUINO1" pin="50"/>
     </net>
     <net code="48" name="/ENC_A">
+      <node ref="ARDUINO1" pin="2"/>
       <node ref="R1" pin="2"/>
       <node ref="E1" pin="5"/>
-      <node ref="ARDUINO1" pin="2"/>
     </net>
     <net code="49" name="/ENC_B">
       <node ref="R2" pin="2"/>
-      <node ref="ARDUINO1" pin="3"/>
       <node ref="E1" pin="4"/>
+      <node ref="ARDUINO1" pin="3"/>
     </net>
     <net code="50" name="/PWM_0">
       <node ref="ARDUINO1" pin="7"/>
@@ -973,8 +970,8 @@
       <node ref="ARDUINO1" pin="11"/>
     </net>
     <net code="53" name="/D_ENC_BTN">
-      <node ref="ARDUINO1" pin="19"/>
       <node ref="U1" pin="6"/>
+      <node ref="ARDUINO1" pin="19"/>
     </net>
     <net code="54" name="Net-(ARDUINO1-Pad34)">
       <node ref="ARDUINO1" pin="34"/>
@@ -1031,8 +1028,8 @@
       <node ref="ARDUINO1" pin="12"/>
     </net>
     <net code="72" name="/PURGE_0">
-      <node ref="ARDUINO1" pin="22"/>
       <node ref="J1" pin="4"/>
+      <node ref="ARDUINO1" pin="22"/>
     </net>
     <net code="73" name="Net-(ARDUINO1-Pad32)">
       <node ref="ARDUINO1" pin="32"/>
@@ -1044,8 +1041,8 @@
       <node ref="ARDUINO1" pin="13"/>
     </net>
     <net code="76" name="/VALVE_OFF_0">
-      <node ref="ARDUINO1" pin="23"/>
       <node ref="J1" pin="12"/>
+      <node ref="ARDUINO1" pin="23"/>
     </net>
     <net code="77" name="Net-(ARDUINO1-Pad33)">
       <node ref="ARDUINO1" pin="33"/>
@@ -1060,39 +1057,39 @@
       <node ref="ARDUINO1" pin="14"/>
       <node ref="P2" pin="1"/>
     </net>
-    <net code="81" name="/D20">
+    <net code="81" name="/IN">
       <node ref="U2" pin="3"/>
       <node ref="S1" pin="1"/>
     </net>
-    <net code="82" name="/D21">
-      <node ref="SW2" pin="2"/>
+    <net code="82" name="/BTN">
       <node ref="U2" pin="1"/>
+      <node ref="SW2" pin="2"/>
     </net>
-    <net code="83" name="/D_D20">
+    <net code="83" name="/D_IN">
       <node ref="ARDUINO1" pin="20"/>
       <node ref="U2" pin="4"/>
     </net>
     <net code="84" name="+5VD">
-      <node ref="C4" pin="1"/>
-      <node ref="U1" pin="5"/>
       <node ref="U2" pin="5"/>
+      <node ref="U1" pin="5"/>
       <node ref="C5" pin="1"/>
+      <node ref="C4" pin="1"/>
       <node ref="ARDUINO1" pin="5V_4"/>
     </net>
-    <net code="85" name="/D_D21">
-      <node ref="ARDUINO1" pin="21"/>
+    <net code="85" name="/D_BTN">
       <node ref="U2" pin="6"/>
+      <node ref="ARDUINO1" pin="21"/>
     </net>
     <net code="86" name="+5V">
-      <node ref="R2" pin="1"/>
-      <node ref="P3" pin="2"/>
-      <node ref="C3" pin="1"/>
-      <node ref="E1" pin="6"/>
       <node ref="P4" pin="2"/>
-      <node ref="P5" pin="2"/>
-      <node ref="P2" pin="3"/>
-      <node ref="ARDUINO1" pin="5V_1"/>
       <node ref="R1" pin="1"/>
+      <node ref="R2" pin="1"/>
+      <node ref="ARDUINO1" pin="5V_1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="P2" pin="3"/>
+      <node ref="P5" pin="2"/>
+      <node ref="E1" pin="6"/>
+      <node ref="P3" pin="2"/>
     </net>
     <net code="87" name="/A2">
       <node ref="P5" pin="1"/>
@@ -1103,8 +1100,8 @@
       <node ref="ARDUINO1" pin="9"/>
     </net>
     <net code="89" name="/ANALOG_IN_2">
-      <node ref="J3" pin="2"/>
       <node ref="ARDUINO1" pin="A5"/>
+      <node ref="J3" pin="2"/>
     </net>
     <net code="90" name="/A1">
       <node ref="P4" pin="1"/>
@@ -1115,9 +1112,9 @@
       <node ref="ARDUINO1" pin="A0"/>
     </net>
     <net code="92" name="/V_IN">
-      <node ref="ARDUINO1" pin="V_IN"/>
       <node ref="REG1" pin="3"/>
       <node ref="C2" pin="1"/>
+      <node ref="ARDUINO1" pin="V_IN"/>
     </net>
     <net code="93" name="/ENC_BTN">
       <node ref="U1" pin="1"/>
@@ -1133,8 +1130,8 @@
       <node ref="J2" pin="2"/>
     </net>
     <net code="96" name="/ANALOG_IN_0">
-      <node ref="ARDUINO1" pin="A3"/>
       <node ref="J1" pin="2"/>
+      <node ref="ARDUINO1" pin="A3"/>
     </net>
     <net code="97" name="Net-(J1-Pad6)">
       <node ref="J1" pin="6"/>
