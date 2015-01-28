@@ -13,7 +13,7 @@ namespace callbacks
 {
 // Callbacks must be non-blocking (avoid 'delay')
 //
-// remote_device.getParameterValue must be cast to either:
+// modular_device.getParameterValue must be cast to either:
 // char*
 // long
 // double
@@ -22,12 +22,12 @@ namespace callbacks
 //
 // For more info read about ArduinoJson v3 JsonParser JsonValues
 //
-// remote_device.getSavedVariableValue type must match the saved variable default type
-// remote_device.setSavedVariableValue type must match the saved variable default type
+// modular_device.getSavedVariableValue type must match the saved variable default type
+// modular_device.setSavedVariableValue type must match the saved variable default type
 
 void setMfcValue(int pwm_pin)
 {
-  long percent = remote_device.getParameterValue(constants::percent_parameter_name);
+  long percent = modular_device.getParameterValue(constants::percent_parameter_name);
   int pwm_value = map(percent,
                       constants::percent_min,
                       constants::percent_max,
@@ -44,7 +44,7 @@ void getMfcValue(int analog_in_pin)
                           constants::analog_in_max,
                           constants::percent_min,
                           constants::percent_max);
-  remote_device.addToResponse("percent",percent_value);
+  modular_device.addToResponse("percent",percent_value);
 }
 
 void setMfcValueACallback()
