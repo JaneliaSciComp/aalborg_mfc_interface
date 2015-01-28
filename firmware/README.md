@@ -320,7 +320,7 @@ Or for more information on installing libraries, see:
 ####Clone This Repository
 
 ```shell
-git clone https://github.com/JaneliaSciComp/arduino_modular_device.git
+git clone https://github.com/JaneliaSciComp/modular_device_arduino.git
 ```
 
 Install symbolic library link into the default sketchbook directory
