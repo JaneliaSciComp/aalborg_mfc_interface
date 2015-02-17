@@ -11,17 +11,29 @@
 
 namespace constants
 {
-enum {MFC_COUNT=2};
+enum {MFC_COUNT=3};
+enum {FRAME_COUNT=1};
 
 extern const int baudrate;
 
 extern const int model_number;
 extern const int firmware_number;
 
-extern const int pwm_pins[MFC_COUNT];
-extern const int analog_in_pins[MFC_COUNT];
-extern const int purge_pins[MFC_COUNT];
-extern const int valve_off_pins[MFC_COUNT];
+extern HardwareSerial display_serial;
+
+extern const int enc_a_pin;
+extern const int enc_b_pin;
+extern const int enc_btn_pin;
+extern const int enc_btn_int;
+extern const int btn_pin;
+extern const int btn_int;
+extern const int led_pwr_pin;
+extern const int standalone_update_period;
+
+extern const int mfc_pwm_pins[MFC_COUNT];
+extern const int mfc_analog_in_pins[MFC_COUNT];
+extern const int mfc_purge_pins[MFC_COUNT];
+extern const int mfc_valve_off_pins[MFC_COUNT];
 
 extern const int pwm_min;
 extern const int pwm_max;

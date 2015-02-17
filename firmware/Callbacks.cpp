@@ -17,6 +17,7 @@ namespace callbacks
 // char*
 // long
 // double
+// bool
 // JsonArray
 // JsonObject
 //
@@ -25,25 +26,32 @@ namespace callbacks
 // modular_device.getSavedVariableValue type must match the saved variable default type
 // modular_device.setSavedVariableValue type must match the saved variable default type
 
+
+void getLedsPoweredCallback()
+{
+  boolean leds_powered = controller.getLedsPowered();
+  modular_device.addBooleanToResponse("leds_powered",leds_powered);
+}
+
 void setMfcValue(int pwm_pin)
 {
   long percent = modular_device.getParameterValue(constants::percent_parameter_name);
-  int pwm_value = map(percent,
-                      constants::percent_min,
-                      constants::percent_max,
-                      constants::pwm_min,
-                      constants::pwm_max);
+  int pwm_value = betterMap(percent,
+                            constants::percent_min,
+                            constants::percent_max,
+                            constants::pwm_min,
+                            constants::pwm_max);
   analogWrite(pwm_pin,pwm_value);
 }
 
 void getMfcValue(int analog_in_pin)
 {
   int analog_in_value = analogRead(analog_in_pin);
-  int percent_value = map(analog_in_value,
-                          constants::analog_in_min,
-                          constants::analog_in_max,
-                          constants::percent_min,
-                          constants::percent_max);
+  int percent_value = betterMap(analog_in_value,
+                                constants::analog_in_min,
+                                constants::analog_in_max,
+                                constants::percent_min,
+                                constants::percent_max);
   modular_device.addToResponse("percent",percent_value);
 }
 
