@@ -43,14 +43,39 @@ extern const int analog_in_max;
 extern const int percent_min;
 extern const int percent_max;
 
-extern const uint8 flow_settings_default[MFC_COUNT];
+extern const uint8_t flow_settings_default[MFC_COUNT];
+
+extern const uint8_t setting_dsp_lbl_display_position;
+extern const uint8_t measure_dsp_lbl_display_position;
+
+extern const uint8_t mfc0_s_dsp_lbl_display_position;
+extern const uint8_t mfc1_s_dsp_lbl_display_position;
+extern const uint8_t mfc2_s_dsp_lbl_display_position;
+
+extern const uint8_t mfc0_m_dsp_lbl_display_position;
+extern const uint8_t mfc1_m_dsp_lbl_display_position;
+extern const uint8_t mfc2_m_dsp_lbl_display_position;
+
+extern const uint8_t mfc_dsp_var_display_width;
+
+extern const uint8_t mfc0_dsp_var_display_position;
+extern const uint8_t mfc1_dsp_var_display_position;
+extern const uint8_t mfc2_dsp_var_display_position;
 
 extern _FLASH_STRING device_name;
+extern _FLASH_STRING execute_standalone_callback_method_name;
+extern _FLASH_STRING get_leds_powered_method_name;
 extern _FLASH_STRING set_mfc_flow_method_name;
 extern _FLASH_STRING get_mfc_flow_setting_method_name;
 extern _FLASH_STRING get_mfc_flow_measure_method_name;
 extern _FLASH_STRING mfc_parameter_name;
 extern _FLASH_STRING percent_parameter_name;
 extern _FLASH_STRING flow_settings_name;
+extern _FLASH_STRING setting_dsp_lbl_string;
+extern _FLASH_STRING measure_dsp_lbl_string;
+extern _FLASH_STRING mfc0_dsp_lbl_string;
+extern _FLASH_STRING mfc1_dsp_lbl_string;
+extern _FLASH_STRING mfc2_dsp_lbl_string;
+extern const _FLASH_STRING frame_name_array[FRAME_COUNT];
 }
 #endif

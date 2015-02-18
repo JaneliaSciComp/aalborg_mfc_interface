@@ -9,6 +9,7 @@
 #define CONTROLLER_H
 #include "ModularDevice.h"
 #include "StandaloneInterface.h"
+#include "BetterMap.h"
 #include "Constants.h"
 #include "Callbacks.h"
 
@@ -20,15 +21,22 @@ public:
   void update();
   void executeStandaloneCallback();
   bool getLedsPowered();
+  void setMfcFlow(const uint8_t mfc, const uint8_t percent);
+  uint8_t getMfcFlowSetting(const uint8_t mfc);
+  uint8_t getMfcFlowMeasure(const uint8_t mfc);
   // void saveState(int state);
   // void recallState(int state);
   // uint32_t* getStatesArray();
 private:
-  // uint32_t states_array_[constants::STATE_COUNT];
   Standalone::StandaloneInterface standalone_interface_;
-  // Standalone::DisplayLabel *channel_dsp_lbl_ptr_;
-  // Standalone::DisplayLabel *state_dsp_lbl_ptr_;
-  // Standalone::InteractiveVariable *channel_int_var_ptr_;
+  uint8_t flow_settings_array_[constants::MFC_COUNT];
+  Standalone::DisplayVariable *mfc0_dsp_var_ptr_;
+  Standalone::DisplayVariable *mfc1_dsp_var_ptr_;
+  Standalone::DisplayVariable *mfc2_dsp_var_ptr_;
+  void updateDisplayVariables();
+  // Standalone::InteractiveVariable *mfc0_int_var_ptr_;
+  // Standalone::InteractiveVariable *mfc1_int_var_ptr_;
+  // Standalone::InteractiveVariable *mfc2_int_var_ptr_;
   // Standalone::InteractiveVariable *state_int_var_ptr_;
 };
 

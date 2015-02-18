@@ -33,35 +33,30 @@ void getLedsPoweredCallback()
   modular_device.addBooleanToResponse("leds_powered",leds_powered);
 }
 
-void setMfcValue(int pwm_pin)
+void setMfcFlowCallback()
 {
+  long mfc = modular_device.getParameterValue(constants::mfc_parameter_name);
   long percent = modular_device.getParameterValue(constants::percent_parameter_name);
-  int pwm_value = betterMap(percent,
-                            constants::percent_min,
-                            constants::percent_max,
-                            constants::pwm_min,
-                            constants::pwm_max);
-  analogWrite(pwm_pin,pwm_value);
+  controller.setMfcFlow(mfc,percent);
 }
 
-void getMfcValue(int analog_in_pin)
+void getMfcFlowSettingCallback()
 {
-  int analog_in_value = analogRead(analog_in_pin);
-  int percent_value = betterMap(analog_in_value,
-                                constants::analog_in_min,
-                                constants::analog_in_max,
-                                constants::percent_min,
-                                constants::percent_max);
-  modular_device.addToResponse("percent",percent_value);
+  long mfc = modular_device.getParameterValue(constants::mfc_parameter_name);
+  uint8_t percent = controller.getMfcFlowSetting(mfc);
+  modular_device.addToResponse("percent",percent);
 }
 
-void setMfcValueACallback()
+void getMfcFlowMeasureCallback()
 {
-  setMfcValue(constants::pwm_a_pin);
+  long mfc = modular_device.getParameterValue(constants::mfc_parameter_name);
+  uint8_t percent = controller.getMfcFlowMeasure(mfc);
+  modular_device.addToResponse("percent",percent);
 }
 
-void getMfcValueACallback()
+// Standalone Callbacks
+void executeStandaloneCallbackCallback()
 {
-  getMfcValue(constants::analog_in_a_pin);
+  controller.executeStandaloneCallback();
 }
 }
