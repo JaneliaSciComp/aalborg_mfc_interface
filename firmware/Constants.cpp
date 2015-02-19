@@ -31,6 +31,8 @@ const int mfc_analog_in_pins[] = {3,4,5};
 const int mfc_purge_pins[] = {22,24,26};
 const int mfc_valve_off_pins[] = {23,25,27};
 
+const int analog_in_pins[] = {0,1,2};
+
 const int pwm_min = 0;
 const int pwm_max = 255;
 const int analog_in_min = 0;
@@ -41,16 +43,13 @@ const int percent_max = 100;
 
 const uint8_t flow_settings_default[] = {0};
 
-const uint8_t setting_dsp_lbl_display_position = 21;
-const uint8_t measure_dsp_lbl_display_position = 31;
-
-const uint8_t mfc_s_dsp_lbl_display_positions[] = {40,45,60};
-const uint8_t mfc_m_dsp_lbl_display_positions[] = {50,55,70};
+const uint8_t mfc_dsp_lbl_display_positions[] = {24,44,64};
+const uint8_t ain_dsp_lbl_display_positions[] = {22,42,62};
 
 const uint8_t percent_display_width = 3;
 
-const uint8_t flow_dsp_var_display_positions[] = {52,57,72};
-const uint8_t flow_int_var_display_positions[] = {42,47,62};
+const uint8_t flow_var_display_positions[] = {26,46,66};
+const uint8_t ain_dsp_var_display_positions[] = {24,44,64};
 
 FLASH_STRING(device_name,"aalborg_mfc_interface");
 FLASH_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
@@ -58,22 +57,36 @@ FLASH_STRING(get_leds_powered_method_name,"getLedsPowered");
 FLASH_STRING(set_mfc_flow_method_name,"setMfcFlow");
 FLASH_STRING(get_mfc_flow_setting_method_name,"getMfcFlowSetting");
 FLASH_STRING(get_mfc_flow_measure_method_name,"getMfcFlowMeasure");
+FLASH_STRING(get_analog_input_method_name,"getAnalogInput");
 FLASH_STRING(mfc_parameter_name,"mfc");
+FLASH_STRING(channel_parameter_name,"channel");
 FLASH_STRING(percent_parameter_name,"percent");
 FLASH_STRING(flow_settings_name,"flow_settings");
-FLASH_STRING(setting_dsp_lbl_string,"setting%");
-FLASH_STRING(measure_dsp_lbl_string,"measure%");
+FLASH_STRING(frame0_name,"setMfcFlows %");
+FLASH_STRING(frame1_name,"getMfcFlowMeasures %");
+FLASH_STRING(frame2_name,"getAnalogInputs %");
 const _FLASH_STRING frame_name_array[] =
   {
-    set_mfc_flow_method_name,
+    frame0_name,
+    frame1_name,
+    frame2_name,
   };
-FLASH_STRING(mfc0_dsp_lbl_string,"0:");
-FLASH_STRING(mfc1_dsp_lbl_string,"1:");
-FLASH_STRING(mfc2_dsp_lbl_string,"2:");
+FLASH_STRING(mfc0_dsp_lbl_string,"mfc0");
+FLASH_STRING(mfc1_dsp_lbl_string,"mfc1");
+FLASH_STRING(mfc2_dsp_lbl_string,"mfc2");
 const _FLASH_STRING mfc_dsp_lbl_strings[] =
   {
     mfc0_dsp_lbl_string,
     mfc1_dsp_lbl_string,
     mfc2_dsp_lbl_string,
+  };
+FLASH_STRING(ain0_dsp_lbl_string,"A0");
+FLASH_STRING(ain1_dsp_lbl_string,"A1");
+FLASH_STRING(ain2_dsp_lbl_string,"A2");
+const _FLASH_STRING ain_dsp_lbl_strings[] =
+  {
+    ain0_dsp_lbl_string,
+    ain1_dsp_lbl_string,
+    ain2_dsp_lbl_string,
   };
 }

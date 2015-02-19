@@ -54,6 +54,13 @@ void getMfcFlowMeasureCallback()
   modular_device.addToResponse("percent",percent);
 }
 
+void getAnalogInputCallback()
+{
+  long channel = modular_device.getParameterValue(constants::channel_parameter_name);
+  uint8_t percent = controller.getAnalogInput(channel);
+  modular_device.addToResponse("percent",percent);
+}
+
 // Standalone Callbacks
 void executeStandaloneCallbackCallback()
 {

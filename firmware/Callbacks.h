@@ -23,6 +23,8 @@ void getMfcFlowSettingCallback();
 
 void getMfcFlowMeasureCallback();
 
+void getAnalogInputCallback();
+
 // Standalone Callbacks
 void executeStandaloneCallbackCallback();
 }

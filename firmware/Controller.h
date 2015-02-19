@@ -24,6 +24,7 @@ public:
   void setMfcFlow(const uint8_t mfc, const uint8_t percent);
   uint8_t getMfcFlowSetting(const uint8_t mfc);
   uint8_t getMfcFlowMeasure(const uint8_t mfc);
+  uint8_t getAnalogInput(const uint8_t channel);
   // void saveState(int state);
   // void recallState(int state);
   // uint32_t* getStatesArray();
@@ -31,8 +32,10 @@ private:
   Standalone::StandaloneInterface standalone_interface_;
   uint8_t flow_settings_array_[constants::MFC_COUNT];
   Standalone::DisplayVariable* flow_dsp_var_ptr_array_[constants::MFC_COUNT];
+  Standalone::DisplayVariable* ain_dsp_var_ptr_array_[constants::ANALOG_INPUT_COUNT];
   void updateDisplayVariables();
   Standalone::InteractiveVariable* flow_int_var_ptr_array_[constants::MFC_COUNT];
+  void updateMfcFlow();
 };
 
 extern Controller controller;
