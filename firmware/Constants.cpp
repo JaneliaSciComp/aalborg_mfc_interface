@@ -55,10 +55,14 @@ FLASH_STRING(device_name,"aalborg_mfc_interface");
 FLASH_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
 FLASH_STRING(get_leds_powered_method_name,"getLedsPowered");
 FLASH_STRING(set_mfc_flow_method_name,"setMfcFlow");
+FLASH_STRING(set_mfc_flows_method_name,"setMfcFlows");
 FLASH_STRING(get_mfc_flow_setting_method_name,"getMfcFlowSetting");
+FLASH_STRING(get_mfc_flow_settings_method_name,"getMfcFlowSettings");
 FLASH_STRING(get_mfc_flow_measure_method_name,"getMfcFlowMeasure");
+FLASH_STRING(get_mfc_flow_measures_method_name,"getMfcFlowMeasures");
 FLASH_STRING(get_analog_input_method_name,"getAnalogInput");
-FLASH_STRING(mfc_parameter_name,"mfc");
+FLASH_STRING(get_analog_inputs_method_name,"getAnalogInputs");
+FLASH_STRING(mfcs_parameter_name,"mfc");
 FLASH_STRING(channel_parameter_name,"channel");
 FLASH_STRING(percent_parameter_name,"percent");
 FLASH_STRING(flow_settings_name,"flow_settings");
@@ -71,9 +75,9 @@ const _FLASH_STRING frame_name_array[] =
     frame1_name,
     frame2_name,
   };
-FLASH_STRING(mfc0_dsp_lbl_string,"mfc0");
-FLASH_STRING(mfc1_dsp_lbl_string,"mfc1");
-FLASH_STRING(mfc2_dsp_lbl_string,"mfc2");
+FLASH_STRING(mfc0_dsp_lbl_string,"MFC0");
+FLASH_STRING(mfc1_dsp_lbl_string,"MFC1");
+FLASH_STRING(mfc2_dsp_lbl_string,"MFC2");
 const _FLASH_STRING mfc_dsp_lbl_strings[] =
   {
     mfc0_dsp_lbl_string,
