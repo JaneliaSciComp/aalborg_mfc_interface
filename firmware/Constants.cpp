@@ -44,19 +44,13 @@ const uint8_t flow_settings_default[] = {0};
 const uint8_t setting_dsp_lbl_display_position = 21;
 const uint8_t measure_dsp_lbl_display_position = 31;
 
-const uint8_t mfc0_s_dsp_lbl_display_position = 40;
-const uint8_t mfc1_s_dsp_lbl_display_position = 45;
-const uint8_t mfc2_s_dsp_lbl_display_position = 60;
+const uint8_t mfc_s_dsp_lbl_display_positions[] = {40,45,60};
+const uint8_t mfc_m_dsp_lbl_display_positions[] = {50,55,70};
 
-const uint8_t mfc0_m_dsp_lbl_display_position = 50;
-const uint8_t mfc1_m_dsp_lbl_display_position = 55;
-const uint8_t mfc2_m_dsp_lbl_display_position = 70;
+const uint8_t percent_display_width = 3;
 
-const uint8_t mfc_dsp_var_display_width = 3;
-
-const uint8_t mfc0_dsp_var_display_position = 52;
-const uint8_t mfc1_dsp_var_display_position = 57;
-const uint8_t mfc2_dsp_var_display_position = 72;
+const uint8_t flow_dsp_var_display_positions[] = {52,57,72};
+const uint8_t flow_int_var_display_positions[] = {42,47,62};
 
 FLASH_STRING(device_name,"aalborg_mfc_interface");
 FLASH_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
@@ -69,11 +63,17 @@ FLASH_STRING(percent_parameter_name,"percent");
 FLASH_STRING(flow_settings_name,"flow_settings");
 FLASH_STRING(setting_dsp_lbl_string,"setting%");
 FLASH_STRING(measure_dsp_lbl_string,"measure%");
-FLASH_STRING(mfc0_dsp_lbl_string,"0");
-FLASH_STRING(mfc1_dsp_lbl_string,"1");
-FLASH_STRING(mfc2_dsp_lbl_string,"2");
 const _FLASH_STRING frame_name_array[] =
   {
     set_mfc_flow_method_name,
+  };
+FLASH_STRING(mfc0_dsp_lbl_string,"0:");
+FLASH_STRING(mfc1_dsp_lbl_string,"1:");
+FLASH_STRING(mfc2_dsp_lbl_string,"2:");
+const _FLASH_STRING mfc_dsp_lbl_strings[] =
+  {
+    mfc0_dsp_lbl_string,
+    mfc1_dsp_lbl_string,
+    mfc2_dsp_lbl_string,
   };
 }

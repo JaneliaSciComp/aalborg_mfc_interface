@@ -85,66 +85,50 @@ void Controller::setup()
   measure_dsp_lbl.setDisplayPosition(constants::measure_dsp_lbl_display_position);
   measure_dsp_lbl.setFlashString(constants::measure_dsp_lbl_string);
 
-  Standalone::DisplayLabel& mfc0_s_dsp_lbl = standalone_interface_.createDisplayLabel();
-  mfc0_s_dsp_lbl.setDisplayPosition(constants::mfc0_s_dsp_lbl_display_position);
-  mfc0_s_dsp_lbl.setFlashString(constants::mfc0_dsp_lbl_string);
 
-  Standalone::DisplayLabel& mfc1_s_dsp_lbl = standalone_interface_.createDisplayLabel();
-  mfc1_s_dsp_lbl.setDisplayPosition(constants::mfc1_s_dsp_lbl_display_position);
-  mfc1_s_dsp_lbl.setFlashString(constants::mfc1_dsp_lbl_string);
+  Standalone::DisplayLabel* mfc_s_dsp_lbl_ptr_array[constants::MFC_COUNT];
+  Standalone::DisplayLabel* mfc_m_dsp_lbl_ptr_array[constants::MFC_COUNT];
+  for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
+  {
+    mfc_s_dsp_lbl_ptr_array[mfc] = &(standalone_interface_.createDisplayLabel());
+    mfc_s_dsp_lbl_ptr_array[mfc]->setDisplayPosition(constants::mfc_s_dsp_lbl_display_positions[mfc]);
+    mfc_s_dsp_lbl_ptr_array[mfc]->setFlashString(constants::mfc_dsp_lbl_strings[mfc]);
 
-  Standalone::DisplayLabel& mfc2_s_dsp_lbl = standalone_interface_.createDisplayLabel();
-  mfc2_s_dsp_lbl.setDisplayPosition(constants::mfc2_s_dsp_lbl_display_position);
-  mfc2_s_dsp_lbl.setFlashString(constants::mfc2_dsp_lbl_string);
-
-  Standalone::DisplayLabel& mfc0_m_dsp_lbl = standalone_interface_.createDisplayLabel();
-  mfc0_m_dsp_lbl.setDisplayPosition(constants::mfc0_m_dsp_lbl_display_position);
-  mfc0_m_dsp_lbl.setFlashString(constants::mfc0_dsp_lbl_string);
-
-  Standalone::DisplayLabel& mfc1_m_dsp_lbl = standalone_interface_.createDisplayLabel();
-  mfc1_m_dsp_lbl.setDisplayPosition(constants::mfc1_m_dsp_lbl_display_position);
-  mfc1_m_dsp_lbl.setFlashString(constants::mfc1_dsp_lbl_string);
-
-  Standalone::DisplayLabel& mfc2_m_dsp_lbl = standalone_interface_.createDisplayLabel();
-  mfc2_m_dsp_lbl.setDisplayPosition(constants::mfc2_m_dsp_lbl_display_position);
-  mfc2_m_dsp_lbl.setFlashString(constants::mfc2_dsp_lbl_string);
+    mfc_m_dsp_lbl_ptr_array[mfc] = &(standalone_interface_.createDisplayLabel());
+    mfc_m_dsp_lbl_ptr_array[mfc]->setDisplayPosition(constants::mfc_m_dsp_lbl_display_positions[mfc]);
+    mfc_m_dsp_lbl_ptr_array[mfc]->setFlashString(constants::mfc_dsp_lbl_strings[mfc]);
+  }
 
   // Display Variables
-  mfc0_dsp_var_ptr_ = &(standalone_interface_.createDisplayVariable());
-  mfc0_dsp_var_ptr_->setDisplayPosition(constants::mfc0_dsp_var_display_position);
-  mfc0_dsp_var_ptr_->setDisplayWidth(constants::mfc_dsp_var_display_width);
-
-  mfc1_dsp_var_ptr_ = &(standalone_interface_.createDisplayVariable());
-  mfc1_dsp_var_ptr_->setDisplayPosition(constants::mfc1_dsp_var_display_position);
-  mfc1_dsp_var_ptr_->setDisplayWidth(constants::mfc_dsp_var_display_width);
-
-  mfc2_dsp_var_ptr_ = &(standalone_interface_.createDisplayVariable());
-  mfc2_dsp_var_ptr_->setDisplayPosition(constants::mfc2_dsp_var_display_position);
-  mfc2_dsp_var_ptr_->setDisplayWidth(constants::mfc_dsp_var_display_width);
+  for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
+  {
+    flow_dsp_var_ptr_array_[mfc] = &(standalone_interface_.createDisplayVariable());
+    flow_dsp_var_ptr_array_[mfc]->setDisplayPosition(constants::flow_dsp_var_display_positions[mfc]);
+    flow_dsp_var_ptr_array_[mfc]->setDisplayWidth(constants::percent_display_width);
+  }
 
   // Interactive Variables
-  // channel_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
-  // channel_int_var_ptr_->setDisplayPosition(constants::int_var_display_position);
-  // channel_int_var_ptr_->setRange(constants::channel_min,constants::channel_max);
-
-  // state_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
-  // state_int_var_ptr_->setDisplayPosition(constants::int_var_display_position);
-  // state_int_var_ptr_->setRange(0,constants::STATE_COUNT-1);
+  for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
+  {
+    flow_int_var_ptr_array_[mfc] = &(standalone_interface_.createInteractiveVariable());
+    flow_int_var_ptr_array_[mfc]->setDisplayPosition(constants::flow_int_var_display_positions[mfc]);
+    flow_int_var_ptr_array_[mfc]->setDisplayWidth(constants::percent_display_width);
+    flow_int_var_ptr_array_[mfc]->setRange(constants::percent_min,constants::percent_max);
+    flow_int_var_ptr_array_[mfc]->setValue(flow_settings_array_[mfc]);
+  }
 
   // All Frames
 
   // Frame 0
   setting_dsp_lbl.addToFrame(0);
   measure_dsp_lbl.addToFrame(0);
-  mfc0_s_dsp_lbl.addToFrame(0);
-  mfc1_s_dsp_lbl.addToFrame(0);
-  mfc2_s_dsp_lbl.addToFrame(0);
-  mfc0_m_dsp_lbl.addToFrame(0);
-  mfc1_m_dsp_lbl.addToFrame(0);
-  mfc2_m_dsp_lbl.addToFrame(0);
-  mfc0_dsp_var_ptr_->addToFrame(0);
-  mfc1_dsp_var_ptr_->addToFrame(0);
-  mfc2_dsp_var_ptr_->addToFrame(0);
+  for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
+  {
+    mfc_s_dsp_lbl_ptr_array[mfc]->addToFrame(0);
+    mfc_m_dsp_lbl_ptr_array[mfc]->addToFrame(0);
+    flow_dsp_var_ptr_array_[mfc]->addToFrame(0);
+    flow_int_var_ptr_array_[mfc]->addToFrame(0);
+  }
   // channel_int_var_ptr_->addToFrame(0);
   // standalone_interface_.attachCallbackToFrame(callbacks::toggleChannelStandaloneCallback,0);
 
@@ -191,6 +175,7 @@ bool Controller::getLedsPowered()
 void Controller::setMfcFlow(const uint8_t mfc, const uint8_t percent)
 {
   flow_settings_array_[mfc] = percent;
+  flow_int_var_ptr_array_[mfc]->setValue(percent);
   int pwm_value = betterMap(percent,
                             constants::percent_min,
                             constants::percent_max,
@@ -218,12 +203,11 @@ uint8_t Controller::getMfcFlowMeasure(const uint8_t mfc)
 void Controller::updateDisplayVariables()
 {
   int percent;
-  percent = getMfcFlowMeasure(0);
-  mfc0_dsp_var_ptr_->setValue(percent);
-  percent = getMfcFlowMeasure(1);
-  mfc1_dsp_var_ptr_->setValue(percent);
-  percent = getMfcFlowMeasure(2);
-  mfc2_dsp_var_ptr_->setValue(percent);
+  for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
+  {
+    percent = getMfcFlowMeasure(mfc);
+    flow_dsp_var_ptr_array_[mfc]->setValue(percent);
+  }
 }
 
 // void Controller::saveState(int state)

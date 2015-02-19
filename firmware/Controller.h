@@ -30,14 +30,9 @@ public:
 private:
   Standalone::StandaloneInterface standalone_interface_;
   uint8_t flow_settings_array_[constants::MFC_COUNT];
-  Standalone::DisplayVariable *mfc0_dsp_var_ptr_;
-  Standalone::DisplayVariable *mfc1_dsp_var_ptr_;
-  Standalone::DisplayVariable *mfc2_dsp_var_ptr_;
+  Standalone::DisplayVariable* flow_dsp_var_ptr_array_[constants::MFC_COUNT];
   void updateDisplayVariables();
-  // Standalone::InteractiveVariable *mfc0_int_var_ptr_;
-  // Standalone::InteractiveVariable *mfc1_int_var_ptr_;
-  // Standalone::InteractiveVariable *mfc2_int_var_ptr_;
-  // Standalone::InteractiveVariable *state_int_var_ptr_;
+  Standalone::InteractiveVariable* flow_int_var_ptr_array_[constants::MFC_COUNT];
 };
 
 extern Controller controller;
