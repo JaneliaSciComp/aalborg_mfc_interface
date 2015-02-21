@@ -14,6 +14,7 @@ namespace constants
 enum {MFC_COUNT=3};
 enum {FRAME_COUNT=3};
 enum {ANALOG_INPUT_COUNT=3};
+enum {STATE_COUNT=10};
 
 extern const int baudrate;
 
@@ -46,7 +47,7 @@ extern const int analog_in_max;
 extern const int percent_min;
 extern const int percent_max;
 
-extern const uint8_t flow_settings_default[MFC_COUNT];
+extern const uint8_t states_default[STATE_COUNT][MFC_COUNT];
 
 extern const uint8_t mfc_dsp_lbl_display_positions[MFC_COUNT];
 extern const uint8_t ain_dsp_lbl_display_positions[ANALOG_INPUT_COUNT];
@@ -67,11 +68,15 @@ extern _FLASH_STRING get_mfc_flow_measure_method_name;
 extern _FLASH_STRING get_mfc_flow_measures_method_name;
 extern _FLASH_STRING get_analog_input_method_name;
 extern _FLASH_STRING get_analog_inputs_method_name;
+extern _FLASH_STRING save_state_method_name;
+extern _FLASH_STRING recall_state_method_name;
+extern _FLASH_STRING get_saved_states_method_name;
 extern _FLASH_STRING mfc_parameter_name;
-extern _FLASH_STRING mfcs_parameter_name;
 extern _FLASH_STRING channel_parameter_name;
 extern _FLASH_STRING percent_parameter_name;
-extern _FLASH_STRING flow_settings_name;
+extern _FLASH_STRING percents_parameter_name;
+extern _FLASH_STRING state_parameter_name;
+extern _FLASH_STRING states_name;
 extern _FLASH_STRING frame0_name;
 extern _FLASH_STRING frame1_name;
 extern _FLASH_STRING frame2_name;

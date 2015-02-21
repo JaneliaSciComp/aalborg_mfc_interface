@@ -40,11 +40,37 @@ void setMfcFlowCallback()
   controller.setMfcFlow(mfc,percent);
 }
 
+void setMfcFlowsCallback()
+{
+  JsonArray percents_array = modular_device.getParameterValue(constants::percents_parameter_name);
+  int mfc = 0;
+  for (JsonArrayIterator percents_it=percents_array.begin();
+       percents_it != percents_array.end();
+       ++percents_it)
+  {
+    long percent = *percents_it;
+    controller.setMfcFlow(mfc,percent);
+    mfc++;
+  }
+}
+
 void getMfcFlowSettingCallback()
 {
   long mfc = modular_device.getParameterValue(constants::mfc_parameter_name);
   uint8_t percent = controller.getMfcFlowSetting(mfc);
   modular_device.addToResponse("percent",percent);
+}
+
+void getMfcFlowSettingsCallback()
+{
+  modular_device.addKeyToResponse("percents");
+  modular_device.startResponseArray();
+  for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
+  {
+    uint8_t percent = controller.getMfcFlowSetting(mfc);
+    modular_device.addToResponse(percent);
+  }
+  modular_device.stopResponseArray();
 }
 
 void getMfcFlowMeasureCallback()
@@ -54,11 +80,64 @@ void getMfcFlowMeasureCallback()
   modular_device.addToResponse("percent",percent);
 }
 
+void getMfcFlowMeasuresCallback()
+{
+  modular_device.addKeyToResponse("percents");
+  modular_device.startResponseArray();
+  for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
+  {
+    uint8_t percent = controller.getMfcFlowMeasure(mfc);
+    modular_device.addToResponse(percent);
+  }
+  modular_device.stopResponseArray();
+}
+
 void getAnalogInputCallback()
 {
   long channel = modular_device.getParameterValue(constants::channel_parameter_name);
   uint8_t percent = controller.getAnalogInput(channel);
   modular_device.addToResponse("percent",percent);
+}
+
+void getAnalogInputsCallback()
+{
+  modular_device.addKeyToResponse("percents");
+  modular_device.startResponseArray();
+  for (int channel=0; channel<constants::ANALOG_INPUT_COUNT; channel++)
+  {
+    uint8_t percent = controller.getAnalogInput(channel);
+    modular_device.addToResponse(percent);
+  }
+  modular_device.stopResponseArray();
+}
+
+void saveStateCallback()
+{
+  long state = modular_device.getParameterValue(constants::state_parameter_name);
+  controller.saveState(state);
+}
+
+void recallStateCallback()
+{
+  long state = modular_device.getParameterValue(constants::state_parameter_name);
+  controller.recallState(state);
+}
+
+void getSavedStatesCallback()
+{
+  uint8_t** states_array = controller.getStatesArray();
+  modular_device.addKeyToResponse("saved_states");
+  modular_device.startResponseArray();
+  for (int state=0; state<constants::STATE_COUNT; state++)
+  {
+    modular_device.startResponseArray();
+    for (int mfc=0; mfc<=constants::MFC_COUNT; mfc++)
+    {
+      modular_device.addToResponse(states_array[state][mfc]);
+    }
+    modular_device.stopResponseArray();
+  }
+  modular_device.stopResponseArray();
 }
 
 // Standalone Callbacks

@@ -41,15 +41,15 @@ const int analog_in_max = 1023;
 const int percent_min = 0;
 const int percent_max = 100;
 
-const uint8_t flow_settings_default[] = {0};
+const uint8_t states_default[STATE_COUNT][MFC_COUNT] = {0};
 
 const uint8_t mfc_dsp_lbl_display_positions[] = {24,44,64};
-const uint8_t ain_dsp_lbl_display_positions[] = {22,42,62};
+const uint8_t ain_dsp_lbl_display_positions[] = {24,44,64};
 
 const uint8_t percent_display_width = 3;
 
 const uint8_t flow_var_display_positions[] = {26,46,66};
-const uint8_t ain_dsp_var_display_positions[] = {24,44,64};
+const uint8_t ain_dsp_var_display_positions[] = {26,46,66};
 
 FLASH_STRING(device_name,"aalborg_mfc_interface");
 FLASH_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
@@ -62,10 +62,15 @@ FLASH_STRING(get_mfc_flow_measure_method_name,"getMfcFlowMeasure");
 FLASH_STRING(get_mfc_flow_measures_method_name,"getMfcFlowMeasures");
 FLASH_STRING(get_analog_input_method_name,"getAnalogInput");
 FLASH_STRING(get_analog_inputs_method_name,"getAnalogInputs");
-FLASH_STRING(mfcs_parameter_name,"mfc");
+FLASH_STRING(save_state_method_name,"saveState");
+FLASH_STRING(recall_state_method_name,"recallState");
+FLASH_STRING(get_saved_states_method_name,"getSavedStates");
+FLASH_STRING(mfc_parameter_name,"mfc");
 FLASH_STRING(channel_parameter_name,"channel");
 FLASH_STRING(percent_parameter_name,"percent");
-FLASH_STRING(flow_settings_name,"flow_settings");
+FLASH_STRING(percents_parameter_name,"percents");
+FLASH_STRING(state_parameter_name,"state");
+FLASH_STRING(states_name,"states");
 FLASH_STRING(frame0_name,"setMfcFlows %");
 FLASH_STRING(frame1_name,"getMfcFlowMeasures %");
 FLASH_STRING(frame2_name,"getAnalogInputs %");
@@ -75,9 +80,9 @@ const _FLASH_STRING frame_name_array[] =
     frame1_name,
     frame2_name,
   };
-FLASH_STRING(mfc0_dsp_lbl_string,"MFC0");
-FLASH_STRING(mfc1_dsp_lbl_string,"MFC1");
-FLASH_STRING(mfc2_dsp_lbl_string,"MFC2");
+FLASH_STRING(mfc0_dsp_lbl_string,"mfc0");
+FLASH_STRING(mfc1_dsp_lbl_string,"mfc1");
+FLASH_STRING(mfc2_dsp_lbl_string,"mfc2");
 const _FLASH_STRING mfc_dsp_lbl_strings[] =
   {
     mfc0_dsp_lbl_string,

@@ -34,13 +34,16 @@ void Controller::setup()
   modular_device.setFirmwareNumber(constants::firmware_number);
 
   // Saved Variables
-  modular_device.createSavedVariable(constants::flow_settings_name,
-                                     constants::flow_settings_default,
-                                     constants::MFC_COUNT);
+  const unsigned int states_array_element_size = sizeof(constants::states_default[0][0])*constants::MFC_COUNT;
+  modular_device.createSavedVariable(constants::states_name,
+                                     constants::states_default,
+                                     constants::STATE_COUNT,
+                                     states_array_element_size);
 
+  int default_state = 0;
+  modular_device.getSavedVariableValue(constants::states_name,flow_settings_array_,default_state);
   for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
   {
-    modular_device.getSavedVariableValue(constants::flow_settings_name,flow_settings_array_,mfc);
     setMfcFlow(mfc,flow_settings_array_[mfc]);
   }
 
@@ -54,6 +57,13 @@ void Controller::setup()
   ModularDevice::Parameter& percent_parameter = modular_device.createParameter(constants::percent_parameter_name);
   percent_parameter.setRange(constants::percent_min,constants::percent_max);
 
+  ModularDevice::Parameter& percents_parameter = modular_device.createParameter(constants::percents_parameter_name);
+  percents_parameter.setTypeArray();
+  percents_parameter.setRange(constants::percent_min,constants::percent_max);
+
+  ModularDevice::Parameter& state_parameter = modular_device.createParameter(constants::state_parameter_name);
+  state_parameter.setRange(0,constants::STATE_COUNT-1);
+
   // Methods
   ModularDevice::Method& execute_standalone_callback_method = modular_device.createMethod(constants::execute_standalone_callback_method_name);
   execute_standalone_callback_method.attachCallback(callbacks::executeStandaloneCallbackCallback);
@@ -66,17 +76,41 @@ void Controller::setup()
   set_mfc_flow_method.addParameter(mfc_parameter);
   set_mfc_flow_method.addParameter(percent_parameter);
 
+  ModularDevice::Method& set_mfc_flows_method = modular_device.createMethod(constants::set_mfc_flows_method_name);
+  set_mfc_flows_method.attachCallback(callbacks::setMfcFlowsCallback);
+  set_mfc_flows_method.addParameter(percents_parameter);
+
   ModularDevice::Method& get_mfc_flow_setting_method = modular_device.createMethod(constants::get_mfc_flow_setting_method_name);
   get_mfc_flow_setting_method.attachCallback(callbacks::getMfcFlowSettingCallback);
   get_mfc_flow_setting_method.addParameter(mfc_parameter);
+
+  ModularDevice::Method& get_mfc_flow_settings_method = modular_device.createMethod(constants::get_mfc_flow_settings_method_name);
+  get_mfc_flow_settings_method.attachCallback(callbacks::getMfcFlowSettingsCallback);
 
   ModularDevice::Method& get_mfc_flow_measure_method = modular_device.createMethod(constants::get_mfc_flow_measure_method_name);
   get_mfc_flow_measure_method.attachCallback(callbacks::getMfcFlowMeasureCallback);
   get_mfc_flow_measure_method.addParameter(mfc_parameter);
 
+  ModularDevice::Method& get_mfc_flow_measures_method = modular_device.createMethod(constants::get_mfc_flow_measures_method_name);
+  get_mfc_flow_measures_method.attachCallback(callbacks::getMfcFlowMeasuresCallback);
+
   ModularDevice::Method& get_analog_input_method = modular_device.createMethod(constants::get_analog_input_method_name);
   get_analog_input_method.attachCallback(callbacks::getAnalogInputCallback);
   get_analog_input_method.addParameter(channel_parameter);
+
+  ModularDevice::Method& get_analog_inputs_method = modular_device.createMethod(constants::get_analog_inputs_method_name);
+  get_analog_inputs_method.attachCallback(callbacks::getAnalogInputsCallback);
+
+  ModularDevice::Method& save_state_method = modular_device.createMethod(constants::save_state_method_name);
+  save_state_method.attachCallback(callbacks::saveStateCallback);
+  save_state_method.addParameter(state_parameter);
+
+  ModularDevice::Method& recall_state_method = modular_device.createMethod(constants::recall_state_method_name);
+  recall_state_method.attachCallback(callbacks::recallStateCallback);
+  recall_state_method.addParameter(state_parameter);
+
+  ModularDevice::Method& get_saved_states_method = modular_device.createMethod(constants::get_saved_states_method_name);
+  get_saved_states_method.attachCallback(callbacks::getSavedStatesCallback);
 
   // Start Server
   modular_device.startServer(constants::baudrate);
@@ -187,8 +221,13 @@ bool Controller::getLedsPowered()
   return digitalRead(constants::led_pwr_pin) == HIGH;
 }
 
-void Controller::setMfcFlow(const uint8_t mfc, const uint8_t percent)
+void Controller::setMfcFlow(const uint8_t mfc, uint8_t percent)
 {
+  if (mfc >= constants::MFC_COUNT)
+  {
+    return;
+  }
+  percent = constrain(percent,constants::percent_min,constants::percent_max);
   if (percent != flow_settings_array_[mfc])
   {
     flow_settings_array_[mfc] = percent;
@@ -204,11 +243,19 @@ void Controller::setMfcFlow(const uint8_t mfc, const uint8_t percent)
 
 uint8_t Controller::getMfcFlowSetting(const uint8_t mfc)
 {
+  if (mfc >= constants::MFC_COUNT)
+  {
+    return 0;
+  }
   return flow_settings_array_[mfc];
 }
 
 uint8_t Controller::getMfcFlowMeasure(const uint8_t mfc)
 {
+  if (mfc >= constants::MFC_COUNT)
+  {
+    return 0;
+  }
   int analog_in_value = analogRead(constants::mfc_analog_in_pins[mfc]);
   int percent = betterMap(analog_in_value,
                           constants::analog_in_min,
@@ -220,6 +267,10 @@ uint8_t Controller::getMfcFlowMeasure(const uint8_t mfc)
 
 uint8_t Controller::getAnalogInput(const uint8_t channel)
 {
+  if (channel >= constants::ANALOG_INPUT_COUNT)
+  {
+    return 0;
+  }
   int analog_in_value = analogRead(constants::analog_in_pins[channel]);
   int percent = betterMap(analog_in_value,
                           constants::analog_in_min,
@@ -254,27 +305,31 @@ void Controller::updateMfcFlow()
   }
 }
 
-// void Controller::saveState(int state)
-// {
-//   uint32_t channels = getChannelsOn();
-//   states_array_[state] = channels;
-//   modular_device.setSavedVariableValue(constants::states_name,states_array_,state);
-// }
+void Controller::saveState(int state)
+{
+  for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
+  {
+    states_array_[state][mfc] = flow_settings_array_[mfc];
+  }
+  modular_device.setSavedVariableValue(constants::states_name,states_array_,state);
+}
 
-// void Controller::recallState(int state)
-// {
-//   modular_device.getSavedVariableValue(constants::states_name,states_array_,state);
-//   uint32_t channels = states_array_[state];
-//   setChannels(channels);
-// }
+void Controller::recallState(int state)
+{
+  modular_device.getSavedVariableValue(constants::states_name,states_array_,state);
+  for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
+  {
+    setMfcFlow(mfc,states_array_[state][mfc]);
+  }
+}
 
-// uint32_t* Controller::getStatesArray()
-// {
-//   for (int state=0; state<constants::STATE_COUNT; state++)
-//   {
-//     modular_device.getSavedVariableValue(constants::states_name,states_array_,state);
-//   }
-//   return states_array_;
-// }
+uint8_t** Controller::getStatesArray()
+{
+  for (int state=0; state<constants::STATE_COUNT; state++)
+  {
+    modular_device.getSavedVariableValue(constants::states_name,states_array_,state);
+  }
+  return states_array_;
+}
 
 Controller controller;

@@ -19,11 +19,25 @@ void getLedsPoweredCallback();
 
 void setMfcFlowCallback();
 
+void setMfcFlowsCallback();
+
 void getMfcFlowSettingCallback();
+
+void getMfcFlowSettingsCallback();
 
 void getMfcFlowMeasureCallback();
 
+void getMfcFlowMeasuresCallback();
+
 void getAnalogInputCallback();
+
+void getAnalogInputsCallback();
+
+void saveStateCallback();
+
+void recallStateCallback();
+
+void getSavedStatesCallback();
 
 // Standalone Callbacks
 void executeStandaloneCallbackCallback();
