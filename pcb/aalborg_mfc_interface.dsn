@@ -3,7 +3,7 @@
     (string_quote ")
     (space_in_quoted_tokens on)
     (host_cad "KiCad's Pcbnew")
-    (host_version "0.201501112116+5365~20~ubuntu14.04.1-product")
+    (host_version "0.201502231246+5447~21~ubuntu14.04.1-product")
   )
   (resolution um 10)
   (unit um)
@@ -33,78 +33,113 @@
     )
   )
   (placement
-    (component aalborg_mfc_interface:Header_Shrouded_2_Pin
-      (place S1 184150 -88265 front 270 (PN HEADER_01X02))
-    )
-    (component aalborg_mfc_interface:SM1210
-      (place C8 158115 -106045 back 0 (PN 10uF))
-      (place R6 158115 -112395 back 0 (PN 5.11k))
-      (place C7 137160 -106045 back 0 (PN 10uF))
-      (place R5 137160 -112395 back 0 (PN 5.11k))
-      (place R3 186690 -110490 back 90 (PN 5.11k))
-      (place C1 204470 -92710 back 180 (PN 10uF))
-      (place C2 205105 -116840 back 270 (PN 10uF))
-      (place C3 105410 -126365 back 0 (PN 10uF))
-      (place C4 172720 -83185 back 90 (PN 0.1uF))
-      (place C5 200025 -80010 back 180 (PN 0.1uF))
-      (place C6 116205 -106045 back 0 (PN 10uF))
-      (place R1 184785 -120015 back 270 (PN 5.11k))
-      (place R2 178435 -120015 back 90 (PN 5.11k))
-      (place R4 116205 -112395 back 0 (PN 5.11k))
-    )
-    (component "aalborg_mfc_interface:Micro-MaTch_6_SMD"
-      (place E1 181610 -120015 front 0 (PN ENCODER_C14))
-    )
-    (component aalborg_mfc_interface:Header_Shrouded_3_Pin
-      (place P5 104140 -109220 front 180 (PN HEADER_01X03_SHR))
-      (place P4 104140 -96520 front 180 (PN HEADER_01X03_SHR))
-      (place P3 104140 -83820 front 180 (PN HEADER_01X03_SHR))
-    )
-    (component aalborg_mfc_interface:DB15FD
-      (place J3 165735 -102870 front 90 (PN DB15FV))
-      (place J2 144780 -102870 front 90 (PN DB15FV))
-      (place J1 123825 -102870 front 90 (PN DB15FV))
-    )
-    (component "aalborg_mfc_interface:LED_555-3XXX"
-      (place D1 187325 -102870 front 180 (PN LED_24V))
-    )
-    (component aalborg_mfc_interface:ARDUINO_MEGA_SHIELD
-      (place ARDUINO1 97790 -129540 front 0 (PN ARDUINO_MEGA))
-    )
-    (component aalborg_mfc_interface:DC_DC_CONV_R78C
-      (place REG1 200025 -115570 front 270 (PN CONV_DC_DC_12V_1A))
-    )
-    (component aalborg_mfc_interface:DCJACK_2PIN_HIGHCURRENT
-      (place P1 211455 -102870 front 270 (PN PWR_JACK_2.5x5.5))
-    )
-    (component aalborg_mfc_interface:MAX6817
-      (place U2 182880 -83185 back 270 (PN MAX6817))
-      (place U1 177800 -83185 back 270 (PN MAX6817))
-    )
-    (component aalborg_mfc_interface:KT_SWITCH
-      (place SW2 200025 -88265 front 90 (PN KT_SWITCH))
+    (component aalborg_mfc_interface:Header_3_Pin
+      (place P2 104140 -123190 front 180 (PN HEADER_01X03))
     )
     (component aalborg_mfc_interface:SPST_SERIES_M
       (place SW1 181610 -102870 front 180 (PN SPST_SERIES_M))
     )
-    (component aalborg_mfc_interface:Header_3_Pin
-      (place P2 104140 -121920 front 180 (PN HEADER_01X03))
+    (component aalborg_mfc_interface:KT_SWITCH
+      (place SW2 200025 -88265 front 90 (PN KT_SWITCH))
+    )
+    (component aalborg_mfc_interface:MAX6817
+      (place U1 177800 -83185 back 270 (PN MAX6817))
+      (place U2 182880 -83185 back 270 (PN MAX6817))
+    )
+    (component aalborg_mfc_interface:SM1210
+      (place R4 116205 -112395 back 0 (PN 5.11k))
+      (place R2 178435 -120015 back 90 (PN 5.11k))
+      (place R1 184785 -120015 back 270 (PN 5.11k))
+      (place C6 116205 -106045 back 0 (PN 10uF))
+      (place C5 200025 -80010 back 180 (PN 0.1uF))
+      (place C4 172720 -83185 back 90 (PN 0.1uF))
+      (place C3 105410 -127000 back 0 (PN 10uF))
+      (place C2 205105 -116840 back 270 (PN 10uF))
+      (place C1 204470 -92710 back 180 (PN 10uF))
+      (place R3 186690 -110490 back 90 (PN 5.11k))
+      (place R5 137160 -112395 back 0 (PN 5.11k))
+      (place C7 137160 -106045 back 0 (PN 10uF))
+      (place R6 158115 -112395 back 0 (PN 5.11k))
+      (place C8 158115 -106045 back 0 (PN 10uF))
+    )
+    (component aalborg_mfc_interface:DCJACK_2PIN_HIGHCURRENT
+      (place P1 211455 -102870 front 270 (PN PWR_JACK_2.5x5.5))
+    )
+    (component aalborg_mfc_interface:DC_DC_CONV_R78C
+      (place REG1 200025 -115570 front 270 (PN CONV_DC_DC_12V_1A))
+    )
+    (component aalborg_mfc_interface:ARDUINO_MEGA_SHIELD
+      (place ARDUINO1 97790 -129540 front 0 (PN ARDUINO_MEGA))
+    )
+    (component "aalborg_mfc_interface:LED_555-3XXX"
+      (place D1 187325 -102870 front 180 (PN LED_24V))
+    )
+    (component aalborg_mfc_interface:DB15FD
+      (place J1 123825 -102870 front 90 (PN DB15FV))
+      (place J2 144780 -102870 front 90 (PN DB15FV))
+      (place J3 165735 -102870 front 90 (PN DB15FV))
+    )
+    (component aalborg_mfc_interface:Header_Shrouded_3_Pin
+      (place P4 104140 -80645 front 180 (PN HEADER_01X03_SHR))
+      (place P5 104140 -88900 front 180 (PN HEADER_01X03_SHR))
+      (place P6 104140 -114935 front 180 (PN HEADER_01X03_SHR))
+    )
+    (component "aalborg_mfc_interface:Micro-MaTch_6_SMD"
+      (place E1 181610 -120015 front 0 (PN ENCODER_C14))
+    )
+    (component aalborg_mfc_interface:Header_Shrouded_2_Pin
+      (place S1 184150 -88265 front 270 (PN HEADER_01X02_SHR))
+    )
+    (component aalborg_mfc_interface:BNC_DOUBLE
+      (place P3 99060 -102870 front 90 (PN BNC_DOUBLE_RA))
     )
   )
   (library
-    (image aalborg_mfc_interface:Header_Shrouded_2_Pin
-      (outline (path signal 381  -3175 -1905  3175 -1905))
-      (outline (path signal 381  -3175 1905  3175 1905))
-      (outline (path signal 381  -3175 3810  3175 3810))
-      (outline (path signal 381  635 3175  1270 1905))
-      (outline (path signal 381  1270 1905  1905 3175))
-      (outline (path signal 381  1905 3175  635 3175))
-      (outline (path signal 381  3175 3810  3175 1905))
-      (outline (path signal 381  -3175 3810  -3175 1905))
-      (outline (path signal 381  -3175 1905  -3175 -1905))
-      (outline (path signal 381  3175 -1905  3175 1905))
-      (pin Oval[A]Pad_1854.2x2540_um 2 -1270 0)
-      (pin Rect[A]Pad_1854.2x2540_um 1 1270 0)
+    (image aalborg_mfc_interface:Header_3_Pin
+      (outline (path signal 381  -4445 -1905  4445 -1905))
+      (outline (path signal 381  -4445 1905  4445 1905))
+      (outline (path signal 381  1905 3175  2540 1905))
+      (outline (path signal 381  2540 1905  3175 3175))
+      (outline (path signal 381  3175 3175  1905 3175))
+      (outline (path signal 381  -4445 1905  -4445 -1905))
+      (outline (path signal 381  4445 -1905  4445 1905))
+      (pin Oval[A]Pad_1854.2x2540_um 2 0 0)
+      (pin Oval[A]Pad_1854.2x2540_um 3 -2540 0)
+      (pin Rect[A]Pad_1854.2x2540_um 1 2540 0)
+    )
+    (image aalborg_mfc_interface:SPST_SERIES_M
+      (outline (path signal 381  -3810 6350  -3810 -6350))
+      (outline (path signal 381  -3810 -6350  3810 -6350))
+      (outline (path signal 381  3810 -6350  3810 6350))
+      (outline (path signal 381  3810 6350  -3810 6350))
+      (pin Oval[A]Pad_4445x3175_um 2 0 0)
+      (pin Oval[A]Pad_4445x3175_um 3 0 4699)
+    )
+    (image aalborg_mfc_interface:KT_SWITCH
+      (outline (path signal 381  0 -762  -762 254))
+      (outline (path signal 381  0 -2032  0 -762))
+      (outline (path signal 381  0 2032  0 762))
+      (outline (path signal 381  -2540 -2032  2540 -2032))
+      (outline (path signal 381  -2540 2032  2540 2032))
+      (outline (path signal 381  -3556 3302  -3556 -3302))
+      (outline (path signal 381  -3556 -3302  3556 -3302))
+      (outline (path signal 381  3556 -3302  3556 3302))
+      (outline (path signal 381  3556 3302  -3556 3302))
+      (pin Rect[T]Pad_2667x1590.04_um 2 4127.5 1998.98)
+      (pin Rect[T]Pad_2667x1590.04_um 1 -4127.5 1998.98)
+      (pin Rect[T]Pad_2667x1590.04_um 4 4127.5 -1998.98)
+      (pin Rect[T]Pad_2667x1590.04_um 3 -4127.5 -1998.98)
+    )
+    (image aalborg_mfc_interface:MAX6817
+      (outline (path signal 381  0 1016  0 -1016))
+      (outline (path signal 228.6  -1524 1778  -1016 1778))
+      (outline (path signal 228.6  -1270 2032  -1270 1524))
+      (pin Rect[T]Pad_1330.96x558.8_um 1 -1198.88 949.96)
+      (pin Rect[T]Pad_1330.96x558.8_um 2 -1198.88 0)
+      (pin Rect[T]Pad_1330.96x558.8_um 3 -1198.88 -949.96)
+      (pin Rect[T]Pad_1330.96x558.8_um 4 1198.88 -949.96)
+      (pin Rect[T]Pad_1330.96x558.8_um 5 1198.88 0)
+      (pin Rect[T]Pad_1330.96x558.8_um 6 1198.88 949.96)
     )
     (image aalborg_mfc_interface:SM1210
       (outline (path signal 127  -762 1397  -2286 1397))
@@ -116,82 +151,25 @@
       (pin Rect[T]Pad_1270x2540_um 1 -1524 0)
       (pin Rect[T]Pad_1270x2540_um 2 1524 0)
     )
-    (image "aalborg_mfc_interface:Micro-MaTch_6_SMD"
-      (outline (path signal 228.6  -5080 1270  -4445 1270))
-      (outline (path signal 228.6  -4445 1270  -4445 -1270))
-      (outline (path signal 228.6  -4445 -1270  -5080 -1270))
-      (outline (path signal 228.6  -5080 2540  -4445 2540))
-      (outline (path signal 228.6  4445 -2540  5080 -2540))
-      (outline (path signal 228.6  5080 2540  3175 2540))
-      (outline (path signal 228.6  -5080 -2540  -3175 -2540))
-      (outline (path signal 228.6  5080 2540  5080 -2540))
-      (outline (path signal 228.6  -5080 2540  -5080 -2540))
-      (pin Rect[T]Pad_1498.6x2997.2_um 1 -3175 2260.6)
-      (pin Rect[T]Pad_1498.6x2997.2_um 2 -1905 -2260.6)
-      (pin Rect[T]Pad_1498.6x2997.2_um 3 -635 2260.6)
-      (pin Rect[T]Pad_1498.6x2997.2_um 4 635 -2260.6)
-      (pin Rect[T]Pad_1498.6x2997.2_um 5 1905 2260.6)
-      (pin Rect[T]Pad_1498.6x2997.2_um 6 3175 -2260.6)
+    (image aalborg_mfc_interface:DCJACK_2PIN_HIGHCURRENT
+      (outline (path signal 381  -5080 -13335  5080 -13335))
+      (outline (path signal 381  5080 -13335  5080 0))
+      (outline (path signal 381  -5080 -13335  -5080 0))
+      (outline (path signal 381  -5080 0  5080 0))
+      (pin Round[A]Pad_1930.4_um @1 0 -2997.2)
+      (pin "Oval[A][0,-508]Pad_3556x4572_um" 2 0 -5994.4)
+      (pin Oval[A]Pad_5080x4064_um 1 0 -11988.8)
+      (pin Oval[A]Pad_3556x5080_um @2 -4495.8 -5003.8)
+      (pin Oval[A]Pad_3556x5080_um @3 4495.8 -5003.8)
     )
-    (image aalborg_mfc_interface:Header_Shrouded_3_Pin
-      (outline (path signal 381  1905 3175  2540 1905))
-      (outline (path signal 381  2540 1905  3175 3175))
-      (outline (path signal 381  3175 3175  1905 3175))
-      (outline (path signal 381  -4445 3810  4445 3810))
-      (outline (path signal 381  4445 3810  4445 1905))
-      (outline (path signal 381  -4445 3810  -4445 1905))
-      (outline (path signal 381  -4445 1905  -4445 -1905))
-      (outline (path signal 381  -4445 -1905  4445 -1905))
-      (outline (path signal 381  4445 -1905  4445 1905))
-      (outline (path signal 381  4445 1905  -4445 1905))
-      (pin Oval[A]Pad_1854.2x2540_um 2 0 0)
-      (pin Oval[A]Pad_1854.2x2540_um 3 -2540 0)
-      (pin Rect[A]Pad_1854.2x2540_um 1 2540 0)
-    )
-    (image aalborg_mfc_interface:DB15FD
-      (outline (path signal 381  -12700 -7620  -9525 -9525))
-      (outline (path signal 381  -12700 7620  -9525 9525))
-      (outline (path signal 381  -12700 -7620  -21590 -7620))
-      (outline (path signal 381  -21590 -7620  -21590 7620))
-      (outline (path signal 381  -21590 7620  -12700 7620))
-      (outline (path signal 381  12700 -7620  9525 -9525))
-      (outline (path signal 381  12700 7620  9525 9525))
-      (outline (path signal 381  21590 7620  21590 -7620))
-      (outline (path signal 381  12700 -7620  21590 -7620))
-      (outline (path signal 381  12700 7620  21590 7620))
-      (outline (path signal 381  -9525 -9525  9525 -9525))
-      (outline (path signal 381  -9525 9525  9525 9525))
-      (outline (path signal 381  -19685 6350  -19685 -6350))
-      (outline (path signal 381  -19685 -6350  19685 -6350))
-      (outline (path signal 381  19685 -6350  19685 6350))
-      (outline (path signal 381  19685 6350  -19685 6350))
-      (pin Oval[A]Pad_3810x6350_um @1 -16662.4 0)
-      (pin Oval[A]Pad_3810x6350_um @2 16662.4 0)
-      (pin Oval[A][0,508]Pad_1524x2540_um 8 -9702.8 1419.86)
-      (pin Oval[A][0,508]Pad_1524x2540_um 7 -6934.2 1419.86)
-      (pin Oval[A][0,508]Pad_1524x2540_um 6 -4165.6 1419.86)
-      (pin Oval[A][0,508]Pad_1524x2540_um 5 -1397 1419.86)
-      (pin Oval[A][0,508]Pad_1524x2540_um 4 1397 1419.86)
-      (pin Oval[A][0,508]Pad_1524x2540_um 3 4165.6 1419.86)
-      (pin Oval[A][0,508]Pad_1524x2540_um 2 6934.2 1419.86)
-      (pin Rect[A][0,508]Pad_1524x2540_um 1 9702.8 1419.86)
-      (pin "Oval[A][0,-508]Pad_1524x2540_um" 15 -8305.8 -1419.86)
-      (pin "Oval[A][0,-508]Pad_1524x2540_um" 14 -5537.2 -1419.86)
-      (pin "Oval[A][0,-508]Pad_1524x2540_um" 13 -2768.6 -1419.86)
-      (pin "Oval[A][0,-508]Pad_1524x2540_um" 12 0 -1419.86)
-      (pin "Oval[A][0,-508]Pad_1524x2540_um" 11 2768.6 -1419.86)
-      (pin "Oval[A][0,-508]Pad_1524x2540_um" 10 5537.2 -1419.86)
-      (pin "Oval[A][0,-508]Pad_1524x2540_um" 9 8305.8 -1419.86)
-    )
-    (image "aalborg_mfc_interface:LED_555-3XXX"
-      (outline (path signal 228.6  -508 508  508 508))
-      (outline (path signal 228.6  0 0  0 1016))
-      (outline (path signal 228.6  -1270 3810  1270 3810))
-      (outline (path signal 228.6  1270 3810  1270 -3810))
-      (outline (path signal 228.6  1270 -3810  -1270 -3810))
-      (outline (path signal 228.6  -1270 -3810  -1270 3810))
-      (pin Oval[A]Pad_1524x2032_um 1 0 2540)
-      (pin Oval[A]Pad_1524x2032_um 2 0 -2540)
+    (image aalborg_mfc_interface:DC_DC_CONV_R78C
+      (outline (path signal 381  5715 -1905  5715 6350))
+      (outline (path signal 381  5715 6350  -5715 6350))
+      (outline (path signal 381  -5715 6350  -5715 -1905))
+      (outline (path signal 381  -5715 -1905  5715 -1905))
+      (pin Oval[A]Pad_1524x2540_um 2 0 0)
+      (pin Oval[A]Pad_1524x2540_um 3 2540 0)
+      (pin Oval[A]Pad_1524x2540_um 1 -2540 0)
     )
     (image aalborg_mfc_interface:ARDUINO_MEGA_SHIELD
       (outline (path signal 381  67945 7620  67851.8 7031.32  67581.2 6500.27  67159.7 6078.82
@@ -331,71 +309,115 @@
       (pin Oval[A][0,508]Pad_1524x2540_um (rotate 90) GND4 93980 7620)
       (pin "Oval[A][0,-508]Pad_1524x2540_um" (rotate 90) GND5 96520 7620)
     )
-    (image aalborg_mfc_interface:DC_DC_CONV_R78C
-      (outline (path signal 381  5715 -1905  5715 6350))
-      (outline (path signal 381  5715 6350  -5715 6350))
-      (outline (path signal 381  -5715 6350  -5715 -1905))
-      (outline (path signal 381  -5715 -1905  5715 -1905))
-      (pin Oval[A]Pad_1524x2540_um 2 0 0)
-      (pin Oval[A]Pad_1524x2540_um 3 2540 0)
-      (pin Oval[A]Pad_1524x2540_um 1 -2540 0)
+    (image "aalborg_mfc_interface:LED_555-3XXX"
+      (outline (path signal 228.6  -508 508  508 508))
+      (outline (path signal 228.6  0 0  0 1016))
+      (outline (path signal 228.6  -1270 3810  1270 3810))
+      (outline (path signal 228.6  1270 3810  1270 -3810))
+      (outline (path signal 228.6  1270 -3810  -1270 -3810))
+      (outline (path signal 228.6  -1270 -3810  -1270 3810))
+      (pin Oval[A]Pad_1524x2032_um 1 0 2540)
+      (pin Oval[A]Pad_1524x2032_um 2 0 -2540)
     )
-    (image aalborg_mfc_interface:DCJACK_2PIN_HIGHCURRENT
-      (outline (path signal 381  -5080 -13335  5080 -13335))
-      (outline (path signal 381  5080 -13335  5080 0))
-      (outline (path signal 381  -5080 -13335  -5080 0))
-      (outline (path signal 381  -5080 0  5080 0))
-      (pin Round[A]Pad_1930.4_um @1 0 -2997.2)
-      (pin "Oval[A][0,-508]Pad_3556x4572_um" 2 0 -5994.4)
-      (pin Oval[A]Pad_5080x4064_um 1 0 -11988.8)
-      (pin Oval[A]Pad_3556x5080_um @2 -4495.8 -5003.8)
-      (pin Oval[A]Pad_3556x5080_um @3 4495.8 -5003.8)
+    (image aalborg_mfc_interface:DB15FD
+      (outline (path signal 381  -12700 -7620  -9525 -9525))
+      (outline (path signal 381  -12700 7620  -9525 9525))
+      (outline (path signal 381  -12700 -7620  -21590 -7620))
+      (outline (path signal 381  -21590 -7620  -21590 7620))
+      (outline (path signal 381  -21590 7620  -12700 7620))
+      (outline (path signal 381  12700 -7620  9525 -9525))
+      (outline (path signal 381  12700 7620  9525 9525))
+      (outline (path signal 381  21590 7620  21590 -7620))
+      (outline (path signal 381  12700 -7620  21590 -7620))
+      (outline (path signal 381  12700 7620  21590 7620))
+      (outline (path signal 381  -9525 -9525  9525 -9525))
+      (outline (path signal 381  -9525 9525  9525 9525))
+      (outline (path signal 381  -19685 6350  -19685 -6350))
+      (outline (path signal 381  -19685 -6350  19685 -6350))
+      (outline (path signal 381  19685 -6350  19685 6350))
+      (outline (path signal 381  19685 6350  -19685 6350))
+      (pin Oval[A]Pad_3810x6350_um @1 -16662.4 0)
+      (pin Oval[A]Pad_3810x6350_um @2 16662.4 0)
+      (pin Oval[A][0,508]Pad_1524x2540_um 8 -9702.8 1419.86)
+      (pin Oval[A][0,508]Pad_1524x2540_um 7 -6934.2 1419.86)
+      (pin Oval[A][0,508]Pad_1524x2540_um 6 -4165.6 1419.86)
+      (pin Oval[A][0,508]Pad_1524x2540_um 5 -1397 1419.86)
+      (pin Oval[A][0,508]Pad_1524x2540_um 4 1397 1419.86)
+      (pin Oval[A][0,508]Pad_1524x2540_um 3 4165.6 1419.86)
+      (pin Oval[A][0,508]Pad_1524x2540_um 2 6934.2 1419.86)
+      (pin Rect[A][0,508]Pad_1524x2540_um 1 9702.8 1419.86)
+      (pin "Oval[A][0,-508]Pad_1524x2540_um" 15 -8305.8 -1419.86)
+      (pin "Oval[A][0,-508]Pad_1524x2540_um" 14 -5537.2 -1419.86)
+      (pin "Oval[A][0,-508]Pad_1524x2540_um" 13 -2768.6 -1419.86)
+      (pin "Oval[A][0,-508]Pad_1524x2540_um" 12 0 -1419.86)
+      (pin "Oval[A][0,-508]Pad_1524x2540_um" 11 2768.6 -1419.86)
+      (pin "Oval[A][0,-508]Pad_1524x2540_um" 10 5537.2 -1419.86)
+      (pin "Oval[A][0,-508]Pad_1524x2540_um" 9 8305.8 -1419.86)
     )
-    (image aalborg_mfc_interface:MAX6817
-      (outline (path signal 381  0 1016  0 -1016))
-      (outline (path signal 228.6  -1524 1778  -1016 1778))
-      (outline (path signal 228.6  -1270 2032  -1270 1524))
-      (pin Rect[T]Pad_1330.96x558.8_um 1 -1198.88 949.96)
-      (pin Rect[T]Pad_1330.96x558.8_um 2 -1198.88 0)
-      (pin Rect[T]Pad_1330.96x558.8_um 3 -1198.88 -949.96)
-      (pin Rect[T]Pad_1330.96x558.8_um 4 1198.88 -949.96)
-      (pin Rect[T]Pad_1330.96x558.8_um 5 1198.88 0)
-      (pin Rect[T]Pad_1330.96x558.8_um 6 1198.88 949.96)
-    )
-    (image aalborg_mfc_interface:KT_SWITCH
-      (outline (path signal 381  0 -762  -762 254))
-      (outline (path signal 381  0 -2032  0 -762))
-      (outline (path signal 381  0 2032  0 762))
-      (outline (path signal 381  -2540 -2032  2540 -2032))
-      (outline (path signal 381  -2540 2032  2540 2032))
-      (outline (path signal 381  -3556 3302  -3556 -3302))
-      (outline (path signal 381  -3556 -3302  3556 -3302))
-      (outline (path signal 381  3556 -3302  3556 3302))
-      (outline (path signal 381  3556 3302  -3556 3302))
-      (pin Rect[T]Pad_2667x1590.04_um 2 4127.5 1998.98)
-      (pin Rect[T]Pad_2667x1590.04_um 1 -4127.5 1998.98)
-      (pin Rect[T]Pad_2667x1590.04_um 4 4127.5 -1998.98)
-      (pin Rect[T]Pad_2667x1590.04_um 3 -4127.5 -1998.98)
-    )
-    (image aalborg_mfc_interface:SPST_SERIES_M
-      (outline (path signal 381  -3810 6350  -3810 -6350))
-      (outline (path signal 381  -3810 -6350  3810 -6350))
-      (outline (path signal 381  3810 -6350  3810 6350))
-      (outline (path signal 381  3810 6350  -3810 6350))
-      (pin Oval[A]Pad_4445x3175_um 2 0 0)
-      (pin Oval[A]Pad_4445x3175_um 3 0 4699)
-    )
-    (image aalborg_mfc_interface:Header_3_Pin
-      (outline (path signal 381  -4445 -1905  4445 -1905))
-      (outline (path signal 381  -4445 1905  4445 1905))
+    (image aalborg_mfc_interface:Header_Shrouded_3_Pin
       (outline (path signal 381  1905 3175  2540 1905))
       (outline (path signal 381  2540 1905  3175 3175))
       (outline (path signal 381  3175 3175  1905 3175))
+      (outline (path signal 381  -4445 3810  4445 3810))
+      (outline (path signal 381  4445 3810  4445 1905))
+      (outline (path signal 381  -4445 3810  -4445 1905))
       (outline (path signal 381  -4445 1905  -4445 -1905))
+      (outline (path signal 381  -4445 -1905  4445 -1905))
       (outline (path signal 381  4445 -1905  4445 1905))
+      (outline (path signal 381  4445 1905  -4445 1905))
       (pin Oval[A]Pad_1854.2x2540_um 2 0 0)
       (pin Oval[A]Pad_1854.2x2540_um 3 -2540 0)
       (pin Rect[A]Pad_1854.2x2540_um 1 2540 0)
+    )
+    (image "aalborg_mfc_interface:Micro-MaTch_6_SMD"
+      (outline (path signal 228.6  -5080 1270  -4445 1270))
+      (outline (path signal 228.6  -4445 1270  -4445 -1270))
+      (outline (path signal 228.6  -4445 -1270  -5080 -1270))
+      (outline (path signal 228.6  -5080 2540  -4445 2540))
+      (outline (path signal 228.6  4445 -2540  5080 -2540))
+      (outline (path signal 228.6  5080 2540  3175 2540))
+      (outline (path signal 228.6  -5080 -2540  -3175 -2540))
+      (outline (path signal 228.6  5080 2540  5080 -2540))
+      (outline (path signal 228.6  -5080 2540  -5080 -2540))
+      (pin Rect[T]Pad_1498.6x2997.2_um 1 -3175 2260.6)
+      (pin Rect[T]Pad_1498.6x2997.2_um 2 -1905 -2260.6)
+      (pin Rect[T]Pad_1498.6x2997.2_um 3 -635 2260.6)
+      (pin Rect[T]Pad_1498.6x2997.2_um 4 635 -2260.6)
+      (pin Rect[T]Pad_1498.6x2997.2_um 5 1905 2260.6)
+      (pin Rect[T]Pad_1498.6x2997.2_um 6 3175 -2260.6)
+    )
+    (image aalborg_mfc_interface:Header_Shrouded_2_Pin
+      (outline (path signal 381  -3175 -1905  3175 -1905))
+      (outline (path signal 381  -3175 1905  3175 1905))
+      (outline (path signal 381  -3175 3810  3175 3810))
+      (outline (path signal 381  635 3175  1270 1905))
+      (outline (path signal 381  1270 1905  1905 3175))
+      (outline (path signal 381  1905 3175  635 3175))
+      (outline (path signal 381  3175 3810  3175 1905))
+      (outline (path signal 381  -3175 3810  -3175 1905))
+      (outline (path signal 381  -3175 1905  -3175 -1905))
+      (outline (path signal 381  3175 -1905  3175 1905))
+      (pin Oval[A]Pad_1854.2x2540_um 2 -1270 0)
+      (pin Rect[A]Pad_1854.2x2540_um 1 1270 0)
+    )
+    (image aalborg_mfc_interface:BNC_DOUBLE
+      (outline (path signal 381  2540 -6350  3302 -5588))
+      (outline (path signal 381  -1270 -7620  -2286 -6096))
+      (outline (path signal 381  -6350 5715  -6350 6350))
+      (outline (path signal 381  -6350 6350  6350 6350))
+      (outline (path signal 381  6350 6350  6350 5715))
+      (outline (path signal 381  -7620 5715  -7620 -10160))
+      (outline (path signal 381  -7620 -10160  7620 -10160))
+      (outline (path signal 381  7620 -10160  7620 5715))
+      (outline (path signal 381  7620 5715  -7620 5715))
+      (outline (path signal 381  4318 -8255  508 -4445))
+      (outline (path signal 381  0 -7620  -2540 -7620))
+      (pin Oval[A]Pad_3048x5080_um @1 -5080 0)
+      (pin Oval[A]Pad_3048x5080_um @2 5080 0)
+      (pin Oval[A][0,254]Pad_1524x2032_um 1 0 -6350)
+      (pin Oval[A]Pad_2032x1524_um 3 0 -8890)
+      (pin Oval[A][254,0]Pad_2032x1524_um 2 2540 -8890)
+      (pin "Oval[A][-254,0]Pad_2032x1524_um" 4 -2540 -8890)
     )
     (padstack Round[A]Pad_1930.4_um
       (shape (circle F.Cu 1930.4))
@@ -405,6 +427,16 @@
     (padstack Round[A]Pad_3937_um
       (shape (circle F.Cu 3937))
       (shape (circle In1.Cu 3937))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_2032x1524_um
+      (shape (path F.Cu 1524  -254 0  254 0))
+      (shape (path In1.Cu 1524  -254 0  254 0))
+      (attach off)
+    )
+    (padstack "Oval[A][-254,0]Pad_2032x1524_um"
+      (shape (path F.Cu 1524  -508 0  0 0))
+      (shape (path In1.Cu 1524  -508 0  0 0))
       (attach off)
     )
     (padstack Oval[A]Pad_2540x1524_um
@@ -432,14 +464,29 @@
       (shape (path In1.Cu 1524  0 0  0 1016))
       (attach off)
     )
+    (padstack Oval[A][0,254]Pad_1524x2032_um
+      (shape (path F.Cu 1524  0 0  0 508))
+      (shape (path In1.Cu 1524  0 0  0 508))
+      (attach off)
+    )
     (padstack Oval[A][508,0]Pad_2540x1524_um
       (shape (path F.Cu 1524  0 0  1016 0))
       (shape (path In1.Cu 1524  0 0  1016 0))
       (attach off)
     )
+    (padstack Oval[A][254,0]Pad_2032x1524_um
+      (shape (path F.Cu 1524  0 0  508 0))
+      (shape (path In1.Cu 1524  0 0  508 0))
+      (attach off)
+    )
     (padstack Oval[A]Pad_1854.2x2540_um
       (shape (path F.Cu 1854.2  0 -342.9  0 342.9))
       (shape (path In1.Cu 1854.2  0 -342.9  0 342.9))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_3048x5080_um
+      (shape (path F.Cu 3048  0 -1016  0 1016))
+      (shape (path In1.Cu 3048  0 -1016  0 1016))
       (attach off)
     )
     (padstack Oval[A]Pad_4445x3175_um
@@ -501,108 +548,114 @@
   )
   (network
     (net VAA
-      (pins J3-7 J2-7 J1-7 REG1-1 P1-1 C1-1 SW1-2)
+      (pins SW1-2 C1-1 P1-1 REG1-1 J1-7 J2-7 J3-7)
     )
     (net GND
-      (pins S1-2 C8-2 E1-1 E1-2 P5-3 P4-3 P3-3 J3-5 J3-3 J3-1 J3-10 C7-2 J2-5 J2-3
-        J2-1 J2-10 J1-5 J1-3 J1-1 J1-10 D1-2 ARDUINO1-GND1 ARDUINO1-GND2 REG1-2 P1-2
-        R3-2 C1-2 C2-2 C3-2 C4-2 C5-2 C6-2 U2-2 U1-2 SW2-3 P2-2)
+      (pins P2-2 SW2-3 U1-2 U2-2 C6-2 C5-2 C4-2 C3-2 C2-2 C1-2 R3-2 P1-2 REG1-2 ARDUINO1-GND1
+        ARDUINO1-GND2 D1-2 J1-5 J1-3 J1-1 J1-10 J2-5 J2-3 J2-1 J2-10 C7-2 J3-5 J3-3
+        J3-1 J3-10 P4-3 P5-3 E1-1 E1-2 C8-2 S1-2 P6-3 P3-2 P3-4)
     )
     (net /V_IN
-      (pins ARDUINO1-V_IN REG1-3 C2-1)
+      (pins C2-1 REG1-3 ARDUINO1-V_IN)
     )
     (net +5V
-      (pins E1-6 P5-2 P4-2 P3-2 ARDUINO1-5V_1 C3-1 R1-1 R2-1 P2-3)
+      (pins P2-3 R2-1 R1-1 C3-1 ARDUINO1-5V_1 P4-2 P5-2 E1-6 P6-2)
     )
     (net /ENC_BTN
-      (pins E1-3 U1-1)
+      (pins U1-1 E1-3)
     )
     (net /ENC_B
-      (pins E1-4 ARDUINO1-3 R2-2)
+      (pins R2-2 ARDUINO1-2 E1-4)
     )
     (net /ENC_A
-      (pins E1-5 ARDUINO1-2 R1-2)
+      (pins R1-2 ARDUINO1-18 E1-5)
     )
     (net /TX3
-      (pins ARDUINO1-14 P2-1)
+      (pins P2-1 ARDUINO1-14)
     )
     (net /D_ENC_BTN
-      (pins ARDUINO1-19 U1-6)
+      (pins U1-6 ARDUINO1-19)
     )
     (net /D_LED_PWR
-      (pins ARDUINO1-18 U1-4)
+      (pins U1-4 ARDUINO1-17)
     )
     (net /LED_PWR
-      (pins D1-1 R3-1 U1-3 SW1-3)
-    )
-    (net /A0
-      (pins P3-1 ARDUINO1-A0)
-    )
-    (net /A1
-      (pins P4-1 ARDUINO1-A1)
-    )
-    (net /A2
-      (pins P5-1 ARDUINO1-A2)
+      (pins SW1-3 U1-3 R3-1 D1-1)
     )
     (net /ANALOG_IN_0
-      (pins J1-2 ARDUINO1-A3)
+      (pins ARDUINO1-A4 J1-2)
     )
     (net /ANALOG_IN_1
-      (pins J2-2 ARDUINO1-A4)
+      (pins ARDUINO1-A5 J2-2)
     )
     (net /ANALOG_IN_2
-      (pins J3-2 ARDUINO1-A5)
+      (pins ARDUINO1-A6 J3-2)
     )
     (net /PWM_2
-      (pins R6-2 ARDUINO1-9)
+      (pins ARDUINO1-9 R6-2)
     )
     (net /PWM_1
-      (pins ARDUINO1-8 R5-2)
+      (pins R5-2 ARDUINO1-8)
     )
     (net /PWM_0
-      (pins ARDUINO1-7 R4-2)
+      (pins R4-2 ARDUINO1-7)
     )
     (net /PURGE_0
-      (pins J1-4 ARDUINO1-22)
+      (pins ARDUINO1-22 J1-4)
     )
     (net /VALVE_OFF_0
-      (pins J1-12 ARDUINO1-23)
+      (pins ARDUINO1-23 J1-12)
     )
     (net /PURGE_1
-      (pins J2-4 ARDUINO1-24)
+      (pins ARDUINO1-24 J2-4)
     )
     (net /VALVE_OFF_1
-      (pins J2-12 ARDUINO1-25)
+      (pins ARDUINO1-25 J2-12)
     )
     (net /PURGE_2
-      (pins J3-4 ARDUINO1-26)
+      (pins ARDUINO1-26 J3-4)
     )
     (net /VALVE_OFF_2
-      (pins J3-12 ARDUINO1-27)
+      (pins ARDUINO1-27 J3-12)
     )
     (net /ANALOG_OUT_0
-      (pins J1-8 C6-1 R4-1)
+      (pins R4-1 C6-1 J1-8)
     )
     (net /ANALOG_OUT_1
-      (pins C7-1 J2-8 R5-1)
+      (pins R5-1 J2-8 C7-1)
     )
     (net /ANALOG_OUT_2
-      (pins C8-1 R6-1 J3-8)
-    )
-    (net /D_D20
-      (pins ARDUINO1-20 U2-4)
-    )
-    (net /D_D21
-      (pins ARDUINO1-21 U2-6)
+      (pins J3-8 R6-1 C8-1)
     )
     (net +5VD
-      (pins ARDUINO1-5V_4 C4-1 C5-1 U2-5 U1-5)
+      (pins U1-5 U2-5 C5-1 C4-1 ARDUINO1-5V_4)
     )
-    (net /D20
-      (pins S1-1 U2-3)
+    (net /D_BTN
+      (pins U2-6 ARDUINO1-21)
     )
-    (net /D21
-      (pins U2-1 SW2-2)
+    (net /BTN
+      (pins SW2-2 U2-1)
+    )
+    (net /BNC_A
+      (pins ARDUINO1-A0 P3-1)
+    )
+    (net /AIN_0
+      (pins ARDUINO1-A1 P4-1)
+    )
+    (net /AIN_1
+      (pins ARDUINO1-A2 P5-1)
+    )
+    (net /AIN_2
+      (pins ARDUINO1-A3 P6-1)
+    )
+    (net /BNC_B
+      (pins ARDUINO1-3 P3-3)
+    )
+    (net /D_SWITCH
+      (pins U2-4 ARDUINO1-20)
+    )
+    (net /SWITCH
+      (pins U2-3 S1-1)
     )
     (class kicad_default ""
       (circuit
@@ -640,30 +693,26 @@
         (clearance 254.1)
       )
     )
-    (class SIGNAL +5VD /A0 /A1 /A2 /ANALOG_IN_0 /ANALOG_IN_1 /ANALOG_IN_2
-      /ANALOG_IN_A /ANALOG_IN_B /ANALOG_IN_C /ANALOG_OUT_0 /ANALOG_OUT_1 /ANALOG_OUT_2
-      /ANALOG_OUT_A /ANALOG_OUT_B /ANALOG_OUT_C /BNC_A /BNC_B /D20 /D21 /D_D20
-      /D_D21 /D_ENC_BTN /D_LED_PWR /ENC_A /ENC_B /ENC_BTN /PURGE_0 /PURGE_1
-      /PURGE_2 /PURGE_A /PURGE_B /PURGE_C /PWM_0 /PWM_1 /PWM_2 /PWM_A /PWM_B
-      /PWM_C /TX3 /VALVE_OFF_0 /VALVE_OFF_1 /VALVE_OFF_2 /VALVE_OFF_A /VALVE_OFF_B
-      /VALVE_OFF_C /V_IN "Net-(ARDUINO1-Pad0)" "Net-(ARDUINO1-Pad1)" "Net-(ARDUINO1-Pad10)"
-      "Net-(ARDUINO1-Pad11)" "Net-(ARDUINO1-Pad12)" "Net-(ARDUINO1-Pad13)"
-      "Net-(ARDUINO1-Pad15)" "Net-(ARDUINO1-Pad16)" "Net-(ARDUINO1-Pad17)"
-      "Net-(ARDUINO1-Pad20)" "Net-(ARDUINO1-Pad20B)" "Net-(ARDUINO1-Pad21)"
-      "Net-(ARDUINO1-Pad21B)" "Net-(ARDUINO1-Pad28)" "Net-(ARDUINO1-Pad29)"
-      "Net-(ARDUINO1-Pad30)" "Net-(ARDUINO1-Pad31)" "Net-(ARDUINO1-Pad32)"
-      "Net-(ARDUINO1-Pad33)" "Net-(ARDUINO1-Pad34)" "Net-(ARDUINO1-Pad35)"
-      "Net-(ARDUINO1-Pad36)" "Net-(ARDUINO1-Pad37)" "Net-(ARDUINO1-Pad38)"
-      "Net-(ARDUINO1-Pad39)" "Net-(ARDUINO1-Pad3V3)" "Net-(ARDUINO1-Pad4)"
-      "Net-(ARDUINO1-Pad40)" "Net-(ARDUINO1-Pad41)" "Net-(ARDUINO1-Pad42)"
-      "Net-(ARDUINO1-Pad43)" "Net-(ARDUINO1-Pad44)" "Net-(ARDUINO1-Pad45)"
-      "Net-(ARDUINO1-Pad46)" "Net-(ARDUINO1-Pad47)" "Net-(ARDUINO1-Pad48)"
-      "Net-(ARDUINO1-Pad49)" "Net-(ARDUINO1-Pad5)" "Net-(ARDUINO1-Pad50)"
-      "Net-(ARDUINO1-Pad51)" "Net-(ARDUINO1-Pad52)" "Net-(ARDUINO1-Pad53)"
-      "Net-(ARDUINO1-Pad5V_4)" "Net-(ARDUINO1-Pad5V_5)" "Net-(ARDUINO1-Pad6)"
+    (class SIGNAL +5VD /A0 /A1 /A2 /AIN_0 /AIN_1 /AIN_2 /ANALOG_IN_0 /ANALOG_IN_1
+      /ANALOG_IN_2 /ANALOG_OUT_0 /ANALOG_OUT_1 /ANALOG_OUT_2 /BNC_A /BNC_B
+      /BTN /D_BTN /D_ENC_BTN /D_IN /D_LED_PWR /D_SWITCH /ENC_A /ENC_B /ENC_BTN
+      /IN /PURGE_0 /PURGE_1 /PURGE_2 /PWM_0 /PWM_1 /PWM_2 /SWITCH /TX3 /VALVE_OFF_0
+      /VALVE_OFF_1 /VALVE_OFF_2 /V_IN "Net-(ARDUINO1-Pad0)" "Net-(ARDUINO1-Pad1)"
+      "Net-(ARDUINO1-Pad10)" "Net-(ARDUINO1-Pad11)" "Net-(ARDUINO1-Pad12)"
+      "Net-(ARDUINO1-Pad13)" "Net-(ARDUINO1-Pad15)" "Net-(ARDUINO1-Pad16)"
+      "Net-(ARDUINO1-Pad20B)" "Net-(ARDUINO1-Pad21B)" "Net-(ARDUINO1-Pad28)"
+      "Net-(ARDUINO1-Pad29)" "Net-(ARDUINO1-Pad30)" "Net-(ARDUINO1-Pad31)"
+      "Net-(ARDUINO1-Pad32)" "Net-(ARDUINO1-Pad33)" "Net-(ARDUINO1-Pad34)"
+      "Net-(ARDUINO1-Pad35)" "Net-(ARDUINO1-Pad36)" "Net-(ARDUINO1-Pad37)"
+      "Net-(ARDUINO1-Pad38)" "Net-(ARDUINO1-Pad39)" "Net-(ARDUINO1-Pad3V3)"
+      "Net-(ARDUINO1-Pad4)" "Net-(ARDUINO1-Pad40)" "Net-(ARDUINO1-Pad41)"
+      "Net-(ARDUINO1-Pad42)" "Net-(ARDUINO1-Pad43)" "Net-(ARDUINO1-Pad44)"
+      "Net-(ARDUINO1-Pad45)" "Net-(ARDUINO1-Pad46)" "Net-(ARDUINO1-Pad47)"
+      "Net-(ARDUINO1-Pad48)" "Net-(ARDUINO1-Pad49)" "Net-(ARDUINO1-Pad5)"
+      "Net-(ARDUINO1-Pad50)" "Net-(ARDUINO1-Pad51)" "Net-(ARDUINO1-Pad52)"
+      "Net-(ARDUINO1-Pad53)" "Net-(ARDUINO1-Pad5V_5)" "Net-(ARDUINO1-Pad6)"
       "Net-(ARDUINO1-PadA10)" "Net-(ARDUINO1-PadA11)" "Net-(ARDUINO1-PadA12)"
       "Net-(ARDUINO1-PadA13)" "Net-(ARDUINO1-PadA14)" "Net-(ARDUINO1-PadA15)"
-      "Net-(ARDUINO1-PadA4)" "Net-(ARDUINO1-PadA5)" "Net-(ARDUINO1-PadA6)"
       "Net-(ARDUINO1-PadA7)" "Net-(ARDUINO1-PadA8)" "Net-(ARDUINO1-PadA9)"
       "Net-(ARDUINO1-PadAREF)" "Net-(ARDUINO1-PadGND3)" "Net-(ARDUINO1-PadGND4)"
       "Net-(ARDUINO1-PadGND5)" "Net-(ARDUINO1-PadIREF)" "Net-(ARDUINO1-PadNC)"

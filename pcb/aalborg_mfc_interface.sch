@@ -72,9 +72,7 @@ $EndComp
 Wire Wire Line
 	1200 1200 1200 1550
 Wire Wire Line
-	1200 1550 1350 1550
-Wire Wire Line
-	1350 1550 1850 1550
+	1200 1550 1850 1550
 Wire Wire Line
 	1350 1200 1350 1550
 Connection ~ 1350 1550
@@ -92,9 +90,7 @@ $EndComp
 Wire Wire Line
 	1850 1650 1350 1650
 Wire Wire Line
-	1350 1650 1350 1750
-Wire Wire Line
-	1350 1750 1350 1800
+	1350 1650 1350 1800
 Wire Wire Line
 	1850 1750 1350 1750
 Connection ~ 1350 1750
@@ -190,18 +186,14 @@ F 3 "" H 5050 950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5250 950  5400 950 
-Wire Wire Line
-	5400 950  5500 950 
+	5250 950  5500 950 
 Wire Wire Line
 	5250 950  5250 850 
 Wire Wire Line
 	5400 850  5400 950 
 Connection ~ 5400 950 
 Wire Wire Line
-	5050 1050 5400 1050
-Wire Wire Line
-	5400 1050 5500 1050
+	5050 1050 5500 1050
 Wire Wire Line
 	5050 1050 5050 950 
 Wire Wire Line
@@ -244,9 +236,7 @@ F 3 "" H 1300 6600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1300 6350 1300 6450
-Wire Wire Line
-	1300 6450 1300 6600
+	1300 6350 1300 6600
 Wire Wire Line
 	900  6450 1300 6450
 Connection ~ 1300 6450
@@ -266,9 +256,7 @@ Wire Wire Line
 Wire Wire Line
 	1300 5900 1000 5900
 Wire Wire Line
-	1000 5850 1000 5900
-Wire Wire Line
-	1000 5900 1000 6350
+	1000 5850 1000 6350
 Wire Wire Line
 	1000 6350 900  6350
 Connection ~ 1000 5900
@@ -312,28 +300,20 @@ F 3 "" H 6800 1450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6800 1200 6800 1350
-Wire Wire Line
-	6800 1350 6800 1450
+	6800 1200 6800 1450
 Wire Wire Line
 	6150 1300 6150 1350
 Wire Wire Line
-	6150 1350 6800 1350
-Wire Wire Line
-	6800 1350 7450 1350
+	6150 1350 7450 1350
 Connection ~ 6800 1350
 Wire Wire Line
 	7450 1350 7450 1300
 Wire Wire Line
 	6150 900  6150 850 
 Wire Wire Line
-	6150 850  6200 850 
+	6150 850  6400 850 
 Wire Wire Line
-	6200 850  6400 850 
-Wire Wire Line
-	7200 850  7450 850 
-Wire Wire Line
-	7450 850  7700 850 
+	7200 850  7700 850 
 Wire Wire Line
 	7450 900  7450 850 
 Connection ~ 7450 850 
@@ -354,9 +334,7 @@ F 3 "" H 1350 7700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	950  7550 1050 7550
-Wire Wire Line
-	1050 7550 1350 7550
+	950  7550 1350 7550
 Wire Wire Line
 	1350 7550 1350 7700
 Wire Wire Line
@@ -375,11 +353,7 @@ F 3 "" H 2000 6850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	950  7050 1650 7050
-Wire Wire Line
-	1650 7050 1900 7050
-Wire Wire Line
-	1900 7050 2000 7050
+	950  7050 2000 7050
 Wire Wire Line
 	2000 7050 2000 6850
 Wire Wire Line
@@ -393,17 +367,13 @@ Wire Wire Line
 Wire Wire Line
 	1550 7150 1550 7700
 Wire Wire Line
-	1550 7700 1650 7700
-Wire Wire Line
-	1650 7700 1950 7700
+	1550 7700 1950 7700
 Wire Wire Line
 	950  7250 1500 7250
 Wire Wire Line
 	1500 7250 1500 7800
 Wire Wire Line
-	1500 7800 1900 7800
-Wire Wire Line
-	1900 7800 1950 7800
+	1500 7800 1950 7800
 Text Label 1050 7350 0    60   ~ 0
 ENC_BTN
 Text Label 1950 7700 0    60   ~ 0
@@ -462,9 +432,7 @@ $EndComp
 Wire Wire Line
 	3750 7000 3750 7050
 Wire Wire Line
-	3750 6500 3750 6550
-Wire Wire Line
-	3750 6550 3750 6600
+	3750 6500 3750 6600
 Wire Wire Line
 	4050 3250 4250 3250
 Text Label 4250 3250 0    60   ~ 0
@@ -501,13 +469,7 @@ VALVE_OFF_0
 Wire Wire Line
 	9050 1350 9000 1350
 Wire Wire Line
-	9000 1350 9000 1750
-Wire Wire Line
-	9000 1750 9000 1850
-Wire Wire Line
-	9000 1850 9000 2150
-Wire Wire Line
-	9000 2150 9000 2250
+	9000 1350 9000 2250
 Wire Wire Line
 	9050 2150 9000 2150
 Connection ~ 9000 2150
@@ -571,9 +533,7 @@ $EndComp
 Wire Wire Line
 	6800 2600 6800 2700
 Wire Wire Line
-	6400 2050 6800 2050
-Wire Wire Line
-	6800 2050 7000 2050
+	6400 2050 7000 2050
 Wire Wire Line
 	6800 2200 6800 2050
 Connection ~ 6800 2050
@@ -597,9 +557,7 @@ $EndComp
 Wire Wire Line
 	6800 3600 6800 3700
 Wire Wire Line
-	6400 3050 6800 3050
-Wire Wire Line
-	6800 3050 7000 3050
+	6400 3050 7000 3050
 Wire Wire Line
 	6800 3200 6800 3050
 Connection ~ 6800 3050
@@ -636,13 +594,7 @@ VALVE_OFF_1
 Wire Wire Line
 	9050 3200 9000 3200
 Wire Wire Line
-	9000 3200 9000 3600
-Wire Wire Line
-	9000 3600 9000 3700
-Wire Wire Line
-	9000 3700 9000 4000
-Wire Wire Line
-	9000 4000 9000 4100
+	9000 3200 9000 4100
 Wire Wire Line
 	9050 4000 9000 4000
 Connection ~ 9000 4000
@@ -991,9 +943,7 @@ F 3 "" H 700 4900 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	700  4000 700  4100
-Wire Wire Line
-	700  4100 700  4250
+	700  4000 700  4250
 Wire Wire Line
 	700  4750 700  4900
 Wire Wire Line
@@ -1028,13 +978,7 @@ VALVE_OFF_2
 Wire Wire Line
 	9050 5100 9000 5100
 Wire Wire Line
-	9000 5100 9000 5500
-Wire Wire Line
-	9000 5500 9000 5600
-Wire Wire Line
-	9000 5600 9000 5900
-Wire Wire Line
-	9000 5900 9000 6000
+	9000 5100 9000 6000
 Wire Wire Line
 	9050 5900 9000 5900
 Connection ~ 9000 5900
@@ -1100,9 +1044,7 @@ $EndComp
 Wire Wire Line
 	6800 4550 6800 4650
 Wire Wire Line
-	6400 4000 6800 4000
-Wire Wire Line
-	6800 4000 7000 4000
+	6400 4000 7000 4000
 Wire Wire Line
 	6800 4150 6800 4000
 Connection ~ 6800 4000
@@ -1271,9 +1213,7 @@ F 3 "" H 4400 3650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4050 3700 4400 3700
-Wire Wire Line
-	4400 3700 4650 3700
+	4050 3700 4650 3700
 Wire Wire Line
 	4400 3700 4400 3650
 $Comp
@@ -1343,9 +1283,7 @@ $EndComp
 Wire Wire Line
 	5600 7000 5600 7050
 Wire Wire Line
-	5600 6500 5600 6550
-Wire Wire Line
-	5600 6550 5600 6600
+	5600 6500 5600 6600
 $Comp
 L 0.1uF C5
 U 1 1 54B955FC
@@ -1475,10 +1413,10 @@ F 6 "SWITCH TACTILE SPST-NO 1VA 32V" H 6250 7850 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L HEADER_01X03_SHR P3
+L HEADER_01X03_SHR P4
 U 1 1 54B9D7EF
 P 7850 4600
-F 0 "P3" H 7850 4800 50  0000 C CNN
+F 0 "P4" H 7850 4800 50  0000 C CNN
 F 1 "HEADER_01X03_SHR" V 7950 4600 50  0000 C CNN
 F 2 "aalborg_mfc_interface:Header_Shrouded_3_Pin" H 7750 4700 60  0001 C CNN
 F 3 "" H 7850 4600 60  0000 C CNN
@@ -1489,10 +1427,10 @@ F 6 "CONN HEADER 3POS .100 VERT GOLD" H 8150 5100 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L HEADER_01X03_SHR P4
+L HEADER_01X03_SHR P5
 U 1 1 54B9D9D9
 P 7850 5400
-F 0 "P4" H 7850 5600 50  0000 C CNN
+F 0 "P5" H 7850 5600 50  0000 C CNN
 F 1 "HEADER_01X03_SHR" V 7950 5400 50  0000 C CNN
 F 2 "aalborg_mfc_interface:Header_Shrouded_3_Pin" H 7750 5500 60  0001 C CNN
 F 3 "" H 7850 5400 60  0000 C CNN
@@ -1503,10 +1441,10 @@ F 6 "CONN HEADER 3POS .100 VERT GOLD" H 8150 5900 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L HEADER_01X03_SHR P5
+L HEADER_01X03_SHR P6
 U 1 1 54B9DA07
 P 7850 6200
-F 0 "P5" H 7850 6400 50  0000 C CNN
+F 0 "P6" H 7850 6400 50  0000 C CNN
 F 1 "HEADER_01X03_SHR" V 7950 6200 50  0000 C CNN
 F 2 "aalborg_mfc_interface:Header_Shrouded_3_Pin" H 7750 6300 60  0001 C CNN
 F 3 "" H 7850 6200 60  0000 C CNN
@@ -1564,4 +1502,44 @@ Wire Wire Line
 	7350 6000 7350 6200
 Wire Wire Line
 	7350 6200 7650 6200
+$Comp
+L BNC_DOUBLE_RA P3
+U 1 1 54EB8C82
+P 2550 6350
+F 0 "P3" H 2550 6500 50  0000 C CNN
+F 1 "BNC_DOUBLE_RA" H 2550 6200 50  0000 C CNN
+F 2 "aalborg_mfc_interface:BNC_DOUBLE" H 2550 5150 60  0001 C CNN
+F 3 "" H 2550 5150 60  0000 C CNN
+F 4 "digikey" H 2650 6600 60  0001 C CNN "Vendor"
+F 5 "ACX1655-ND" H 2750 6700 60  0001 C CNN "PartNumber"
+F 6 "CONN BNC JACK R/A 75 OHM PCB" H 2850 6800 60  0001 C CNN "Description"
+	1    2550 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR042
+U 1 1 54EB8D56
+P 2950 6450
+F 0 "#PWR042" H 2950 6200 60  0001 C CNN
+F 1 "GND" H 2950 6300 60  0000 C CNN
+F 2 "" H 2950 6450 60  0000 C CNN
+F 3 "" H 2950 6450 60  0000 C CNN
+	1    2950 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 6300 2950 6300
+Wire Wire Line
+	2950 6300 2950 6450
+Wire Wire Line
+	2800 6400 2950 6400
+Connection ~ 2950 6400
+Wire Wire Line
+	2300 6300 1950 6300
+Wire Wire Line
+	2300 6400 1950 6400
+Text Label 1950 6300 0    60   ~ 0
+BNC_A
+Text Label 1950 6400 0    60   ~ 0
+BNC_B
 $EndSCHEMATC
