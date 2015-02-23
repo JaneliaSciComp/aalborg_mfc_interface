@@ -41,5 +41,9 @@ void getSavedStatesCallback();
 
 // Standalone Callbacks
 void executeStandaloneCallbackCallback();
+
+void saveStateStandaloneCallback();
+
+void recallStateStandaloneCallback();
 }
 #endif

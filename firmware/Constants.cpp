@@ -27,29 +27,31 @@ const int led_pwr_pin = 18;
 const int standalone_update_period = 300;
 
 const int mfc_pwm_pins[] = {7,8,9};
-const int mfc_analog_in_pins[] = {3,4,5};
+const int mfc_ain_pins[] = {3,4,5};
 const int mfc_purge_pins[] = {22,24,26};
 const int mfc_valve_off_pins[] = {23,25,27};
 
-const int analog_in_pins[] = {0,1,2};
+const int ain_pins[] = {0,1,2};
 
 const int pwm_min = 0;
 const int pwm_max = 255;
-const int analog_in_min = 0;
-const int analog_in_max = 1023;
+const int ain_min = 0;
+const int ain_max = 1023;
 
 const int percent_min = 0;
 const int percent_max = 100;
 
-const uint8_t states_default[STATE_COUNT][MFC_COUNT] = {0};
+const uint8_t states_array_default[STATE_COUNT][MFC_COUNT] = {0};
 
 const uint8_t mfc_dsp_lbl_display_positions[] = {24,44,64};
 const uint8_t ain_dsp_lbl_display_positions[] = {24,44,64};
+const uint8_t state_dsp_lbl_display_position = 51;
 
 const uint8_t percent_display_width = 3;
 
 const uint8_t flow_var_display_positions[] = {26,46,66};
 const uint8_t ain_dsp_var_display_positions[] = {26,46,66};
+const uint8_t state_int_var_display_position = 57;
 
 FLASH_STRING(device_name,"aalborg_mfc_interface");
 FLASH_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
@@ -66,7 +68,7 @@ FLASH_STRING(save_state_method_name,"saveState");
 FLASH_STRING(recall_state_method_name,"recallState");
 FLASH_STRING(get_saved_states_method_name,"getSavedStates");
 FLASH_STRING(mfc_parameter_name,"mfc");
-FLASH_STRING(channel_parameter_name,"channel");
+FLASH_STRING(ain_parameter_name,"ain");
 FLASH_STRING(percent_parameter_name,"percent");
 FLASH_STRING(percents_parameter_name,"percents");
 FLASH_STRING(state_parameter_name,"state");
@@ -79,6 +81,8 @@ const _FLASH_STRING frame_name_array[] =
     frame0_name,
     frame1_name,
     frame2_name,
+    save_state_method_name,
+    recall_state_method_name,
   };
 FLASH_STRING(mfc0_dsp_lbl_string,"mfc0");
 FLASH_STRING(mfc1_dsp_lbl_string,"mfc1");
@@ -89,9 +93,9 @@ const _FLASH_STRING mfc_dsp_lbl_strings[] =
     mfc1_dsp_lbl_string,
     mfc2_dsp_lbl_string,
   };
-FLASH_STRING(ain0_dsp_lbl_string,"A0");
-FLASH_STRING(ain1_dsp_lbl_string,"A1");
-FLASH_STRING(ain2_dsp_lbl_string,"A2");
+FLASH_STRING(ain0_dsp_lbl_string,"ain0");
+FLASH_STRING(ain1_dsp_lbl_string,"ain1");
+FLASH_STRING(ain2_dsp_lbl_string,"ain2");
 const _FLASH_STRING ain_dsp_lbl_strings[] =
   {
     ain0_dsp_lbl_string,

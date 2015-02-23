@@ -94,8 +94,8 @@ void getMfcFlowMeasuresCallback()
 
 void getAnalogInputCallback()
 {
-  long channel = modular_device.getParameterValue(constants::channel_parameter_name);
-  uint8_t percent = controller.getAnalogInput(channel);
+  long ain = modular_device.getParameterValue(constants::ain_parameter_name);
+  uint8_t percent = controller.getAnalogInput(ain);
   modular_device.addToResponse("percent",percent);
 }
 
@@ -103,9 +103,9 @@ void getAnalogInputsCallback()
 {
   modular_device.addKeyToResponse("percents");
   modular_device.startResponseArray();
-  for (int channel=0; channel<constants::ANALOG_INPUT_COUNT; channel++)
+  for (int ain=0; ain<constants::AIN_COUNT; ain++)
   {
-    uint8_t percent = controller.getAnalogInput(channel);
+    uint8_t percent = controller.getAnalogInput(ain);
     modular_device.addToResponse(percent);
   }
   modular_device.stopResponseArray();
@@ -125,13 +125,14 @@ void recallStateCallback()
 
 void getSavedStatesCallback()
 {
-  uint8_t** states_array = controller.getStatesArray();
+  uint8_t states_array[constants::STATE_COUNT][constants::MFC_COUNT];
+  controller.getStatesArray(states_array);
   modular_device.addKeyToResponse("saved_states");
   modular_device.startResponseArray();
   for (int state=0; state<constants::STATE_COUNT; state++)
   {
     modular_device.startResponseArray();
-    for (int mfc=0; mfc<=constants::MFC_COUNT; mfc++)
+    for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
     {
       modular_device.addToResponse(states_array[state][mfc]);
     }
@@ -144,5 +145,17 @@ void getSavedStatesCallback()
 void executeStandaloneCallbackCallback()
 {
   controller.executeStandaloneCallback();
+}
+
+void saveStateStandaloneCallback()
+{
+  uint8_t state = controller.getStateIntVar();
+  controller.saveState(state);
+}
+
+void recallStateStandaloneCallback()
+{
+  uint8_t state = controller.getStateIntVar();
+  controller.recallState(state);
 }
 }

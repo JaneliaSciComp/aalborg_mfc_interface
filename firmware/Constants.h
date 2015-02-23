@@ -11,10 +11,10 @@
 
 namespace constants
 {
-enum {MFC_COUNT=3};
-enum {FRAME_COUNT=3};
-enum {ANALOG_INPUT_COUNT=3};
+enum {FRAME_COUNT=5};
 enum {STATE_COUNT=10};
+enum {MFC_COUNT=3};
+enum {AIN_COUNT=3};
 
 extern const int baudrate;
 
@@ -33,29 +33,31 @@ extern const int led_pwr_pin;
 extern const int standalone_update_period;
 
 extern const int mfc_pwm_pins[MFC_COUNT];
-extern const int mfc_analog_in_pins[MFC_COUNT];
+extern const int mfc_ain_pins[MFC_COUNT];
 extern const int mfc_purge_pins[MFC_COUNT];
 extern const int mfc_valve_off_pins[MFC_COUNT];
 
-extern const int analog_in_pins[ANALOG_INPUT_COUNT];
+extern const int ain_pins[AIN_COUNT];
 
 extern const int pwm_min;
 extern const int pwm_max;
-extern const int analog_in_min;
-extern const int analog_in_max;
+extern const int ain_min;
+extern const int ain_max;
 
 extern const int percent_min;
 extern const int percent_max;
 
-extern const uint8_t states_default[STATE_COUNT][MFC_COUNT];
+extern const uint8_t states_array_default[STATE_COUNT][MFC_COUNT];
 
 extern const uint8_t mfc_dsp_lbl_display_positions[MFC_COUNT];
-extern const uint8_t ain_dsp_lbl_display_positions[ANALOG_INPUT_COUNT];
+extern const uint8_t ain_dsp_lbl_display_positions[AIN_COUNT];
+extern const uint8_t state_dsp_lbl_display_position;
 
 extern const uint8_t percent_display_width;
 
 extern const uint8_t flow_var_display_positions[MFC_COUNT];
-extern const uint8_t ain_dsp_var_display_positions[ANALOG_INPUT_COUNT];
+extern const uint8_t ain_dsp_var_display_positions[AIN_COUNT];
+extern const uint8_t state_int_var_display_position;
 
 extern _FLASH_STRING device_name;
 extern _FLASH_STRING execute_standalone_callback_method_name;
@@ -72,7 +74,7 @@ extern _FLASH_STRING save_state_method_name;
 extern _FLASH_STRING recall_state_method_name;
 extern _FLASH_STRING get_saved_states_method_name;
 extern _FLASH_STRING mfc_parameter_name;
-extern _FLASH_STRING channel_parameter_name;
+extern _FLASH_STRING ain_parameter_name;
 extern _FLASH_STRING percent_parameter_name;
 extern _FLASH_STRING percents_parameter_name;
 extern _FLASH_STRING state_parameter_name;
@@ -88,6 +90,6 @@ extern const _FLASH_STRING mfc_dsp_lbl_strings[MFC_COUNT];
 extern _FLASH_STRING ain0_dsp_lbl_string;
 extern _FLASH_STRING ain1_dsp_lbl_string;
 extern _FLASH_STRING ain2_dsp_lbl_string;
-extern const _FLASH_STRING ain_dsp_lbl_strings[ANALOG_INPUT_COUNT];
+extern const _FLASH_STRING ain_dsp_lbl_strings[AIN_COUNT];
 }
 #endif

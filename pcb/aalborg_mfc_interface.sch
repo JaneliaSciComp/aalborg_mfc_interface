@@ -30,7 +30,6 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:aalborg_mfc_interface
-LIBS:components
 LIBS:aalborg_mfc_interface-cache
 EELAYER 25 0
 EELAYER END
@@ -39,7 +38,7 @@ encoding utf-8
 Sheet 1 1
 Title "aalborg_mfc_interface"
 Date ""
-Rev "1.1"
+Rev "1.2"
 Comp "Janelia"
 Comment1 ""
 Comment2 ""
@@ -99,7 +98,6 @@ Wire Wire Line
 Wire Wire Line
 	1850 1750 1350 1750
 Connection ~ 1350 1750
-NoConn ~ 1850 2650
 NoConn ~ 1850 2750
 NoConn ~ 1850 2950
 NoConn ~ 1850 3050
@@ -136,7 +134,6 @@ NoConn ~ 4050 2450
 NoConn ~ 4050 2550
 NoConn ~ 4050 2850
 NoConn ~ 4050 2950
-NoConn ~ 4050 3050
 NoConn ~ 4050 3800
 NoConn ~ 4050 4550
 NoConn ~ 4050 4650
@@ -422,11 +419,11 @@ Connection ~ 1900 7800
 Wire Wire Line
 	4050 2350 4250 2350
 Text Label 4250 2350 0    60   ~ 0
-ENC_A
+ENC_B
 Wire Wire Line
 	4050 2250 4250 2250
 Text Label 4250 2250 0    60   ~ 0
-ENC_B
+BNC_B
 Wire Wire Line
 	1050 7450 1050 7550
 Connection ~ 1050 7550
@@ -548,9 +545,9 @@ Wire Wire Line
 	9050 1950 8350 1950
 Text Label 8350 1950 0    60   ~ 0
 ANALOG_IN_0
-Text Label 1200 2350 0    60   ~ 0
-ANALOG_IN_0
 Text Label 1200 2450 0    60   ~ 0
+ANALOG_IN_0
+Text Label 1200 2550 0    60   ~ 0
 ANALOG_IN_1
 Wire Wire Line
 	4050 1850 4250 1850
@@ -945,7 +942,7 @@ Wire Wire Line
 	1850 2150 1200 2150
 Wire Wire Line
 	4050 3150 4250 3150
-Text Label 4250 3150 0    60   ~ 0
+Text Label 4250 3050 0    60   ~ 0
 D_LED_PWR
 Text Label 700  5300 0    60   ~ 0
 LED_PWR
@@ -1157,7 +1154,7 @@ Text Label 4250 4450 0    60   ~ 0
 VALVE_OFF_2
 Wire Wire Line
 	1850 2350 1200 2350
-Text Label 1200 2550 0    60   ~ 0
+Text Label 1200 2650 0    60   ~ 0
 ANALOG_IN_2
 NoConn ~ 4050 1450
 Wire Wire Line
@@ -1166,25 +1163,25 @@ Wire Wire Line
 	1850 2450 1200 2450
 Wire Wire Line
 	1850 2550 1200 2550
-Text Label 1200 2050 0    60   ~ 0
-A0
 Text Label 1200 2150 0    60   ~ 0
-A1
+AIN_0
 Text Label 1200 2250 0    60   ~ 0
-A2
+AIN_1
+Text Label 1200 2350 0    60   ~ 0
+AIN_2
 Wire Wire Line
-	7650 4500 7500 4500
-Text Label 7500 4500 0    60   ~ 0
-A0
+	7650 4500 7400 4500
+Text Label 7400 4500 0    60   ~ 0
+AIN_0
 $Comp
 L +5V #PWR028
 U 1 1 54B5A3F5
-P 7450 4400
-F 0 "#PWR028" H 7450 4250 60  0001 C CNN
-F 1 "+5V" H 7450 4540 60  0000 C CNN
-F 2 "" H 7450 4400 60  0000 C CNN
-F 3 "" H 7450 4400 60  0000 C CNN
-	1    7450 4400
+P 7350 4400
+F 0 "#PWR028" H 7350 4250 60  0001 C CNN
+F 1 "+5V" H 7350 4540 60  0000 C CNN
+F 2 "" H 7350 4400 60  0000 C CNN
+F 3 "" H 7350 4400 60  0000 C CNN
+	1    7350 4400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1199,26 +1196,22 @@ F 3 "" H 7450 4750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7650 4600 7450 4600
-Wire Wire Line
-	7450 4600 7450 4400
-Wire Wire Line
 	7650 4700 7450 4700
 Wire Wire Line
 	7450 4700 7450 4750
 Wire Wire Line
-	7650 5300 7500 5300
-Text Label 7500 5300 0    60   ~ 0
-A1
+	7650 5300 7400 5300
+Text Label 7400 5300 0    60   ~ 0
+AIN_1
 $Comp
 L +5V #PWR030
 U 1 1 54B5A9BF
-P 7450 5200
-F 0 "#PWR030" H 7450 5050 60  0001 C CNN
-F 1 "+5V" H 7450 5340 60  0000 C CNN
-F 2 "" H 7450 5200 60  0000 C CNN
-F 3 "" H 7450 5200 60  0000 C CNN
-	1    7450 5200
+P 7350 5200
+F 0 "#PWR030" H 7350 5050 60  0001 C CNN
+F 1 "+5V" H 7350 5340 60  0000 C CNN
+F 2 "" H 7350 5200 60  0000 C CNN
+F 3 "" H 7350 5200 60  0000 C CNN
+	1    7350 5200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1233,26 +1226,22 @@ F 3 "" H 7450 5550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7650 5400 7450 5400
-Wire Wire Line
-	7450 5400 7450 5200
-Wire Wire Line
 	7650 5500 7450 5500
 Wire Wire Line
 	7450 5500 7450 5550
 Wire Wire Line
-	7650 6100 7500 6100
-Text Label 7500 6100 0    60   ~ 0
-A2
+	7650 6100 7400 6100
+Text Label 7400 6100 0    60   ~ 0
+AIN_2
 $Comp
 L +5V #PWR032
 U 1 1 54B5AB98
-P 7450 6000
-F 0 "#PWR032" H 7450 5850 60  0001 C CNN
-F 1 "+5V" H 7450 6140 60  0000 C CNN
-F 2 "" H 7450 6000 60  0000 C CNN
-F 3 "" H 7450 6000 60  0000 C CNN
-	1    7450 6000
+P 7350 6000
+F 0 "#PWR032" H 7350 5850 60  0001 C CNN
+F 1 "+5V" H 7350 6140 60  0000 C CNN
+F 2 "" H 7350 6000 60  0000 C CNN
+F 3 "" H 7350 6000 60  0000 C CNN
+	1    7350 6000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1266,10 +1255,6 @@ F 3 "" H 7450 6350 60  0000 C CNN
 	1    7450 6350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7650 6200 7450 6200
-Wire Wire Line
-	7450 6200 7450 6000
 Wire Wire Line
 	7650 6300 7450 6300
 Wire Wire Line
@@ -1392,11 +1377,11 @@ $EndComp
 Wire Wire Line
 	4550 7500 4150 7500
 Text Label 4150 7500 0    60   ~ 0
-IN
+SWITCH
 Wire Wire Line
 	5350 7500 5400 7500
 Text Label 5400 7500 0    60   ~ 0
-D_IN
+D_SWITCH
 $Comp
 L +5VD #PWR039
 U 1 1 54B9560F
@@ -1416,9 +1401,9 @@ Wire Wire Line
 	5400 6550 5600 6550
 Connection ~ 5600 6550
 Wire Wire Line
-	4400 6450 4300 6450
-Text Label 4300 6450 0    60   ~ 0
-IN
+	4400 6450 4050 6450
+Text Label 4050 6450 0    60   ~ 0
+SWITCH
 $Comp
 L GND #PWR040
 U 1 1 54B961A4
@@ -1457,7 +1442,7 @@ Wire Wire Line
 Text Label 4250 3450 0    60   ~ 0
 D_BTN
 Text Label 4250 3350 0    60   ~ 0
-D_IN
+D_SWITCH
 $Comp
 L GND #PWR041
 U 1 1 54B9A066
@@ -1559,4 +1544,24 @@ F 6 "CONN HEADER 2POS .100 VERT GOLD" H 4900 6950 60  0001 C CNN "Description"
 	1    4600 6500
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4050 3050 4250 3050
+Text Label 4250 3150 0    60   ~ 0
+ENC_A
+Wire Wire Line
+	1850 2650 1200 2650
+Text Label 1200 2050 0    60   ~ 0
+BNC_A
+Wire Wire Line
+	7350 4400 7350 4600
+Wire Wire Line
+	7350 4600 7650 4600
+Wire Wire Line
+	7350 5200 7350 5400
+Wire Wire Line
+	7350 5400 7650 5400
+Wire Wire Line
+	7350 6000 7350 6200
+Wire Wire Line
+	7350 6200 7650 6200
 $EndSCHEMATC

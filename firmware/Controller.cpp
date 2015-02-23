@@ -34,11 +34,9 @@ void Controller::setup()
   modular_device.setFirmwareNumber(constants::firmware_number);
 
   // Saved Variables
-  const unsigned int states_array_element_size = sizeof(constants::states_default[0][0])*constants::MFC_COUNT;
   modular_device.createSavedVariable(constants::states_name,
-                                     constants::states_default,
-                                     constants::STATE_COUNT,
-                                     states_array_element_size);
+                                     constants::states_array_default,
+                                     constants::STATE_COUNT);
 
   int default_state = 0;
   modular_device.getSavedVariableValue(constants::states_name,flow_settings_array_,default_state);
@@ -51,8 +49,8 @@ void Controller::setup()
   ModularDevice::Parameter& mfc_parameter = modular_device.createParameter(constants::mfc_parameter_name);
   mfc_parameter.setRange(0,constants::MFC_COUNT-1);
 
-  ModularDevice::Parameter& channel_parameter = modular_device.createParameter(constants::channel_parameter_name);
-  channel_parameter.setRange(0,constants::ANALOG_INPUT_COUNT-1);
+  ModularDevice::Parameter& ain_parameter = modular_device.createParameter(constants::ain_parameter_name);
+  ain_parameter.setRange(0,constants::AIN_COUNT-1);
 
   ModularDevice::Parameter& percent_parameter = modular_device.createParameter(constants::percent_parameter_name);
   percent_parameter.setRange(constants::percent_min,constants::percent_max);
@@ -96,7 +94,7 @@ void Controller::setup()
 
   ModularDevice::Method& get_analog_input_method = modular_device.createMethod(constants::get_analog_input_method_name);
   get_analog_input_method.attachCallback(callbacks::getAnalogInputCallback);
-  get_analog_input_method.addParameter(channel_parameter);
+  get_analog_input_method.addParameter(ain_parameter);
 
   ModularDevice::Method& get_analog_inputs_method = modular_device.createMethod(constants::get_analog_inputs_method_name);
   get_analog_inputs_method.attachCallback(callbacks::getAnalogInputsCallback);
@@ -128,27 +126,32 @@ void Controller::setup()
     mfc_dsp_lbl_ptr_array[mfc]->setRightJustify();
   }
 
-  Standalone::DisplayLabel* ain_dsp_lbl_ptr_array[constants::ANALOG_INPUT_COUNT];
-  for (int channel=0; channel<constants::ANALOG_INPUT_COUNT; channel++)
+  Standalone::DisplayLabel* ain_dsp_lbl_ptr_array[constants::AIN_COUNT];
+  for (int ain=0; ain<constants::AIN_COUNT; ain++)
   {
-    ain_dsp_lbl_ptr_array[channel] = &(standalone_interface_.createDisplayLabel());
-    ain_dsp_lbl_ptr_array[channel]->setDisplayPosition(constants::ain_dsp_lbl_display_positions[channel]);
-    ain_dsp_lbl_ptr_array[channel]->setFlashString(constants::ain_dsp_lbl_strings[channel]);
-    ain_dsp_lbl_ptr_array[channel]->setRightJustify();
+    ain_dsp_lbl_ptr_array[ain] = &(standalone_interface_.createDisplayLabel());
+    ain_dsp_lbl_ptr_array[ain]->setDisplayPosition(constants::ain_dsp_lbl_display_positions[ain]);
+    ain_dsp_lbl_ptr_array[ain]->setFlashString(constants::ain_dsp_lbl_strings[ain]);
+    ain_dsp_lbl_ptr_array[ain]->setRightJustify();
   }
+
+  Standalone::DisplayLabel& state_dsp_lbl = standalone_interface_.createDisplayLabel();
+  state_dsp_lbl.setDisplayPosition(constants::state_dsp_lbl_display_position);
+  state_dsp_lbl.setFlashString(constants::state_parameter_name);
 
   // Display Variables
   for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
   {
-    flow_dsp_var_ptr_array_[mfc] = &(standalone_interface_.createDisplayVariable());
-    flow_dsp_var_ptr_array_[mfc]->setDisplayPosition(constants::flow_var_display_positions[mfc]);
-    flow_dsp_var_ptr_array_[mfc]->setDisplayWidth(constants::percent_display_width);
+    flow_m_dsp_var_ptr_array_[mfc] = &(standalone_interface_.createDisplayVariable());
+    flow_m_dsp_var_ptr_array_[mfc]->setDisplayPosition(constants::flow_var_display_positions[mfc]);
+    flow_m_dsp_var_ptr_array_[mfc]->setDisplayWidth(constants::percent_display_width);
   }
-  for (int channel=0; channel<constants::ANALOG_INPUT_COUNT; channel++)
+
+  for (int ain=0; ain<constants::AIN_COUNT; ain++)
   {
-    ain_dsp_var_ptr_array_[channel] = &(standalone_interface_.createDisplayVariable());
-    ain_dsp_var_ptr_array_[channel]->setDisplayPosition(constants::ain_dsp_var_display_positions[channel]);
-    ain_dsp_var_ptr_array_[channel]->setDisplayWidth(constants::percent_display_width);
+    ain_dsp_var_ptr_array_[ain] = &(standalone_interface_.createDisplayVariable());
+    ain_dsp_var_ptr_array_[ain]->setDisplayPosition(constants::ain_dsp_var_display_positions[ain]);
+    ain_dsp_var_ptr_array_[ain]->setDisplayWidth(constants::percent_display_width);
   }
 
   // Interactive Variables
@@ -161,40 +164,57 @@ void Controller::setup()
     flow_int_var_ptr_array_[mfc]->setValue(flow_settings_array_[mfc]);
   }
 
+  state_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
+  state_int_var_ptr_->setDisplayPosition(constants::state_int_var_display_position);
+  state_int_var_ptr_->setRange(0,constants::STATE_COUNT-1);
+
   // All Frames
 
   // Frame 0
+  int frame = 0;
   for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
   {
-    mfc_dsp_lbl_ptr_array[mfc]->addToFrame(0);
-    flow_int_var_ptr_array_[mfc]->addToFrame(0);
+    mfc_dsp_lbl_ptr_array[mfc]->addToFrame(frame);
+    flow_int_var_ptr_array_[mfc]->addToFrame(frame);
   }
 
   // Frame 1
+  frame = 1;
   for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
   {
-    mfc_dsp_lbl_ptr_array[mfc]->addToFrame(1);
-    flow_dsp_var_ptr_array_[mfc]->addToFrame(1);
+    mfc_dsp_lbl_ptr_array[mfc]->addToFrame(frame);
+    flow_m_dsp_var_ptr_array_[mfc]->addToFrame(frame);
   }
-  // standalone_interface_.attachCallbackToFrame(callbacks::setAllChannelsOffCallback,1);
 
   // Frame 2
-  for (int channel=0; channel<constants::ANALOG_INPUT_COUNT; channel++)
+  frame = 2;
+  for (int ain=0; ain<constants::AIN_COUNT; ain++)
   {
-    ain_dsp_lbl_ptr_array[channel]->addToFrame(2);
-    ain_dsp_var_ptr_array_[channel]->addToFrame(2);
+    ain_dsp_lbl_ptr_array[ain]->addToFrame(frame);
+    ain_dsp_var_ptr_array_[ain]->addToFrame(frame);
   }
-  // standalone_interface_.attachCallbackToFrame(callbacks::setAllChannelsOnCallback,2);
 
   // Frame 3
-  // state_dsp_lbl_ptr_->addToFrame(3);
-  // state_int_var_ptr_->addToFrame(3);
-  // standalone_interface_.attachCallbackToFrame(callbacks::saveStateStandaloneCallback,3);
+  frame = 3;
+  state_dsp_lbl.addToFrame(frame);
+  state_int_var_ptr_->addToFrame(frame);
+  for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
+  {
+    mfc_dsp_lbl_ptr_array[mfc]->addToFrame(frame);
+    flow_int_var_ptr_array_[mfc]->addToFrame(frame);
+  }
+  standalone_interface_.attachCallbackToFrame(callbacks::saveStateStandaloneCallback,frame);
 
   // Frame 4
-  // state_dsp_lbl_ptr_->addToFrame(4);
-  // state_int_var_ptr_->addToFrame(4);
-  // standalone_interface_.attachCallbackToFrame(callbacks::recallStateStandaloneCallback,4);
+  frame = 4;
+  state_dsp_lbl.addToFrame(frame);
+  state_int_var_ptr_->addToFrame(frame);
+  for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
+  {
+    mfc_dsp_lbl_ptr_array[mfc]->addToFrame(frame);
+    flow_int_var_ptr_array_[mfc]->addToFrame(frame);
+  }
+  standalone_interface_.attachCallbackToFrame(callbacks::recallStateStandaloneCallback,frame);
 
   // Enable Standalone Interface
   standalone_interface_.enable();
@@ -256,25 +276,25 @@ uint8_t Controller::getMfcFlowMeasure(const uint8_t mfc)
   {
     return 0;
   }
-  int analog_in_value = analogRead(constants::mfc_analog_in_pins[mfc]);
-  int percent = betterMap(analog_in_value,
-                          constants::analog_in_min,
-                          constants::analog_in_max,
+  int ain_value = analogRead(constants::mfc_ain_pins[mfc]);
+  int percent = betterMap(ain_value,
+                          constants::ain_min,
+                          constants::ain_max,
                           constants::percent_min,
                           constants::percent_max);
   return percent;
 }
 
-uint8_t Controller::getAnalogInput(const uint8_t channel)
+uint8_t Controller::getAnalogInput(const uint8_t ain)
 {
-  if (channel >= constants::ANALOG_INPUT_COUNT)
+  if (ain >= constants::AIN_COUNT)
   {
     return 0;
   }
-  int analog_in_value = analogRead(constants::analog_in_pins[channel]);
-  int percent = betterMap(analog_in_value,
-                          constants::analog_in_min,
-                          constants::analog_in_max,
+  int ain_value = analogRead(constants::ain_pins[ain]);
+  int percent = betterMap(ain_value,
+                          constants::ain_min,
+                          constants::ain_max,
                           constants::percent_min,
                           constants::percent_max);
   return percent;
@@ -286,12 +306,15 @@ void Controller::updateDisplayVariables()
   for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
   {
     percent = getMfcFlowMeasure(mfc);
-    flow_dsp_var_ptr_array_[mfc]->setValue(percent);
+    flow_m_dsp_var_ptr_array_[mfc]->setValue(percent);
+
+    // percent = getMfcFlowSetting(mfc);
+    // flow_s_dsp_var_ptr_array_[mfc]->setValue(percent);
   }
-  for (int channel=0; channel<constants::ANALOG_INPUT_COUNT; channel++)
+  for (int ain=0; ain<constants::AIN_COUNT; ain++)
   {
-    percent = getAnalogInput(channel);
-    ain_dsp_var_ptr_array_[channel]->setValue(percent);
+    percent = getAnalogInput(ain);
+    ain_dsp_var_ptr_array_[ain]->setValue(percent);
   }
 }
 
@@ -323,13 +346,17 @@ void Controller::recallState(int state)
   }
 }
 
-uint8_t** Controller::getStatesArray()
+void Controller::getStatesArray(uint8_t states_array[][constants::MFC_COUNT])
 {
   for (int state=0; state<constants::STATE_COUNT; state++)
   {
-    modular_device.getSavedVariableValue(constants::states_name,states_array_,state);
+    modular_device.getSavedVariableValue(constants::states_name,states_array,state);
   }
-  return states_array_;
+}
+
+uint8_t Controller::getStateIntVar()
+{
+  return state_int_var_ptr_->getValue();
 }
 
 Controller controller;
