@@ -145,6 +145,10 @@ void Controller::setup()
     flow_m_dsp_var_ptr_array_[mfc] = &(standalone_interface_.createDisplayVariable());
     flow_m_dsp_var_ptr_array_[mfc]->setDisplayPosition(constants::flow_var_display_positions[mfc]);
     flow_m_dsp_var_ptr_array_[mfc]->setDisplayWidth(constants::percent_display_width);
+
+    flow_s_dsp_var_ptr_array_[mfc] = &(standalone_interface_.createDisplayVariable());
+    flow_s_dsp_var_ptr_array_[mfc]->setDisplayPosition(constants::flow_var_display_positions[mfc]);
+    flow_s_dsp_var_ptr_array_[mfc]->setDisplayWidth(constants::percent_display_width);
   }
 
   for (int ain=0; ain<constants::AIN_COUNT; ain++)
@@ -212,7 +216,7 @@ void Controller::setup()
   for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
   {
     mfc_dsp_lbl_ptr_array[mfc]->addToFrame(frame);
-    flow_int_var_ptr_array_[mfc]->addToFrame(frame);
+    flow_s_dsp_var_ptr_array_[mfc]->addToFrame(frame);
   }
   standalone_interface_.attachCallbackToFrame(callbacks::recallStateStandaloneCallback,frame);
 
@@ -308,9 +312,10 @@ void Controller::updateDisplayVariables()
     percent = getMfcFlowMeasure(mfc);
     flow_m_dsp_var_ptr_array_[mfc]->setValue(percent);
 
-    // percent = getMfcFlowSetting(mfc);
-    // flow_s_dsp_var_ptr_array_[mfc]->setValue(percent);
+    percent = getMfcFlowSetting(mfc);
+    flow_s_dsp_var_ptr_array_[mfc]->setValue(percent);
   }
+
   for (int ain=0; ain<constants::AIN_COUNT; ain++)
   {
     percent = getAnalogInput(ain);

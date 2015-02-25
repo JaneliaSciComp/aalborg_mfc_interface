@@ -34,6 +34,7 @@ private:
   uint8_t flow_settings_array_[constants::MFC_COUNT];
   uint8_t states_array_[constants::STATE_COUNT][constants::MFC_COUNT];
   Standalone::DisplayVariable* flow_m_dsp_var_ptr_array_[constants::MFC_COUNT];
+  Standalone::DisplayVariable* flow_s_dsp_var_ptr_array_[constants::MFC_COUNT];
   Standalone::DisplayVariable* ain_dsp_var_ptr_array_[constants::AIN_COUNT];
   void updateDisplayVariables();
   Standalone::InteractiveVariable* flow_int_var_ptr_array_[constants::MFC_COUNT];
