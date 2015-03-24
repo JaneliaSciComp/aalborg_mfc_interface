@@ -7,7 +7,7 @@
 // ----------------------------------------------------------------------------
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
-#include "Flash.h"
+#include "ConstantVariable.h"
 
 namespace constants
 {
@@ -59,37 +59,37 @@ extern const uint8_t flow_var_display_positions[MFC_COUNT];
 extern const uint8_t ain_dsp_var_display_positions[AIN_COUNT];
 extern const uint8_t state_int_var_display_position;
 
-extern _FLASH_STRING device_name;
-extern _FLASH_STRING execute_standalone_callback_method_name;
-extern _FLASH_STRING get_leds_powered_method_name;
-extern _FLASH_STRING set_mfc_flow_method_name;
-extern _FLASH_STRING set_mfc_flows_method_name;
-extern _FLASH_STRING get_mfc_flow_setting_method_name;
-extern _FLASH_STRING get_mfc_flow_settings_method_name;
-extern _FLASH_STRING get_mfc_flow_measure_method_name;
-extern _FLASH_STRING get_mfc_flow_measures_method_name;
-extern _FLASH_STRING get_analog_input_method_name;
-extern _FLASH_STRING get_analog_inputs_method_name;
-extern _FLASH_STRING save_state_method_name;
-extern _FLASH_STRING recall_state_method_name;
-extern _FLASH_STRING get_saved_states_method_name;
-extern _FLASH_STRING mfc_parameter_name;
-extern _FLASH_STRING ain_parameter_name;
-extern _FLASH_STRING percent_parameter_name;
-extern _FLASH_STRING percents_parameter_name;
-extern _FLASH_STRING state_parameter_name;
-extern _FLASH_STRING states_name;
-extern _FLASH_STRING frame0_name;
-extern _FLASH_STRING frame1_name;
-extern _FLASH_STRING frame2_name;
-extern const _FLASH_STRING frame_name_array[FRAME_COUNT];
-extern _FLASH_STRING mfc0_dsp_lbl_string;
-extern _FLASH_STRING mfc1_dsp_lbl_string;
-extern _FLASH_STRING mfc2_dsp_lbl_string;
-extern const _FLASH_STRING mfc_dsp_lbl_strings[MFC_COUNT];
-extern _FLASH_STRING ain0_dsp_lbl_string;
-extern _FLASH_STRING ain1_dsp_lbl_string;
-extern _FLASH_STRING ain2_dsp_lbl_string;
-extern const _FLASH_STRING ain_dsp_lbl_strings[AIN_COUNT];
+extern ConstantString device_name;
+extern ConstantString execute_standalone_callback_method_name;
+extern ConstantString get_leds_powered_method_name;
+extern ConstantString set_mfc_flow_method_name;
+extern ConstantString set_mfc_flows_method_name;
+extern ConstantString get_mfc_flow_setting_method_name;
+extern ConstantString get_mfc_flow_settings_method_name;
+extern ConstantString get_mfc_flow_measure_method_name;
+extern ConstantString get_mfc_flow_measures_method_name;
+extern ConstantString get_analog_input_method_name;
+extern ConstantString get_analog_inputs_method_name;
+extern ConstantString save_state_method_name;
+extern ConstantString recall_state_method_name;
+extern ConstantString get_saved_states_method_name;
+extern ConstantString mfc_parameter_name;
+extern ConstantString ain_parameter_name;
+extern ConstantString percent_parameter_name;
+extern ConstantString percents_parameter_name;
+extern ConstantString state_parameter_name;
+extern ConstantString states_name;
+extern ConstantString frame0_name;
+extern ConstantString frame1_name;
+extern ConstantString frame2_name;
+extern const ConstantString frame_name_array[FRAME_COUNT];
+extern ConstantString mfc0_dsp_lbl_string;
+extern ConstantString mfc1_dsp_lbl_string;
+extern ConstantString mfc2_dsp_lbl_string;
+extern const ConstantString mfc_dsp_lbl_strings[MFC_COUNT];
+extern ConstantString ain0_dsp_lbl_string;
+extern ConstantString ain1_dsp_lbl_string;
+extern ConstantString ain2_dsp_lbl_string;
+extern const ConstantString ain_dsp_lbl_strings[AIN_COUNT];
 }
 #endif

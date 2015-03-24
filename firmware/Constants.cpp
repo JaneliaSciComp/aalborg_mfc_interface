@@ -53,30 +53,30 @@ const uint8_t flow_var_display_positions[] = {26,46,66};
 const uint8_t ain_dsp_var_display_positions[] = {26,46,66};
 const uint8_t state_int_var_display_position = 57;
 
-FLASH_STRING(device_name,"aalborg_mfc_interface");
-FLASH_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
-FLASH_STRING(get_leds_powered_method_name,"getLedsPowered");
-FLASH_STRING(set_mfc_flow_method_name,"setMfcFlow");
-FLASH_STRING(set_mfc_flows_method_name,"setMfcFlows");
-FLASH_STRING(get_mfc_flow_setting_method_name,"getMfcFlowSetting");
-FLASH_STRING(get_mfc_flow_settings_method_name,"getMfcFlowSettings");
-FLASH_STRING(get_mfc_flow_measure_method_name,"getMfcFlowMeasure");
-FLASH_STRING(get_mfc_flow_measures_method_name,"getMfcFlowMeasures");
-FLASH_STRING(get_analog_input_method_name,"getAnalogInput");
-FLASH_STRING(get_analog_inputs_method_name,"getAnalogInputs");
-FLASH_STRING(save_state_method_name,"saveState");
-FLASH_STRING(recall_state_method_name,"recallState");
-FLASH_STRING(get_saved_states_method_name,"getSavedStates");
-FLASH_STRING(mfc_parameter_name,"mfc");
-FLASH_STRING(ain_parameter_name,"ain");
-FLASH_STRING(percent_parameter_name,"percent");
-FLASH_STRING(percents_parameter_name,"percents");
-FLASH_STRING(state_parameter_name,"state");
-FLASH_STRING(states_name,"states");
-FLASH_STRING(frame0_name,"setMfcFlows %");
-FLASH_STRING(frame1_name,"getMfcFlowMeasures %");
-FLASH_STRING(frame2_name,"getAnalogInputs %");
-const _FLASH_STRING frame_name_array[] =
+CONSTANT_STRING(device_name,"aalborg_mfc_interface");
+CONSTANT_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
+CONSTANT_STRING(get_leds_powered_method_name,"getLedsPowered");
+CONSTANT_STRING(set_mfc_flow_method_name,"setMfcFlow");
+CONSTANT_STRING(set_mfc_flows_method_name,"setMfcFlows");
+CONSTANT_STRING(get_mfc_flow_setting_method_name,"getMfcFlowSetting");
+CONSTANT_STRING(get_mfc_flow_settings_method_name,"getMfcFlowSettings");
+CONSTANT_STRING(get_mfc_flow_measure_method_name,"getMfcFlowMeasure");
+CONSTANT_STRING(get_mfc_flow_measures_method_name,"getMfcFlowMeasures");
+CONSTANT_STRING(get_analog_input_method_name,"getAnalogInput");
+CONSTANT_STRING(get_analog_inputs_method_name,"getAnalogInputs");
+CONSTANT_STRING(save_state_method_name,"saveState");
+CONSTANT_STRING(recall_state_method_name,"recallState");
+CONSTANT_STRING(get_saved_states_method_name,"getSavedStates");
+CONSTANT_STRING(mfc_parameter_name,"mfc");
+CONSTANT_STRING(ain_parameter_name,"ain");
+CONSTANT_STRING(percent_parameter_name,"percent");
+CONSTANT_STRING(percents_parameter_name,"percents");
+CONSTANT_STRING(state_parameter_name,"state");
+CONSTANT_STRING(states_name,"states");
+CONSTANT_STRING(frame0_name,"setMfcFlows %");
+CONSTANT_STRING(frame1_name,"getMfcFlowMeasures %");
+CONSTANT_STRING(frame2_name,"getAnalogInputs %");
+const ConstantString frame_name_array[] =
   {
     frame0_name,
     frame1_name,
@@ -84,19 +84,19 @@ const _FLASH_STRING frame_name_array[] =
     save_state_method_name,
     recall_state_method_name,
   };
-FLASH_STRING(mfc0_dsp_lbl_string,"mfc0");
-FLASH_STRING(mfc1_dsp_lbl_string,"mfc1");
-FLASH_STRING(mfc2_dsp_lbl_string,"mfc2");
-const _FLASH_STRING mfc_dsp_lbl_strings[] =
+CONSTANT_STRING(mfc0_dsp_lbl_string,"mfc0");
+CONSTANT_STRING(mfc1_dsp_lbl_string,"mfc1");
+CONSTANT_STRING(mfc2_dsp_lbl_string,"mfc2");
+const ConstantString mfc_dsp_lbl_strings[] =
   {
     mfc0_dsp_lbl_string,
     mfc1_dsp_lbl_string,
     mfc2_dsp_lbl_string,
   };
-FLASH_STRING(ain0_dsp_lbl_string,"ain0");
-FLASH_STRING(ain1_dsp_lbl_string,"ain1");
-FLASH_STRING(ain2_dsp_lbl_string,"ain2");
-const _FLASH_STRING ain_dsp_lbl_strings[] =
+CONSTANT_STRING(ain0_dsp_lbl_string,"ain0");
+CONSTANT_STRING(ain1_dsp_lbl_string,"ain1");
+CONSTANT_STRING(ain2_dsp_lbl_string,"ain2");
+const ConstantString ain_dsp_lbl_strings[] =
   {
     ain0_dsp_lbl_string,
     ain1_dsp_lbl_string,
