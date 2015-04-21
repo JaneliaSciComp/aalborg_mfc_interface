@@ -30,6 +30,34 @@ press the 'Enter' key.
 Example Response:
 
 ```json
+{
+  "method":"?",
+  "device_info":{
+    "name":"aalborg_mfc_interface",
+    "model_number":1100,
+    "serial_number":0,
+    "firmware_number":1
+  },
+  "methods":[
+    "getMemoryFree",
+    "resetDefaults",
+    "setSerialNumber",
+    "executeStandaloneCallback",
+    "getLedsPowered",
+    "setMfcFlow",
+    "setMfcFlows",
+    "getMfcFlowSetting",
+    "getMfcFlowSettings",
+    "getMfcFlowMeasure",
+    "getMfcFlowMeasures",
+    "getAnalogInput",
+    "getAnalogInputs",
+    "saveState",
+    "recallState",
+    "getSavedStates"
+  ],
+  "status":success
+}
 ```
 
 "methods" is an array of user methods. To execute a method, simply
@@ -64,6 +92,115 @@ marks ?? into the input field and press the 'Send' button or press the
 Example Response:
 
 ```json
+{
+  "method":"??",
+  "device_info":{
+    "name":"aalborg_mfc_interface",
+    "model_number":1100,
+    "serial_number":0,
+    "firmware_number":1
+  },
+  "methods":[
+    {
+      "getMemoryFree":{
+        "parameters":[]
+      }
+    },
+    {
+      "resetDefaults":{
+        "parameters":[]
+      }
+    },
+    {
+      "setSerialNumber":{
+        "parameters":[
+          "serial_number"
+        ]
+      }
+    },
+    {
+      "executeStandaloneCallback":{
+        "parameters":[]
+      }
+    },
+    {
+      "getLedsPowered":{
+        "parameters":[]
+      }
+    },
+    {
+      "setMfcFlow":{
+        "parameters":[
+          "mfc",
+          "percent"
+        ]
+      }
+    },
+    {
+      "setMfcFlows":{
+        "parameters":[
+          "percents"
+        ]
+      }
+    },
+    {
+      "getMfcFlowSetting":{
+        "parameters":[
+          "mfc"
+        ]
+      }
+    },
+    {
+      "getMfcFlowSettings":{
+        "parameters":[]
+      }
+    },
+    {
+      "getMfcFlowMeasure":{
+        "parameters":[
+          "mfc"
+        ]
+      }
+    },
+    {
+      "getMfcFlowMeasures":{
+        "parameters":[]
+      }
+    },
+    {
+      "getAnalogInput":{
+        "parameters":[
+          "ain"
+        ]
+      }
+    },
+    {
+      "getAnalogInputs":{
+        "parameters":[]
+      }
+    },
+    {
+      "saveState":{
+        "parameters":[
+          "state"
+        ]
+      }
+    },
+    {
+      "recallState":{
+        "parameters":[
+          "state"
+        ]
+      }
+    },
+    {
+      "getSavedStates":{
+        "parameters":[]
+      }
+    }
+  ],
+  "status":success
+}
 ```
 
 Example Method with Parameters:
