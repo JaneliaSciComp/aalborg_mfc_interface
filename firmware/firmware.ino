@@ -1,3 +1,4 @@
+// aalborg_mfc_interface
 #ifdef __AVR__
 #include "Flash.h"
 #include <EEPROM.h>
@@ -17,8 +18,6 @@
 #include "Callbacks.h"
 #include "Controller.h"
 
-
-// aalborg_mfc_interface
 
 // See README.md for more information
 

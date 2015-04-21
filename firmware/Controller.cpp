@@ -122,7 +122,7 @@ void Controller::setup()
   {
     mfc_dsp_lbl_ptr_array[mfc] = &(standalone_interface_.createDisplayLabel());
     mfc_dsp_lbl_ptr_array[mfc]->setDisplayPosition(constants::mfc_dsp_lbl_display_positions[mfc]);
-    mfc_dsp_lbl_ptr_array[mfc]->setFlashString(constants::mfc_dsp_lbl_strings[mfc]);
+    mfc_dsp_lbl_ptr_array[mfc]->setConstantString(constants::mfc_dsp_lbl_strings[mfc]);
     mfc_dsp_lbl_ptr_array[mfc]->setRightJustify();
   }
 
@@ -131,13 +131,13 @@ void Controller::setup()
   {
     ain_dsp_lbl_ptr_array[ain] = &(standalone_interface_.createDisplayLabel());
     ain_dsp_lbl_ptr_array[ain]->setDisplayPosition(constants::ain_dsp_lbl_display_positions[ain]);
-    ain_dsp_lbl_ptr_array[ain]->setFlashString(constants::ain_dsp_lbl_strings[ain]);
+    ain_dsp_lbl_ptr_array[ain]->setConstantString(constants::ain_dsp_lbl_strings[ain]);
     ain_dsp_lbl_ptr_array[ain]->setRightJustify();
   }
 
   Standalone::DisplayLabel& state_dsp_lbl = standalone_interface_.createDisplayLabel();
   state_dsp_lbl.setDisplayPosition(constants::state_dsp_lbl_display_position);
-  state_dsp_lbl.setFlashString(constants::state_parameter_name);
+  state_dsp_lbl.setConstantString(constants::state_parameter_name);
 
   // Display Variables
   for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
@@ -171,6 +171,7 @@ void Controller::setup()
   state_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
   state_int_var_ptr_->setDisplayPosition(constants::state_int_var_display_position);
   state_int_var_ptr_->setRange(0,constants::STATE_COUNT-1);
+  state_int_var_ptr_->setDisplayWidth(2);
 
   // All Frames
 
