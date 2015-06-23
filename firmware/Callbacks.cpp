@@ -141,6 +141,20 @@ void getSavedStatesCallback()
   modular_device.stopResponseArray();
 }
 
+void pulseBncBCallback()
+{
+  long duration = modular_device.getParameterValue(constants::duration_parameter_name);
+  EventController::event_controller.addPwmUsingDelayPeriodOnDuration(setBncBHighCallback,
+                                                                     setBncBLowCallback,
+                                                                     5,
+                                                                     1,
+                                                                     duration,
+                                                                     1,
+                                                                     0,
+                                                                     NULL,
+                                                                     NULL);
+}
+
 // Standalone Callbacks
 void executeStandaloneCallbackCallback()
 {
@@ -157,5 +171,31 @@ void recallStateStandaloneCallback()
 {
   uint8_t state = controller.getStateIntVar();
   controller.recallState(state);
+}
+
+void pulseBncBStandaloneCallback()
+{
+  uint16_t duration = controller.getDurationIntVar();
+  EventController::event_controller.addPwmUsingDelayPeriodOnDuration(setBncBHighCallback,
+                                                                     setBncBLowCallback,
+                                                                     5,
+                                                                     1,
+                                                                     duration,
+                                                                     1,
+                                                                     0,
+                                                                     NULL,
+                                                                     NULL);
+}
+
+// EventController Callbacks
+
+void setBncBHighCallback(int index)
+{
+  digitalWrite(constants::bnc_b_pin,HIGH);
+}
+
+void setBncBLowCallback(int index)
+{
+  digitalWrite(constants::bnc_b_pin,LOW);
 }
 }

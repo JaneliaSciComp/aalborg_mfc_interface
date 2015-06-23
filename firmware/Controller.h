@@ -9,6 +9,7 @@
 #define CONTROLLER_H
 #include "ModularDevice.h"
 #include "StandaloneInterface.h"
+#include "EventController.h"
 #include "BetterMap.h"
 #include "Constants.h"
 #include "Callbacks.h"
@@ -29,6 +30,7 @@ public:
   void recallState(int state);
   void getStatesArray(uint8_t states_array[][constants::MFC_COUNT]);
   uint8_t getStateIntVar();
+  uint8_t getDurationIntVar();
 private:
   Standalone::StandaloneInterface standalone_interface_;
   uint8_t flow_settings_array_[constants::MFC_COUNT];
@@ -39,6 +41,7 @@ private:
   void updateDisplayVariables();
   Standalone::InteractiveVariable* flow_int_var_ptr_array_[constants::MFC_COUNT];
   Standalone::InteractiveVariable *state_int_var_ptr_;
+  Standalone::InteractiveVariable *duration_int_var_ptr_;
   void updateMfcFlow();
 };
 

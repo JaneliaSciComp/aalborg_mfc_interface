@@ -21,12 +21,15 @@ Controller::Controller() :
 
 void Controller::setup()
 {
+  EventController::event_controller.setup();
+
   // Pin Setup
   for (int mfc = 0; mfc < constants::MFC_COUNT; mfc++)
   {
     pinMode(constants::mfc_purge_pins[mfc],INPUT);
     pinMode(constants::mfc_valve_off_pins[mfc],INPUT);
   }
+  pinMode(constants::bnc_b_pin,OUTPUT);
 
   // Device Info
   modular_device.setName(constants::device_name);
@@ -61,6 +64,10 @@ void Controller::setup()
 
   ModularDevice::Parameter& state_parameter = modular_device.createParameter(constants::state_parameter_name);
   state_parameter.setRange(0,constants::STATE_COUNT-1);
+
+  ModularDevice::Parameter& duration_parameter = modular_device.createParameter(constants::duration_parameter_name);
+  duration_parameter.setRange(constants::duration_min,constants::duration_max);
+  duration_parameter.setUnits(constants::duration_parameter_units);
 
   // Methods
   ModularDevice::Method& execute_standalone_callback_method = modular_device.createMethod(constants::execute_standalone_callback_method_name);
@@ -110,6 +117,10 @@ void Controller::setup()
   ModularDevice::Method& get_saved_states_method = modular_device.createMethod(constants::get_saved_states_method_name);
   get_saved_states_method.attachCallback(callbacks::getSavedStatesCallback);
 
+  ModularDevice::Method& pulse_bnc_b_method = modular_device.createMethod(constants::pulse_bnc_b_method_name);
+  pulse_bnc_b_method.addParameter(duration_parameter);
+  pulse_bnc_b_method.attachCallback(callbacks::pulseBncBCallback);
+
   // Start Server
   modular_device.startServer(constants::baudrate);
 
@@ -138,6 +149,11 @@ void Controller::setup()
   Standalone::DisplayLabel& state_dsp_lbl = standalone_interface_.createDisplayLabel();
   state_dsp_lbl.setDisplayPosition(constants::state_dsp_lbl_display_position);
   state_dsp_lbl.setConstantString(constants::state_parameter_name);
+
+  Standalone::DisplayLabel& duration_dsp_lbl = standalone_interface_.createDisplayLabel();
+  duration_dsp_lbl.setDisplayPosition(constants::duration_dsp_lbl_display_position);
+  duration_dsp_lbl.setConstantString(constants::duration_parameter_name);
+  duration_dsp_lbl.setRightJustify();
 
   // Display Variables
   for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
@@ -172,6 +188,12 @@ void Controller::setup()
   state_int_var_ptr_->setDisplayPosition(constants::state_int_var_display_position);
   state_int_var_ptr_->setRange(0,constants::STATE_COUNT-1);
   state_int_var_ptr_->setDisplayWidth(2);
+
+  duration_int_var_ptr_ = &(standalone_interface_.createInteractiveVariable());
+  duration_int_var_ptr_->setDisplayPosition(constants::duration_int_var_display_position);
+  duration_int_var_ptr_->setRange(constants::duration_min,constants::duration_max);
+  duration_int_var_ptr_->trimDisplayWidthUsingRange();
+  duration_int_var_ptr_->setValue(constants::duration_int_var_default);
 
   // All Frames
 
@@ -220,6 +242,12 @@ void Controller::setup()
     flow_s_dsp_var_ptr_array_[mfc]->addToFrame(frame);
   }
   standalone_interface_.attachCallbackToFrame(callbacks::recallStateStandaloneCallback,frame);
+
+  // Frame 5
+  frame = 5;
+  duration_dsp_lbl.addToFrame(frame);
+  duration_int_var_ptr_->addToFrame(frame);
+  standalone_interface_.attachCallbackToFrame(callbacks::pulseBncBStandaloneCallback,frame);
 
   // Enable Standalone Interface
   standalone_interface_.enable();
@@ -363,6 +391,11 @@ void Controller::getStatesArray(uint8_t states_array[][constants::MFC_COUNT])
 uint8_t Controller::getStateIntVar()
 {
   return state_int_var_ptr_->getValue();
+}
+
+uint8_t Controller::getDurationIntVar()
+{
+  return duration_int_var_ptr_->getValue();
 }
 
 Controller controller;

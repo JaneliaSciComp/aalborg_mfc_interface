@@ -24,6 +24,7 @@ const int enc_btn_int = 4;
 const int btn_pin = 21;
 const int btn_int = 2;
 const int led_pwr_pin = 17;
+const int bnc_b_pin = 3;
 const int standalone_update_period = 300;
 
 const int mfc_pwm_pins[] = {7,8,9};
@@ -46,14 +47,29 @@ const uint8_t states_array_default[STATE_COUNT][MFC_COUNT] = {0};
 const uint8_t mfc_dsp_lbl_display_positions[] = {24,44,64};
 const uint8_t ain_dsp_lbl_display_positions[] = {24,44,64};
 const uint8_t state_dsp_lbl_display_position = 51;
+const uint8_t duration_dsp_lbl_display_position = 49;
 
 const uint8_t percent_display_width = 3;
 
 const uint8_t flow_var_display_positions[] = {26,46,66};
 const uint8_t ain_dsp_var_display_positions[] = {26,46,66};
 const uint8_t state_int_var_display_position = 57;
+const uint8_t duration_int_var_display_position = 51;
+const uint16_t duration_int_var_default = 10;
+
+const uint16_t duration_min = 1;
+const uint16_t duration_max = 10000;
 
 CONSTANT_STRING(device_name,"aalborg_mfc_interface");
+
+CONSTANT_STRING(mfc_parameter_name,"mfc");
+CONSTANT_STRING(ain_parameter_name,"ain");
+CONSTANT_STRING(percent_parameter_name,"percent");
+CONSTANT_STRING(percents_parameter_name,"percents");
+CONSTANT_STRING(state_parameter_name,"state");
+CONSTANT_STRING(duration_parameter_name,"duration");
+CONSTANT_STRING(duration_parameter_units,"ms");
+
 CONSTANT_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
 CONSTANT_STRING(get_leds_powered_method_name,"getLedsPowered");
 CONSTANT_STRING(set_mfc_flow_method_name,"setMfcFlow");
@@ -67,11 +83,8 @@ CONSTANT_STRING(get_analog_inputs_method_name,"getAnalogInputs");
 CONSTANT_STRING(save_state_method_name,"saveState");
 CONSTANT_STRING(recall_state_method_name,"recallState");
 CONSTANT_STRING(get_saved_states_method_name,"getSavedStates");
-CONSTANT_STRING(mfc_parameter_name,"mfc");
-CONSTANT_STRING(ain_parameter_name,"ain");
-CONSTANT_STRING(percent_parameter_name,"percent");
-CONSTANT_STRING(percents_parameter_name,"percents");
-CONSTANT_STRING(state_parameter_name,"state");
+CONSTANT_STRING(pulse_bnc_b_method_name,"pulseBncB");
+
 CONSTANT_STRING(states_name,"states");
 CONSTANT_STRING(frame0_name,"setMfcFlows %");
 CONSTANT_STRING(frame1_name,"getMfcFlowMeasures %");
@@ -83,6 +96,7 @@ const ConstantString frame_name_array[] =
     frame2_name,
     save_state_method_name,
     recall_state_method_name,
+    pulse_bnc_b_method_name,
   };
 CONSTANT_STRING(mfc0_dsp_lbl_string,"mfc0");
 CONSTANT_STRING(mfc1_dsp_lbl_string,"mfc1");

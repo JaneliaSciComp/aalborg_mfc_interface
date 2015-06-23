@@ -39,11 +39,20 @@ void recallStateCallback();
 
 void getSavedStatesCallback();
 
+void pulseBncBCallback();
+
 // Standalone Callbacks
 void executeStandaloneCallbackCallback();
 
 void saveStateStandaloneCallback();
 
 void recallStateStandaloneCallback();
+
+void pulseBncBStandaloneCallback();
+
+// EventController Callbacks
+void setBncBHighCallback(int index);
+
+void setBncBLowCallback(int index);
 }
 #endif

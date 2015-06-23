@@ -1,8 +1,6 @@
 // aalborg_mfc_interface
-#ifdef __AVR__
 #include "Flash.h"
 #include <EEPROM.h>
-#endif
 #include "Streaming.h"
 #include "JsonParser.h"
 #include "Array.h"
@@ -14,6 +12,7 @@
 #include "NewhavenDisplay.h"
 #include "Encoder.h"
 #include "StandaloneInterface.h"
+#include "EventController.h"
 #include "Constants.h"
 #include "Callbacks.h"
 #include "Controller.h"
