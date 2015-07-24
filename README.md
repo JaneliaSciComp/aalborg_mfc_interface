@@ -13,7 +13,7 @@ License:
 
 [modular-devices](https://github.com/janelia-modular-devices/modular-devices)
 
-##aalborg_mfc_interface
+##Device Information
 
 ```shell
 {
