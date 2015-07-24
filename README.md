@@ -15,7 +15,7 @@ License:
 
 ##Device Information
 
-```shell
+```json
 {
   "method":"?",
   "device_info":{
@@ -40,9 +40,123 @@ License:
     "getAnalogInputs",
     "saveState",
     "recallState",
-    "getSavedStates",
-    "pulseBncB"
+    "getSavedStates"
   ],
   "status":success
 }
 ```
+
+##Verbose Device Information
+
+```json
+{
+  "method":"??",
+  "device_info":{
+    "name":"aalborg_mfc_interface",
+    "model_number":1100,
+    "serial_number":0,
+    "firmware_number":1
+  },
+  "methods":[
+    {
+      "getMemoryFree":{
+        "parameters":[]
+      }
+    },
+    {
+      "resetDefaults":{
+        "parameters":[]
+      }
+    },
+    {
+      "setSerialNumber":{
+        "parameters":[
+          "serial_number"
+        ]
+      }
+    },
+    {
+      "executeStandaloneCallback":{
+        "parameters":[]
+      }
+    },
+    {
+      "getLedsPowered":{
+        "parameters":[]
+      }
+    },
+    {
+      "setMfcFlow":{
+        "parameters":[
+          "mfc",
+          "percent"
+        ]
+      }
+    },
+    {
+      "setMfcFlows":{
+        "parameters":[
+          "percents"
+        ]
+      }
+    },
+    {
+      "getMfcFlowSetting":{
+        "parameters":[
+          "mfc"
+        ]
+      }
+    },
+    {
+      "getMfcFlowSettings":{
+        "parameters":[]
+      }
+    },
+    {
+      "getMfcFlowMeasure":{
+        "parameters":[
+          "mfc"
+        ]
+      }
+    },
+    {
+      "getMfcFlowMeasures":{
+        "parameters":[]
+      }
+    },
+    {
+      "getAnalogInput":{
+        "parameters":[
+          "ain"
+        ]
+      }
+    },
+    {
+      "getAnalogInputs":{
+        "parameters":[]
+      }
+    },
+    {
+      "saveState":{
+        "parameters":[
+          "state"
+        ]
+      }
+    },
+    {
+      "recallState":{
+        "parameters":[
+          "state"
+        ]
+      }
+    },
+    {
+      "getSavedStates":{
+        "parameters":[]
+      }
+    }
+  ],
+  "status":success
+}
+```
+
