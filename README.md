@@ -9,9 +9,11 @@ License:
 
     BSD
 
-For more detailed help on installation and use see:
+##More Detailed Help on Installation and Usage
 
-[modular-devices]<https://github.com/janelia-modular-devices/modular-devices>
+[modular-devices](https://github.com/janelia-modular-devices/modular-devices)
+
+##aalborg_mfc_interface
 
 ```shell
 {
