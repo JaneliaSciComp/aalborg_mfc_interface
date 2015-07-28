@@ -29,8 +29,8 @@ namespace callbacks
 
 void getLedsPoweredCallback()
 {
-  boolean leds_powered = controller.getLedsPowered();
-  modular_device.addBooleanToResponse("leds_powered",leds_powered);
+  bool leds_powered = controller.getLedsPowered();
+  modular_device.addBoolToResponse("leds_powered",leds_powered);
 }
 
 void setMfcFlowCallback()

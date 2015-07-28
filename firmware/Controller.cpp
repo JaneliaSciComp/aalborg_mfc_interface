@@ -256,7 +256,7 @@ void Controller::setup()
 void Controller::update()
 {
   modular_device.handleServerRequests();
-  boolean updated = standalone_interface_.update();
+  bool updated = standalone_interface_.update();
   if (updated)
   {
     updateDisplayVariables();
