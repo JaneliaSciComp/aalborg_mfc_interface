@@ -1,11 +1,11 @@
-(kicad_pcb (version 4) (host pcbnew 0.201502231246+5447~21~ubuntu14.04.1-product)
+(kicad_pcb (version 4) (host pcbnew 0.201508100901+6080~28~ubuntu14.04.1-product)
 
   (general
     (links 95)
     (no_connects 0)
-    (area 93.230699 75.450699 211.569301 130.289301)
+    (area 90.995499 74.295 212.725001 131.445001)
     (thickness 1.6)
-    (drawings 22)
+    (drawings 23)
     (tracks 512)
     (zones 0)
     (modules 32)
@@ -15,7 +15,7 @@
   (page A4)
   (title_block
     (title aalborg_mfc_interface)
-    (rev 1.2)
+    (rev 1.3)
   )
 
   (layers
@@ -1332,6 +1332,9 @@
       (net 2 GND))
   )
 
+  (gr_text "2.5x5.5 Center +" (at 196.85 102.87 90) (layer F.SilkS)
+    (effects (font (size 0.762 0.762) (thickness 0.1905)))
+  )
   (gr_text SWITCH (at 180.975 88.265 90) (layer F.SilkS)
     (effects (font (thickness 0.381)))
   )
@@ -1384,10 +1387,10 @@
   (gr_text DISPLAY (at 104.14 127.635) (layer F.SilkS)
     (effects (font (size 1.016 1.016) (thickness 0.254)))
   )
-  (gr_text https://github.com/janelia-modular-devices/modular-devices (at 189.23 102.87 90) (layer F.SilkS)
+  (gr_text https://github.com/janelia-modular-devices (at 189.23 102.87 90) (layer F.SilkS)
     (effects (font (size 0.762 0.762) (thickness 0.1905)))
   )
-  (gr_text "Janelia Modular Device\naalborg_mfc_interface\nmodel_number: 1100\n02/2015 version 1.2" (at 207.01 85.725 90) (layer F.SilkS)
+  (gr_text "Janelia Modular Device\naalborg_mfc_interface\nmodel_number: 1100\n08/2015 version 1.3" (at 207.01 85.725 90) (layer F.SilkS)
     (effects (font (size 1.016 1.016) (thickness 0.254)))
   )
 
