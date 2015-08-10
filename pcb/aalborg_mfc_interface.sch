@@ -10,7 +10,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -30,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:aalborg_mfc_interface
+LIBS:components
 LIBS:aalborg_mfc_interface-cache
 EELAYER 25 0
 EELAYER END
@@ -38,7 +38,7 @@ encoding utf-8
 Sheet 1 1
 Title "aalborg_mfc_interface"
 Date ""
-Rev "1.2"
+Rev "1.3"
 Comp "Janelia"
 Comment1 ""
 Comment2 ""
@@ -128,7 +128,6 @@ NoConn ~ 4050 2050
 NoConn ~ 4050 2150
 NoConn ~ 4050 2450
 NoConn ~ 4050 2550
-NoConn ~ 4050 2850
 NoConn ~ 4050 2950
 NoConn ~ 4050 3800
 NoConn ~ 4050 4550
@@ -805,10 +804,10 @@ F 6 "RES SMD 5.11K OHM 1% 1/2W 1210" V 2280 7700 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 5.11k R4
+L 5.11k R3
 U 1 1 54894188
 P 6150 2050
-F 0 "R4" V 6230 2050 40  0000 C CNN
+F 0 "R3" V 6230 2050 40  0000 C CNN
 F 1 "5.11k" V 6157 2051 40  0000 C CNN
 F 2 "aalborg_mfc_interface:SM1210" V 6080 2050 30  0001 C CNN
 F 3 "" H 6150 2050 30  0000 C CNN
@@ -819,10 +818,10 @@ F 6 "RES SMD 5.11K OHM 1% 1/2W 1210" V 6530 2350 60  0001 C CNN "Description"
 	0    1    1    0   
 $EndComp
 $Comp
-L 5.11k R5
+L 5.11k R4
 U 1 1 5489443F
 P 6150 3050
-F 0 "R5" V 6230 3050 40  0000 C CNN
+F 0 "R4" V 6230 3050 40  0000 C CNN
 F 1 "5.11k" V 6157 3051 40  0000 C CNN
 F 2 "aalborg_mfc_interface:SM1210" V 6080 3050 30  0001 C CNN
 F 3 "" H 6150 3050 30  0000 C CNN
@@ -895,61 +894,40 @@ Wire Wire Line
 Wire Wire Line
 	4050 3150 4250 3150
 Text Label 4250 3050 0    60   ~ 0
-D_LED_PWR
+D_LIGHTS
 Text Label 700  5300 0    60   ~ 0
 LED_PWR
 Wire Wire Line
 	2700 7500 2300 7500
 Text Label 2300 7500 0    60   ~ 0
-LED_PWR
+LIGHTS
 Wire Wire Line
 	3500 7500 3550 7500
 Text Label 3550 7500 0    60   ~ 0
-D_LED_PWR
+D_LIGHTS
 $Comp
 L VAA #PWR023
 U 1 1 54AF28AD
-P 700 3400
-F 0 "#PWR023" H 700 3250 60  0001 C CNN
-F 1 "VAA" H 700 3550 60  0000 C CNN
-F 2 "" H 700 3400 60  0000 C CNN
-F 3 "" H 700 3400 60  0000 C CNN
-	1    700  3400
-	1    0    0    -1  
-$EndComp
-$Comp
-L 5.11k R3
-U 1 1 54AF2C25
-P 700 4500
-F 0 "R3" V 780 4500 40  0000 C CNN
-F 1 "5.11k" V 707 4501 40  0000 C CNN
-F 2 "aalborg_mfc_interface:SM1210" V 630 4500 30  0001 C CNN
-F 3 "" H 700 4500 30  0000 C CNN
-F 4 "digikey" V 880 4600 60  0001 C CNN "Vendor"
-F 5 "P5.11KAACT-ND" V 980 4700 60  0001 C CNN "PartNumber"
-F 6 "RES SMD 5.11K OHM 1% 1/2W 1210" V 1080 4800 60  0001 C CNN "Description"
-	1    700  4500
+P 700 3300
+F 0 "#PWR023" H 700 3150 60  0001 C CNN
+F 1 "VAA" H 700 3450 60  0000 C CNN
+F 2 "" H 700 3300 60  0000 C CNN
+F 3 "" H 700 3300 60  0000 C CNN
+	1    700  3300
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR024
 U 1 1 54AF2C77
-P 700 4900
-F 0 "#PWR024" H 700 4650 60  0001 C CNN
-F 1 "GND" H 700 4750 60  0000 C CNN
-F 2 "" H 700 4900 60  0000 C CNN
-F 3 "" H 700 4900 60  0000 C CNN
-	1    700  4900
+P 1100 4100
+F 0 "#PWR024" H 1100 3850 60  0001 C CNN
+F 1 "GND" H 1100 3950 60  0000 C CNN
+F 2 "" H 1100 4100 60  0000 C CNN
+F 3 "" H 1100 4100 60  0000 C CNN
+	1    1100 4100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	700  4000 700  4250
-Wire Wire Line
-	700  4750 700  4900
-Wire Wire Line
-	700  4100 900  4100
-Connection ~ 700  4100
-Text Label 900  4100 0    60   ~ 0
+Text Label 700  4400 0    60   ~ 0
 LED_PWR
 $Comp
 L GND #PWR025
@@ -1069,10 +1047,10 @@ F 6 "CAP CER 10UF 50V 10% X7S 1210" H 7100 4750 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 5.11k R6
+L 5.11k R5
 U 1 1 54B44545
 P 6150 4000
-F 0 "R6" V 6230 4000 40  0000 C CNN
+F 0 "R5" V 6230 4000 40  0000 C CNN
 F 1 "5.11k" V 6157 4001 40  0000 C CNN
 F 2 "aalborg_mfc_interface:SM1210" V 6080 4000 30  0001 C CNN
 F 3 "" H 6150 4000 30  0000 C CNN
@@ -1357,22 +1335,6 @@ Wire Wire Line
 	4300 6600 4300 6550
 Wire Wire Line
 	4300 6550 4400 6550
-$Comp
-L SPST_SERIES_M SW1
-U 1 1 54B9764F
-P 700 3750
-F 0 "SW1" H 700 3700 40  0000 C CNN
-F 1 "SPST_SERIES_M" H 700 3850 40  0000 C CNN
-F 2 "aalborg_mfc_interface:SPST_SERIES_M" H 600 3550 60  0001 C CNN
-F 3 "" H 700 3750 60  0000 C CNN
-F 4 "digikey" H 800 3950 60  0001 C CNN "Vendor"
-F 5 "360-3243-ND" H 900 4050 60  0001 C CNN "PartNumber"
-F 6 "SWITCH TOGGLE SPST 6A 125V" H 1000 4150 60  0001 C CNN "Description"
-	1    700  3750
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	700  3400 700  3500
 Wire Wire Line
 	4050 3350 4250 3350
 Wire Wire Line
@@ -1482,8 +1444,6 @@ F 6 "CONN HEADER 2POS .100 VERT GOLD" H 4900 6950 60  0001 C CNN "Description"
 	1    4600 6500
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4050 3050 4250 3050
 Text Label 4250 3150 0    60   ~ 0
 ENC_A
 Wire Wire Line
@@ -1542,4 +1502,31 @@ Text Label 1950 6300 0    60   ~ 0
 BNC_A
 Text Label 1950 6400 0    60   ~ 0
 BNC_B
+Wire Wire Line
+	700  3400 700  3300
+Wire Wire Line
+	1100 3300 1100 3400
+$Comp
+L DPST_SERIES_M SW1
+U 1 1 55C8DAA5
+P 900 3700
+F 0 "SW1" V 950 3750 50  0000 C CNN
+F 1 "DPST_SERIES_M" V 875 3725 30  0000 C CNN
+F 2 "aalborg_mfc_interface:DPST_SERIES_M" H 1100 3650 60  0001 C CNN
+F 3 "" H 1200 3750 60  0000 C CNN
+F 4 "digikey" H 1300 3850 60  0001 C CNN "Vendor"
+F 5 "360-3244-ND" H 1400 3950 60  0001 C CNN "PartNumber"
+F 6 "SWITCH TOGGLE DPST 6A 125V" H 1500 4050 60  0001 C CNN "Description"
+	1    900  3700
+	0    1    1    0   
+$EndComp
+Text Label 1100 3300 0    60   ~ 0
+LIGHTS
+NoConn ~ 4050 2850
+Wire Wire Line
+	4050 3050 4250 3050
+Wire Wire Line
+	1100 4000 1100 4100
+Wire Wire Line
+	700  4000 700  4400
 $EndSCHEMATC
