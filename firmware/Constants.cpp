@@ -23,7 +23,7 @@ const int enc_btn_pin = 19;
 const int enc_btn_int = 4;
 const int btn_pin = 21;
 const int btn_int = 2;
-const int led_pwr_pin = 17;
+const int lights_pin = 17;
 const int bnc_b_pin = 3;
 const int standalone_update_period = 300;
 

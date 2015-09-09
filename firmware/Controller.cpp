@@ -14,7 +14,7 @@ Controller::Controller() :
                                                         constants::enc_btn_int,
                                                         constants::btn_pin,
                                                         constants::btn_int,
-                                                        constants::led_pwr_pin,
+                                                        constants::lights_pin,
                                                         constants::standalone_update_period))
 {
 }
@@ -271,7 +271,7 @@ void Controller::executeStandaloneCallback()
 
 bool Controller::getLedsPowered()
 {
-  return digitalRead(constants::led_pwr_pin) == HIGH;
+  return digitalRead(constants::lights_pin) == HIGH;
 }
 
 void Controller::setMfcFlow(const uint8_t mfc, uint8_t percent)
