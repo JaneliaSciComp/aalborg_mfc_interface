@@ -16,10 +16,13 @@ enum {STATE_COUNT=10};
 enum {MFC_COUNT=3};
 enum {AIN_COUNT=3};
 
-extern const int baudrate;
+extern const unsigned int baudrate;
 
-extern const int model_number;
-extern const int firmware_number;
+extern const unsigned int model_number;
+
+extern const unsigned char firmware_major;
+extern const unsigned char firmware_minor;
+extern const unsigned char firmware_patch;
 
 extern HardwareSerial& display_serial;
 

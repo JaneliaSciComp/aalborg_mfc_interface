@@ -7,30 +7,28 @@
 // ----------------------------------------------------------------------------
 #include "Callbacks.h"
 
-using namespace ArduinoJson::Parser;
 
 namespace callbacks
 {
 // Callbacks must be non-blocking (avoid 'delay')
 //
 // modular_device.getParameterValue must be cast to either:
-// char*
+// const char*
 // long
 // double
 // bool
-// JsonArray
-// JsonObject
+// ArduinoJson::JsonArray&
+// ArduinoJson::JsonObject&
 //
-// For more info read about ArduinoJson v3 JsonParser JsonValues
+// For more info read about ArduinoJson parsing https://github.com/janelia-arduino/ArduinoJson
 //
 // modular_device.getSavedVariableValue type must match the saved variable default type
 // modular_device.setSavedVariableValue type must match the saved variable default type
 
-
 void getLedsPoweredCallback()
 {
   bool leds_powered = controller.getLedsPowered();
-  modular_device.addBoolToResponse("leds_powered",leds_powered);
+  modular_device.addToResponse("leds_powered",leds_powered);
 }
 
 void setMfcFlowCallback()
@@ -42,13 +40,13 @@ void setMfcFlowCallback()
 
 void setMfcFlowsCallback()
 {
-  JsonArray percents_array = modular_device.getParameterValue(constants::percents_parameter_name);
+  ArduinoJson::JsonArray& percents_array = modular_device.getParameterValue(constants::percents_parameter_name);
   int mfc = 0;
-  for (JsonArrayIterator percents_it=percents_array.begin();
-       percents_it != percents_array.end();
-       ++percents_it)
+  for (ArduinoJson::JsonArray::iterator it=percents_array.begin();
+       it != percents_array.end();
+       ++it)
   {
-    long percent = *percents_it;
+    long percent = *it;
     controller.setMfcFlow(mfc,percent);
     mfc++;
   }

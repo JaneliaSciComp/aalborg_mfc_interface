@@ -21,7 +21,11 @@ License:
     "name":"aalborg_mfc_interface",
     "model_number":1100,
     "serial_number":0,
-    "firmware_number":1
+    "firmware_version":{
+      "major":0,
+      "minor":1,
+      "patch":0
+    }
   },
   "methods":[
     "getMemoryFree",
@@ -39,7 +43,8 @@ License:
     "getAnalogInputs",
     "saveState",
     "recallState",
-    "getSavedStates"
+    "getSavedStates",
+    "pulseBncB"
   ],
   "status":success
 }
@@ -54,105 +59,151 @@ License:
     "name":"aalborg_mfc_interface",
     "model_number":1100,
     "serial_number":0,
-    "firmware_number":1
+    "firmware_version":{
+      "major":0,
+      "minor":1,
+      "patch":0
+    }
   },
   "methods":[
     {
-      "getMemoryFree":{
-        "parameters":[]
-      }
+      "name":"getMemoryFree",
+      "parameters":[]
     },
     {
-      "resetDefaults":{
-        "parameters":[]
-      }
+      "name":"resetDefaults",
+      "parameters":[]
     },
     {
-      "setSerialNumber":{
-        "parameters":[
-          "serial_number"
-        ]
-      }
+      "name":"setSerialNumber",
+      "parameters":[
+        {
+          "name":"serial_number",
+          "type":"long",
+          "min":0,
+          "max":65535
+        }
+      ]
     },
     {
-      "executeStandaloneCallback":{
-        "parameters":[]
-      }
+      "name":"executeStandaloneCallback",
+      "parameters":[]
     },
     {
-      "getLedsPowered":{
-        "parameters":[]
-      }
+      "name":"getLedsPowered",
+      "parameters":[]
     },
     {
-      "setMfcFlow":{
-        "parameters":[
-          "mfc",
-          "percent"
-        ]
-      }
+      "name":"setMfcFlow",
+      "parameters":[
+        {
+          "name":"mfc",
+          "type":"long",
+          "min":0,
+          "max":2
+        },
+        {
+          "name":"percent",
+          "type":"long",
+          "min":0,
+          "max":100
+        }
+      ]
     },
     {
-      "setMfcFlows":{
-        "parameters":[
-          "percents"
-        ]
-      }
+      "name":"setMfcFlows",
+      "parameters":[
+        {
+          "name":"percents",
+          "type":"array",
+          "array_element_type":"long",
+          "min":0,
+          "max":100
+        }
+      ]
     },
     {
-      "getMfcFlowSetting":{
-        "parameters":[
-          "mfc"
-        ]
-      }
+      "name":"getMfcFlowSetting",
+      "parameters":[
+        {
+          "name":"mfc",
+          "type":"long",
+          "min":0,
+          "max":2
+        }
+      ]
     },
     {
-      "getMfcFlowSettings":{
-        "parameters":[]
-      }
+      "name":"getMfcFlowSettings",
+      "parameters":[]
     },
     {
-      "getMfcFlowMeasure":{
-        "parameters":[
-          "mfc"
-        ]
-      }
+      "name":"getMfcFlowMeasure",
+      "parameters":[
+        {
+          "name":"mfc",
+          "type":"long",
+          "min":0,
+          "max":2
+        }
+      ]
     },
     {
-      "getMfcFlowMeasures":{
-        "parameters":[]
-      }
+      "name":"getMfcFlowMeasures",
+      "parameters":[]
     },
     {
-      "getAnalogInput":{
-        "parameters":[
-          "ain"
-        ]
-      }
+      "name":"getAnalogInput",
+      "parameters":[
+        {
+          "name":"ain",
+          "type":"long",
+          "min":0,
+          "max":2
+        }
+      ]
     },
     {
-      "getAnalogInputs":{
-        "parameters":[]
-      }
+      "name":"getAnalogInputs",
+      "parameters":[]
     },
     {
-      "saveState":{
-        "parameters":[
-          "state"
-        ]
-      }
+      "name":"saveState",
+      "parameters":[
+        {
+          "name":"state",
+          "type":"long",
+          "min":0,
+          "max":9
+        }
+      ]
     },
     {
-      "recallState":{
-        "parameters":[
-          "state"
-        ]
-      }
+      "name":"recallState",
+      "parameters":[
+        {
+          "name":"state",
+          "type":"long",
+          "min":0,
+          "max":9
+        }
+      ]
     },
     {
-      "getSavedStates":{
-        "parameters":[]
-      }
+      "name":"getSavedStates",
+      "parameters":[]
+    },
+    {
+      "name":"pulseBncB",
+      "parameters":[
+        {
+          "name":"duration",
+          "units":"ms",
+          "type":"long",
+          "min":1,
+          "max":10000
+        }
+      ]
     }
   ],
   "status":success
