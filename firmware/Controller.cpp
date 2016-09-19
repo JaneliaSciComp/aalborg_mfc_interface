@@ -49,75 +49,75 @@ void Controller::setup()
   }
 
   // Parameters
-  ModularDevice::Parameter& mfc_parameter = modular_device.createParameter(constants::mfc_parameter_name);
+  ModularDevice::Parameter & mfc_parameter = modular_device.createParameter(constants::mfc_parameter_name);
   mfc_parameter.setRange(0,constants::MFC_COUNT-1);
 
-  ModularDevice::Parameter& ain_parameter = modular_device.createParameter(constants::ain_parameter_name);
+  ModularDevice::Parameter & ain_parameter = modular_device.createParameter(constants::ain_parameter_name);
   ain_parameter.setRange(0,constants::AIN_COUNT-1);
 
-  ModularDevice::Parameter& percent_parameter = modular_device.createParameter(constants::percent_parameter_name);
+  ModularDevice::Parameter & percent_parameter = modular_device.createParameter(constants::percent_parameter_name);
   percent_parameter.setRange(constants::percent_min,constants::percent_max);
 
-  ModularDevice::Parameter& percents_parameter = modular_device.createParameter(constants::percents_parameter_name);
+  ModularDevice::Parameter & percents_parameter = modular_device.createParameter(constants::percents_parameter_name);
   percents_parameter.setTypeArray();
   percents_parameter.setRange(constants::percent_min,constants::percent_max);
 
-  ModularDevice::Parameter& state_parameter = modular_device.createParameter(constants::state_parameter_name);
+  ModularDevice::Parameter & state_parameter = modular_device.createParameter(constants::state_parameter_name);
   state_parameter.setRange(0,constants::STATE_COUNT-1);
 
-  ModularDevice::Parameter& duration_parameter = modular_device.createParameter(constants::duration_parameter_name);
+  ModularDevice::Parameter & duration_parameter = modular_device.createParameter(constants::duration_parameter_name);
   duration_parameter.setRange(constants::duration_min,constants::duration_max);
   duration_parameter.setUnits(constants::duration_parameter_units);
 
   // Methods
-  ModularDevice::Method& execute_standalone_callback_method = modular_device.createMethod(constants::execute_standalone_callback_method_name);
+  ModularDevice::Method & execute_standalone_callback_method = modular_device.createMethod(constants::execute_standalone_callback_method_name);
   execute_standalone_callback_method.attachCallback(callbacks::executeStandaloneCallbackCallback);
 
-  ModularDevice::Method& get_leds_powered_method = modular_device.createMethod(constants::get_leds_powered_method_name);
+  ModularDevice::Method & get_leds_powered_method = modular_device.createMethod(constants::get_leds_powered_method_name);
   get_leds_powered_method.attachCallback(callbacks::getLedsPoweredCallback);
 
-  ModularDevice::Method& set_mfc_flow_method = modular_device.createMethod(constants::set_mfc_flow_method_name);
+  ModularDevice::Method & set_mfc_flow_method = modular_device.createMethod(constants::set_mfc_flow_method_name);
   set_mfc_flow_method.attachCallback(callbacks::setMfcFlowCallback);
   set_mfc_flow_method.addParameter(mfc_parameter);
   set_mfc_flow_method.addParameter(percent_parameter);
 
-  ModularDevice::Method& set_mfc_flows_method = modular_device.createMethod(constants::set_mfc_flows_method_name);
+  ModularDevice::Method & set_mfc_flows_method = modular_device.createMethod(constants::set_mfc_flows_method_name);
   set_mfc_flows_method.attachCallback(callbacks::setMfcFlowsCallback);
   set_mfc_flows_method.addParameter(percents_parameter);
 
-  ModularDevice::Method& get_mfc_flow_setting_method = modular_device.createMethod(constants::get_mfc_flow_setting_method_name);
+  ModularDevice::Method & get_mfc_flow_setting_method = modular_device.createMethod(constants::get_mfc_flow_setting_method_name);
   get_mfc_flow_setting_method.attachCallback(callbacks::getMfcFlowSettingCallback);
   get_mfc_flow_setting_method.addParameter(mfc_parameter);
 
-  ModularDevice::Method& get_mfc_flow_settings_method = modular_device.createMethod(constants::get_mfc_flow_settings_method_name);
+  ModularDevice::Method & get_mfc_flow_settings_method = modular_device.createMethod(constants::get_mfc_flow_settings_method_name);
   get_mfc_flow_settings_method.attachCallback(callbacks::getMfcFlowSettingsCallback);
 
-  ModularDevice::Method& get_mfc_flow_measure_method = modular_device.createMethod(constants::get_mfc_flow_measure_method_name);
+  ModularDevice::Method & get_mfc_flow_measure_method = modular_device.createMethod(constants::get_mfc_flow_measure_method_name);
   get_mfc_flow_measure_method.attachCallback(callbacks::getMfcFlowMeasureCallback);
   get_mfc_flow_measure_method.addParameter(mfc_parameter);
 
-  ModularDevice::Method& get_mfc_flow_measures_method = modular_device.createMethod(constants::get_mfc_flow_measures_method_name);
+  ModularDevice::Method & get_mfc_flow_measures_method = modular_device.createMethod(constants::get_mfc_flow_measures_method_name);
   get_mfc_flow_measures_method.attachCallback(callbacks::getMfcFlowMeasuresCallback);
 
-  ModularDevice::Method& get_analog_input_method = modular_device.createMethod(constants::get_analog_input_method_name);
+  ModularDevice::Method & get_analog_input_method = modular_device.createMethod(constants::get_analog_input_method_name);
   get_analog_input_method.attachCallback(callbacks::getAnalogInputCallback);
   get_analog_input_method.addParameter(ain_parameter);
 
-  ModularDevice::Method& get_analog_inputs_method = modular_device.createMethod(constants::get_analog_inputs_method_name);
+  ModularDevice::Method & get_analog_inputs_method = modular_device.createMethod(constants::get_analog_inputs_method_name);
   get_analog_inputs_method.attachCallback(callbacks::getAnalogInputsCallback);
 
-  ModularDevice::Method& save_state_method = modular_device.createMethod(constants::save_state_method_name);
+  ModularDevice::Method & save_state_method = modular_device.createMethod(constants::save_state_method_name);
   save_state_method.attachCallback(callbacks::saveStateCallback);
   save_state_method.addParameter(state_parameter);
 
-  ModularDevice::Method& recall_state_method = modular_device.createMethod(constants::recall_state_method_name);
+  ModularDevice::Method & recall_state_method = modular_device.createMethod(constants::recall_state_method_name);
   recall_state_method.attachCallback(callbacks::recallStateCallback);
   recall_state_method.addParameter(state_parameter);
 
-  ModularDevice::Method& get_saved_states_method = modular_device.createMethod(constants::get_saved_states_method_name);
+  ModularDevice::Method & get_saved_states_method = modular_device.createMethod(constants::get_saved_states_method_name);
   get_saved_states_method.attachCallback(callbacks::getSavedStatesCallback);
 
-  ModularDevice::Method& pulse_bnc_b_method = modular_device.createMethod(constants::pulse_bnc_b_method_name);
+  ModularDevice::Method & pulse_bnc_b_method = modular_device.createMethod(constants::pulse_bnc_b_method_name);
   pulse_bnc_b_method.addParameter(duration_parameter);
   pulse_bnc_b_method.attachCallback(callbacks::pulseBncBCallback);
 
@@ -128,7 +128,7 @@ void Controller::setup()
   standalone_interface_.setup(constants::frame_name_array,constants::FRAME_COUNT);
 
   // Display Labels
-  Standalone::DisplayLabel* mfc_dsp_lbl_ptr_array[constants::MFC_COUNT];
+  Standalone::DisplayLabel * mfc_dsp_lbl_ptr_array[constants::MFC_COUNT];
   for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
   {
     mfc_dsp_lbl_ptr_array[mfc] = &(standalone_interface_.createDisplayLabel());
@@ -137,7 +137,7 @@ void Controller::setup()
     mfc_dsp_lbl_ptr_array[mfc]->setRightJustify();
   }
 
-  Standalone::DisplayLabel* ain_dsp_lbl_ptr_array[constants::AIN_COUNT];
+  Standalone::DisplayLabel * ain_dsp_lbl_ptr_array[constants::AIN_COUNT];
   for (int ain=0; ain<constants::AIN_COUNT; ain++)
   {
     ain_dsp_lbl_ptr_array[ain] = &(standalone_interface_.createDisplayLabel());
@@ -146,11 +146,11 @@ void Controller::setup()
     ain_dsp_lbl_ptr_array[ain]->setRightJustify();
   }
 
-  Standalone::DisplayLabel& state_dsp_lbl = standalone_interface_.createDisplayLabel();
+  Standalone::DisplayLabel & state_dsp_lbl = standalone_interface_.createDisplayLabel();
   state_dsp_lbl.setDisplayPosition(constants::state_dsp_lbl_display_position);
   state_dsp_lbl.setConstantString(constants::state_parameter_name);
 
-  Standalone::DisplayLabel& duration_dsp_lbl = standalone_interface_.createDisplayLabel();
+  Standalone::DisplayLabel & duration_dsp_lbl = standalone_interface_.createDisplayLabel();
   duration_dsp_lbl.setDisplayPosition(constants::duration_dsp_lbl_display_position);
   duration_dsp_lbl.setConstantString(constants::duration_parameter_name);
   duration_dsp_lbl.setRightJustify();
