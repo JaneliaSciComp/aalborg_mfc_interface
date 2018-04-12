@@ -1,20 +1,18 @@
-# aalborg_mfc_interface
+#+TITLE: aalborg_mfc_interface
+#+AUTHOR: Peter Polidoro
+#+EMAIL: peterpolidoro@gmail.com
 
-Authors:
+* Repository Information
+  - Author :: Peter Polidoro
+  - License :: BSD
 
-    Peter Polidoro <polidorop@janelia.hhmi.org>
+* More Detailed Help on Installation and Usage
 
-License:
+   [[https://github.com/janelia-modular-devices/modular-devices][modular-devices]]
 
-    BSD
+* Device Information
 
-## More Detailed Help on Installation and Usage
-
-[modular-devices](https://github.com/janelia-modular-devices/modular-devices)
-
-## Device Information
-
-```json
+   #+BEGIN_SRC js
 {
   "method":"?",
   "device_info":{
@@ -48,11 +46,11 @@ License:
   ],
   "status":success
 }
-```
+   #+END_SRC
 
-## Verbose Device Information
+* Verbose Device Information
 
-```json
+   #+BEGIN_SRC js
 {
   "method":"??",
   "device_info":{
@@ -208,5 +206,4 @@ License:
   ],
   "status":success
 }
-```
-
+   #+END_SRC
